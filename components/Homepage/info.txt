@@ -1,0 +1,1 @@
+The homepage folder contents all the components related to the home page .

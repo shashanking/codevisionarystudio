@@ -1,0 +1,3 @@
+The common folder contents all common components and files which are been use in every page or router.
+ex. (Navbar,footer,sidebar,etc).
+Like 'homepage' folder all other pages/router will have a sperate folder by the name of the page in the components folder.
