@@ -10,7 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        // foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        mainFont: "var(--font-earth-orbiter)",
+        secondaryFont: "var(--secondaryFont)",
+        // inputFont:'var(----inputFont)',
       },
     },
   },
