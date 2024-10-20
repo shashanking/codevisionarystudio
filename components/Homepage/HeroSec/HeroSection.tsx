@@ -3,9 +3,19 @@ import React from "react";
 
 export const HeroSection: React.FC = () => {
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute w-full h-full">
+        <iframe
+          src="https://my.spline.design/webbg-2027e265eca50f4533c337593fa82e2a"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          title="Background Animation"
+        ></iframe>
+        <div className="absolute bottom-0 left-0 w-full bg-green-5 homePage__heroSectionOverlay h-[20%]" />
+      </div>
       <div className="max-w-[1920px] min-h-[100vh] mx-auto relative flex justify-center items-center">
-        <div className="absolute w-full h-full">
+        {/* <div className="absolute w-full h-full">
           <iframe
             src="https://my.spline.design/webbg-2027e265eca50f4533c337593fa82e2a"
             frameBorder="0"
@@ -14,7 +24,7 @@ export const HeroSection: React.FC = () => {
             title="Background Animation"
           ></iframe>
           <div className="absolute bottom-0 left-0 w-full bg-green-5 homePage__heroSectionOverlay h-[20%]" />
-        </div>
+        </div> */}
         <div className=" flex flex-col justify-center items-center w-[85%] gap-1 mx-auto relative">
           <h1
             style={{
