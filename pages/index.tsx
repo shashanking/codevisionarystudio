@@ -1,3 +1,4 @@
+import { AboutSecondSection } from "@/components/Homepage/AboutSec/AboutSecondSection";
 import { AboutSection } from "@/components/Homepage/AboutSec/AboutSection";
 import { HeroSection } from "@/components/Homepage/HeroSec/HeroSection";
 
@@ -6,7 +7,8 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
-      <div>the third section</div>
+      <AboutSecondSection />
+      {/* <div>the third section</div> */}
     </>
   );
 }

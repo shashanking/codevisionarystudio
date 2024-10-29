@@ -98,7 +98,7 @@ export const AboutSection = () => {
     <div>
       <div
         ref={about__MainWrapper}
-        className="max-w-[1920px] mx-auto min-h-[200vh] relative "
+        className="max-w-[1920px] mx-auto min-h-[300vh] relative"
       >
         <div className="sticky top-0 w-full h-screen flex justify-center items-center overflow-hidden">
           <div className="absolute w-full h-full flex justify-center items-center">
