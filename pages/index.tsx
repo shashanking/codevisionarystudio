@@ -8,7 +8,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <AboutSecondSection />
-      {/* <div>the third section</div> */}
+      <div className="h-screen bg-red-800 text-white flex justify-center items-center">
+        the Next section
+      </div>
     </>
   );
 }

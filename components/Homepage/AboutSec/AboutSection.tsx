@@ -15,10 +15,10 @@ export const AboutSection = () => {
   // the right-side paragraph...
   const translateSmallText = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [0, 0.3],
     ["200%", "0%"]
   );
-  const opacitySmallText = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const opacitySmallText = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   const translateSmallTextSmooth = useSpring(translateSmallText, {
     damping: 20,
@@ -35,12 +35,12 @@ export const AboutSection = () => {
 
   const translateXImage1 = useTransform(
     scrollYProgress,
-    [0.5, 1],
+    [0.33, 1],
     ["-800%", "0%"]
   );
   const translateYImage1 = useTransform(
     scrollYProgress,
-    [0.5, 1],
+    [0.33, 1],
     ["-500%", "0%"]
   );
 
@@ -62,45 +62,50 @@ export const AboutSection = () => {
   );
   const translateXImage2Smooth = useSpring(translateXImage2, {
     damping: 20,
-    stiffness: 30,
+    stiffness: 50,
   });
 
   const translateXImage3 = useTransform(
     scrollYProgress,
-    [0.5, 1],
+    [0.33, 1],
     ["-800%", "0%"]
   );
   const translateYImage3 = useTransform(
     scrollYProgress,
-    [0.5, 1],
+    [0.33, 1],
     ["500%", "0%"]
   );
   const translateXImage3Smooth = useSpring(translateXImage3, {
     damping: 20,
-    stiffness: 30,
+    stiffness: 50,
   });
   const translateYImage3Smooth = useSpring(translateYImage3, {
     //common for third and fourth image...
     damping: 20,
-    stiffness: 30,
+    stiffness: 50,
   });
   const translateXImage4 = useTransform(
     scrollYProgress,
-    [0.5, 1],
+    [0.33, 1],
     ["800%", "0%"]
   );
   const translateXImage4Smooth = useSpring(translateXImage4, {
     damping: 20,
-    stiffness: 30,
+    stiffness: 50,
   });
+
+
+  // opacity animation ....
+
+  const opacityIncreace = useTransform(scrollYProgress,[.33,1],[0,1])
 
   return (
     <div>
       <div
         ref={about__MainWrapper}
-        className="max-w-[1920px] mx-auto min-h-[300vh] relative"
+        className="max-w-[1920px] mx-auto min-h-[500vh] relative"
       >
-        <div className="sticky top-0 w-full h-screen flex justify-center items-center overflow-hidden">
+        <div className="sticky top-0 w-full h-[110vh] flex justify-center items-center overflow-hidden">
           <div className="absolute w-full h-full flex justify-center items-center">
             <HomeAboutSecSvg />
           </div>
@@ -157,6 +162,7 @@ export const AboutSection = () => {
                 style={{
                   x: translateXImage1Smooth,
                   y: translateYImage1Smooth,
+                  opacity: opacityIncreace
                 }}
                 className="relative rounded-xl overflow-hidden opacity-85 h-[300px] w-[85%] mx-auto flex justify-center items-center"
               >
@@ -172,6 +178,7 @@ export const AboutSection = () => {
                 style={{
                   x: translateXImage2Smooth,
                   y: translateYImage1Smooth,
+                  opacity: opacityIncreace
                 }}
                 className="relative rounded-xl overflow-hidden opacity-85 ml-[8%] h-[250px] w-[65%]"
               >
@@ -182,6 +189,7 @@ export const AboutSection = () => {
                 style={{
                   x: translateXImage3Smooth,
                   y: translateYImage3Smooth,
+                  opacity: opacityIncreace
                 }}
                 className="relative rounded-xl overflow-hidden opacity-100 -mt-[60px] h-[250px] w-[60%] ml-auto"
               >
@@ -192,6 +200,7 @@ export const AboutSection = () => {
                 style={{
                   x: translateXImage4Smooth,
                   y: translateYImage3Smooth,
+                  opacity: opacityIncreace
                 }}
                 className="relative rounded-xl overflow-hidden opacity-85 h-[250px] -mt-[40px] w-[70%] ml-auto flex justify-center items-center"
               >
