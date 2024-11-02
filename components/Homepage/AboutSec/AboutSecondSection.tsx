@@ -39,6 +39,7 @@ export const AboutSecondSection = () => {
     stiffness: 50,
     damping: 20,
   });
+  
 
   return (
     <>
