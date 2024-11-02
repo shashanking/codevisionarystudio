@@ -16,6 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
     requestAnimationFrame(raf);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
   return (
     <>
       <Navbar />
