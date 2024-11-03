@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
             style={{
               fontFamily: mainFont.style.fontFamily,
             }}
-            className="text-[5vw] uppercase font-bold customLine__height"
+            className="text-[5vw] uppercase text-white font-bold customLine__height"
           >
             Transforming Ideas into
           </h1>
@@ -42,7 +42,7 @@ export const HeroSection: React.FC = () => {
           >
             Digital Reality
           </h2>
-          <p className="2xl:text-[1.5vw] xl:text-[1.6vw] lg:text-[1.9vw] md:text-[2.2vw] text-[2.5vw] font-secondaryFont font-medium my-7">
+          <p className="2xl:text-[1.5vw] xl:text-[1.6vw] lg:text-[1.9vw] md:text-[2.2vw] text-[2.5vw] font-secondaryFont font-medium my-7 text-white">
             Web Design, App Development, Branding & Marketing Services.
           </p>
 

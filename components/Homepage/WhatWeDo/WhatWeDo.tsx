@@ -73,9 +73,9 @@ export const WhatWeDo = () => {
       <div>
         <div
           ref={mainContainerRef}
-          className="max-w-[1920px] h-[200vh] relative mx-auto "
+          className="max-w-[1920px] h-[200vh] relative mx-auto"
         >
-          <div className="min-h-[100vh] top-0 sticky w-full  flex justify-center items-center">
+          <div className="min-h-[100vh] top-0 sticky w-full  flex justify-center items-center overflow-hidden">
             <Image
               src="/assets/WhatWeDoBG.png"
               alt="bg-img"
@@ -87,7 +87,7 @@ export const WhatWeDo = () => {
             </div>
             <div className="w-[85%] mx-auto relative z-40 p-2">
               <h3
-                className="text-center font-bold text-[2vw]"
+                className="text-center font-bold text-[2vw] text-white"
                 style={{
                   fontFamily: mainFont.style.fontFamily,
                 }}
