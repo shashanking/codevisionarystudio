@@ -1,121 +1,128 @@
+/**
+ * The `FooterSection` component represents the footer section of the homepage. It includes the following features:
+ * - A contact form with fields for name, email, phone number, and subject
+ * - A "Submit" button for the contact form
+ * - The company logo and a brief description
+ * - A menu with links to different pages (About Us, Our Services, Portfolio, Blogs, Contact Us)
+ * - Contact information (phone number, address, email)
+ * - An animated marquee with the company name and a copy icon
+ * 
+ * Responsiveness Notes:
+ * - Fixed height of 685px might cause issues on smaller screens, consider using min-height
+ * - The form fields layout might break on mobile, needs media queries for column layout
+ * - The footer content width of 83% might need adjustment for very small screens
+ * - The two-column layout for logo/menu sections needs responsive handling for mobile
+ */
 import React from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 
+const menuItems = ["About Us", "Our Services", "Portfolio", "Blogs", "Contact Us"];
+
+const formFields = [
+  { type: "text", placeholder: "Your Name" },
+  { type: "email", placeholder: "Email Id" },
+  { type: "text", placeholder: "Phone Number" }
+];
+
 export const FooterSection = () => {
   return (
-    <div className="h-[806px] w-full bg-gradient-to-br from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-t-[60px]">
+    // Consider using min-height instead of fixed height for better responsiveness
+    <div className="h-[685px] w-full bg-gradient-to-b from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-t-[60px] flex flex-col justify-between shadow-[0px_-4px_8px_0px_rgba(137,226,255,0.2)]">
       <div className="w-full flex justify-center">
-        <div className="w-[80%] mt-20">
-          <h1
-            style={{
-              fontFamily: mainFont.style.fontFamily,
-            }}
-            className="w-[309px] h-[48px] text-nowrap font-bold text-black uppercase text-5xl"
-          >
+        {/* 83% width might need media queries for very small screens */}
+        <div className="w-[83%] mt-10">
+          <h1 style={{ fontFamily: mainFont.style.fontFamily }} 
+              className="text-4xl font-bold text-black uppercase tracking-wider mb-6">
             Contact Us
           </h1>
-          <div className="flex justify-evenly gap-5 mt-12">
-            <form action="">
-              <input
-                type="text"
-                className="w-full h-[36px] leading-6 text-xl text-black bg-transparent border-b-2 border-black "
-                placeholder="Your Name"
-              />
-            </form>
-            <form action="">
-              <input
-                type="email"
-                className="w-full h-[36px] leading-6 text-xl text-black bg-transparent border-b-2 border-black "
-                placeholder="Email Id"
-              />
-            </form>
-            <form action="">
-              <input
-                type="text"
-                className="w-full h-[36px] leading-6 text-xl text-black bg-transparent border-b-2 border-black "
-                placeholder="Phone Number"
-              />
-            </form>
-            <form action="">
-              <select
-                name="Subjects"
-                id=""
-                className="w-full h-[36px] leading-6 text-xl text-black"
-                bg-transparent
-                border-b-2
-                border-black
-              >
-                <option value="">Subjects </option>
-                <option value="Shasank">Shasank</option>
-                <option value="Sayan">Sayan</option>
-                <option value="Sahil">Sahil</option>
-                <option value="Shashank">Shashank</option>
+          
+          {/* Form fields in row layout - needs media query for mobile column layout */}
+          <div className="flex justify-between gap-4 mt-6 w-full">
+            {formFields.map((field, index) => (
+              <form key={index} className="flex-1">
+                {/* Fixed height input might need adjustment for different screen sizes */}
+                <input type={field.type} className="w-full h-[36px] leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none placeholder:text-black/70 placeholder:text-sm" placeholder={field.placeholder} />
+              </form>
+            ))}
+            
+            <form className="relative flex-1">
+              {/* Fixed height select might need adjustment for different screen sizes */}
+              <select className="w-full h-[36px] leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8">
+                <option value="">Subjects</option>
+                <option value="web">Web Development</option>
+                <option value="app">App Development</option>
+                <option value="design">UI/UX Design</option>
               </select>
             </form>
           </div>
-          <div>
-            <button
-              style={{
-                fontFamily: mainFont.style.fontFamily,
-              }}
-              className="bg-black text-pink-400 w-full mt-16 h-[72px] rounded-full text-xl leading-6 font-semibold uppercase"
-            >
-              Submit
-              {/* <Image 
-              src="/assets/bxs_paper-plane.png"
-              alt="Floating Laptop Image"
-              width={240}
-              height={82}
-              className="" /> */}
-            </button>
-          </div>
-          <div className="flex justify-around gap-10 mt-20">
-            <div className=" flex flex-col gap-10 w-[45%]">
-              <Image
-                src="/assets/NavLogo.png"
-                alt="Floating Laptop Image"
-                width={240}
-                height={82}
-                className=""
-              />
-              <div className="text-xl font-medium font-secondaryFont leading-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam beatae ipsum officia cumque amet magni, veritatis,
-                voluptatem, eligendi ipsam quod quia numquam suscipit neque quas
-                ab earum nobis porro asperiores?
-              </div>
+
+          {/* Fixed height button - consider responsive height */}
+          <button style={{ fontFamily: mainFont.style.fontFamily }} 
+                  className="submit-button bg-black text-[#C44F56] hover:text-white w-full mt-12 h-14 rounded-full text-lg font-medium uppercase flex items-center justify-center transition-colors relative overflow-hidden group">
+            Submit
+          </button>
+
+          {/* Two-column layout needs media query for mobile stack layout */}
+          <div className="flex justify-between gap-10 mt-20">
+            {/* Fixed width percentage might need adjustment for mobile */}
+            <div className="w-[40%] space-y-6">
+              {/* Consider responsive image sizing */}
+              <Image src="/assets/NavLogo.png" alt="Logo" width={200} height={70} className="object-contain" />
+              <p className="text-base font-secondaryFont leading-relaxed text-white/90">
+                Your trusted partner in digital transformation. We create innovative solutions that drive business growth.
+              </p>
             </div>
 
-            <div className="w-[45%] flex justify-around font-secondaryFont">
-              <div className="flex flex-col gap-3 w-[126px] h-[224px]">
-                <h1 className="text-2xl leading-6 font-medium">Menu</h1>
-                <ul className="text-xl leading-6 flex flex-col gap-3">
-                  <li>About Us</li>
-                  <li>Our Services</li>
-                  <li> Portfolio</li>
-                  <li> Blogs</li>
-                  <li> Contact Us</li>
+            {/* Fixed width percentage might need adjustment for mobile */}
+            <div className="w-[45%] flex justify-end">
+              {/* Fixed width might cause issues on smaller screens */}
+              <div className="flex flex-col gap-3 w-[126px] mr-10">
+                <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-xl leading-6 font-semibold text-white">
+                  Menu
+                </h1>
+                <ul className="space-y-2 text-base text-white/90">
+                  {menuItems.map((item, index) => (
+                    <li key={index} className="hover:text-white/70 cursor-pointer">{item}</li>
+                  ))}
                 </ul>
               </div>
-              <div className="flex flex-col gap-3 w-[309px] h-[168px]">
-                <h2 className="text-2xl leading-6 font-medium">Contact Info</h2>
-                <div className="text-xl leading-6 flex flex-col gap-3">
-                  +91-1234567890 <br />
-                  <p>Address, Kolkata, West Bengal, 700040</p>
-                  <p>Codevisionary@gmail.com</p>
+
+              {/* Fixed width might cause issues on smaller screens */}
+              <div className="flex flex-col gap-3 w-[309px]">
+                <h2 style={{ fontFamily: mainFont.style.fontFamily }} className="text-xl leading-6 font-semibold text-white">
+                  Contact Info
+                </h2>
+                <div className="space-y-2 text-base text-white/90">
+                  <p>+91-1234567890</p>
+                  <p>Address, Kolkata,<br />West Bengal, 700040</p>
+                  <p>sales@codevisionary.com</p>
                 </div>
               </div>
             </div>
           </div>
-         
         </div>
       </div>
-      <div className="flex items-center text-center">
-            <marquee behavior="slide" direction="left"  style={{
-                    fontFamily: mainFont.style.fontFamily,
-                  }} className='uppercase h-[127px] w-full text-[128px] leading-[128px]' >Code Visionarty Studio</marquee>
+
+      {/* Marquee section - might need adjustment for very small screens */}
+      <div className="w-full overflow-hidden bg-transparent">
+        <div className="w-full h-[1px] bg-white/90" />
+        {/* Fixed height might need adjustment */}
+        <div className="h-[100px] flex items-center">
+          {/* Large text size might need scaling for mobile */}
+          <div style={{ fontFamily: mainFont.style.fontFamily }} className="animate-marquee whitespace-nowrap text-[100px] leading-[98px] uppercase text-black/20">
+            {[1, 2, 3].map((_, index) => (
+              <React.Fragment key={index}>
+                Code Visionary Studio
+                {/* Fixed image size might need responsive adjustment */}
+                <Image src="/assets/copy_icon.png" alt="Copy Icon" width={200} height={200} 
+                       className="ml-8 mr-8 object-contain" />
+              </React.Fragment>
+            ))}
           </div>
+        </div>
+        <div className="w-full h-[1px] mb-6 bg-white/90" />
+      </div>
     </div>
   );
 };
