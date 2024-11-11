@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { mainFont } from "@/components/UI/Mainfontt";
 import React from "react";
-// import AboutUsAnimation from "./AboutUsAnimation";
+import AboutUsAnimation from "./AboutUsAnimation";
 import AboutUsTestimonial from "./AboutUsTestimonial";
 import AboutUsBanner from "./AboutUsBanner";
 import AboutUsFooter from "./AboutUsFooter";
@@ -50,7 +50,7 @@ const AboutUsLanding = () => {
       </div>
     
       {/* About Us Animated Card Section */}
-      {/* <AboutUsAnimation /> */}
+      <AboutUsAnimation />
       {/* About Us Testimonial Section */}
       <AboutUsTestimonial /> 
       {/* About Us Banner Section */}
