@@ -5,8 +5,8 @@ import React from "react";
 export const Navbar = () => {
   return (
     <>
-      <div className="fixed z-50 top-0 w-full">
-        <div className="max-w-[1920px] w-full mx-auto">
+      <div className="fixed z-50 top-0 w-full bg-transparent">
+        <div className="max-w-[1920px] w-full mx-auto ">
           <div className="px-3 py-4 w-[85%] mx-auto flex justify-between items-center">
             <div>
               <Image

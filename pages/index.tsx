@@ -9,7 +9,7 @@ import { WhyUsSection } from "@/components/Homepage/WhyUs/WhyUs";
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection /> 
       <AboutSection />
       <AboutSecondSection />
       <WhatWeDo />
