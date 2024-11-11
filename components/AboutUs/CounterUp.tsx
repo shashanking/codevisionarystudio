@@ -3,7 +3,12 @@ import React, { useState } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-const CounterUp = ({ endCountNum, duration, }) => {
+interface CounterUpProps {
+  endCountNum: number;
+  duration: number;
+}
+
+const CounterUp: React.FC<CounterUpProps> = ({ endCountNum, duration }) => {
   const [counterOn, setCounterOn] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.5,

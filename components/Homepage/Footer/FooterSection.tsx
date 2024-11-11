@@ -14,12 +14,12 @@
  * - The two-column layout for logo/menu sections needs responsive handling for mobile
  */
 import React from "react";
-import { mainFont } from "@/components/UI/Mainfontt"; 
+import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 import Link from "next/link";
 
 const menuItems = [
-  { name: "About Us", link: "/aboutus" },  // Update menu items with link paths
+  { name: "About Us", link: "/about_us" },  // Update menu items with link paths
   { name: "Our Services", link: "/services" },
   { name: "Portfolio", link: "/portfolio" },
   { name: "Blogs", link: "/blogs" },
@@ -39,11 +39,11 @@ export const FooterSection = () => {
       <div className="w-full flex justify-center">
         {/* 83% width might need media queries for very small screens */}
         <div className="w-[83%] mt-10">
-          <h1 style={{ fontFamily: mainFont.style.fontFamily }} 
-              className="text-4xl font-bold text-black uppercase tracking-wider mb-6">
+          <h1 style={{ fontFamily: mainFont.style.fontFamily }}
+            className="text-4xl font-bold text-black uppercase tracking-wider mb-6">
             Contact Us
           </h1>
-          
+
           {/* Form fields in row layout - needs media query for mobile column layout */}
           <div className="flex justify-between gap-4 mt-6 w-full">
             {formFields.map((field, index) => (
@@ -52,7 +52,7 @@ export const FooterSection = () => {
                 <input type={field.type} className="w-full h-[36px] leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none placeholder:text-black/70 placeholder:text-sm" placeholder={field.placeholder} />
               </form>
             ))}
-            
+
             <form className="relative flex-1">
               {/* Fixed height select might need adjustment for different screen sizes */}
               <select className="w-full h-[36px] leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8">
@@ -65,8 +65,8 @@ export const FooterSection = () => {
           </div>
 
           {/* Fixed height button - consider responsive height */}
-          <button style={{ fontFamily: mainFont.style.fontFamily }} 
-                  className="submit-button bg-black text-[#C44F56] hover:text-white w-full mt-12 h-14 rounded-full text-lg font-medium uppercase flex items-center justify-center transition-colors relative overflow-hidden group">
+          <button style={{ fontFamily: mainFont.style.fontFamily }}
+            className="submit-button bg-black text-[#C44F56] hover:text-white w-full mt-12 h-14 rounded-full text-lg font-medium uppercase flex items-center justify-center transition-colors relative overflow-hidden group">
             Submit
           </button>
 
@@ -126,8 +126,8 @@ export const FooterSection = () => {
               <React.Fragment key={index}>
                 Code Visionary Studio
                 {/* Fixed image size might need responsive adjustment */}
-                <Image src="/assets/copy_icon.png" alt="Copy Icon" width={200} height={200} 
-                       className="ml-8 mr-8 object-contain" />
+                <Image src="/assets/copy_icon.png" alt="Copy Icon" width={200} height={200}
+                  className="ml-8 mr-8 object-contain" />
               </React.Fragment>
             ))}
           </div>
