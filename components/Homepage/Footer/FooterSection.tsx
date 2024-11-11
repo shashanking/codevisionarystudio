@@ -14,10 +14,17 @@
  * - The two-column layout for logo/menu sections needs responsive handling for mobile
  */
 import React from "react";
-import { mainFont } from "@/components/UI/Mainfontt";
+import { mainFont } from "@/components/UI/Mainfontt"; 
 import Image from "next/image";
+import Link from "next/link";
 
-const menuItems = ["About Us", "Our Services", "Portfolio", "Blogs", "Contact Us"];
+const menuItems = [
+  { name: "About Us", link: "/aboutus" },  // Update menu items with link paths
+  { name: "Our Services", link: "/services" },
+  { name: "Portfolio", link: "/portfolio" },
+  { name: "Blogs", link: "/blogs" },
+  { name: "Contact Us", link: "/contact" },
+];
 
 const formFields = [
   { type: "text", placeholder: "Your Name" },
@@ -83,7 +90,11 @@ export const FooterSection = () => {
                 </h1>
                 <ul className="space-y-2 text-base text-white/90">
                   {menuItems.map((item, index) => (
-                    <li key={index} className="hover:text-white/70 cursor-pointer">{item}</li>
+                    <li key={index} className="hover:text-white/70 cursor-pointer">
+                      <Link href={item.link}>  {/* Use Link component to create the route */}
+                        {item.name}
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </div>
