@@ -408,7 +408,7 @@ export const WhyUsSection = () => {
   const TranslateYAxisPoint3 = useTransform(
     scrollYProgress,
     [0.8, 1],
-    ["0%", "-250%"]
+    ["0%", "-240%"]
   );
   const OpacityPoint1 = useTransform(scrollYProgress, [0.1, 0.35], [1, 0]);
   const OpacityPoint2Phase1 = useTransform(

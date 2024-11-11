@@ -10,10 +10,10 @@ export const Navbar = () => {
           <div className="px-3 py-4 w-[85%] mx-auto flex justify-between items-center">
             <div>
               <Image
-                src="/assets/NavLogo.png"
+                src="/assets/NewLogo.png"
                 alt="code-visonary-studio"
-                height={150}
-                width={200}
+                height={100}
+                width={100}
               />
             </div>
             <div className="flex justify-end px-2 items-center gap-7 w-[50%]">
