@@ -45,17 +45,17 @@ export const FooterSection = () => {
           </h1>
 
           {/* Form fields in row layout - needs media query for mobile column layout */}
-          <div className="flex justify-between gap-4 mt-6 w-full">
+          <div className="flex justify-between gap-4 mt-6 w-full ">
             {formFields.map((field, index) => (
               <form key={index} className="flex-1">
                 {/* Fixed height input might need adjustment for different screen sizes */}
-                <input type={field.type} className="w-full h-[36px] leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none placeholder:text-black/70 placeholder:text-sm" placeholder={field.placeholder} />
+                <input type={field.type} className="w-full h-[36px] font-secondaryFont leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none placeholder:text-black/70 placeholder:text-sm" placeholder={field.placeholder} />
               </form>
             ))}
 
             <form className="relative flex-1">
               {/* Fixed height select might need adjustment for different screen sizes */}
-              <select className="w-full h-[36px] leading-6 text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8">
+              <select className="w-full h-[36px] leading-6 font-secondaryFont text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8">
                 <option value="">Subjects</option>
                 <option value="web">Web Development</option>
                 <option value="app">App Development</option>
@@ -75,7 +75,7 @@ export const FooterSection = () => {
             {/* Fixed width percentage might need adjustment for mobile */}
             <div className="w-[40%] space-y-6">
               {/* Consider responsive image sizing */}
-              <Image src="/assets/NavLogo.png" alt="Logo" width={200} height={70} className="object-contain" />
+              <Image src="/assets/NewLogo.png" alt="Logo" width={200} height={70} className="object-contain" />
               <p className="text-base font-secondaryFont leading-relaxed text-white/90">
                 Your trusted partner in digital transformation. We create innovative solutions that drive business growth.
               </p>
@@ -84,11 +84,11 @@ export const FooterSection = () => {
             {/* Fixed width percentage might need adjustment for mobile */}
             <div className="w-[45%] flex justify-end">
               {/* Fixed width might cause issues on smaller screens */}
-              <div className="flex flex-col gap-3 w-[126px] mr-10">
+              <div className="flex flex-col gap-3 w-[126px] mr-10 ">
                 <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-xl leading-6 font-semibold text-white">
                   Menu
                 </h1>
-                <ul className="space-y-2 text-base text-white/90">
+                <ul className="space-y-2 text-base text-white/90 font-secondaryFont">
                   {menuItems.map((item, index) => (
                     <li key={index} className="hover:text-white/70 cursor-pointer">
                       <Link href={item.link}>  {/* Use Link component to create the route */}
@@ -104,7 +104,7 @@ export const FooterSection = () => {
                 <h2 style={{ fontFamily: mainFont.style.fontFamily }} className="text-xl leading-6 font-semibold text-white">
                   Contact Info
                 </h2>
-                <div className="space-y-2 text-base text-white/90">
+                <div className="space-y-2 text-base text-white/90 font-secondaryFont">
                   <p>+91-1234567890</p>
                   <p>Address, Kolkata,<br />West Bengal, 700040</p>
                   <p>sales@codevisionary.com</p>

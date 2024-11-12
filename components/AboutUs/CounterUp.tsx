@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
@@ -10,10 +10,21 @@ interface CounterUpProps {
 
 const CounterUp: React.FC<CounterUpProps> = ({ endCountNum, duration }) => {
   const [counterOn, setCounterOn] = useState(false);
+  const [hasCounted, setHasCounted] = useState(false); // Track if count has already been triggered
   const { ref, inView } = useInView({
     threshold: 0.5,
-    onChange: (inView) => setCounterOn(inView),
+    onChange: (inView) => {
+      if (inView && !hasCounted) {
+        setCounterOn(true); // Start counting only if the counter hasn't run before
+      }
+    },
   });
+
+  useEffect(() => {
+    if (counterOn) {
+      setHasCounted(true); // Mark as counted after the first time
+    }
+  }, [counterOn]);
 
   return (
     <div ref={ref}>

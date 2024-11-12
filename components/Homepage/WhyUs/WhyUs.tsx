@@ -1,3 +1,10 @@
+ 
+// 1. aura effect must be circular 
+// 2. 2nd phase of animation not be there (left bottom corner effect)
+// 3. point 1 == blank mobile screen point 2 = components visible point 3 = components on frame 
+// 4. motion components not exactly on frame 
+
+
 import { mainFont } from "@/components/UI/Mainfontt";
 import { HomepageTagIconSvg, WhyUsSectionSvg } from "@/styles/Svgs/AllSvgs";
 import {
@@ -487,7 +494,7 @@ export const WhyUsSection = () => {
                     src="/assets/MobileImg.png"
                     height={350}
                     width={350}
-                    className="z-10"
+                    className="z-10 "
                   />
 
                   <motion.div

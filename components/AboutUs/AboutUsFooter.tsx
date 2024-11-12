@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,15 +14,15 @@ const AboutUsFooter = () => {
   return (
     <div className=" w-full h-[467px] bg-gradient-to-b from-[#590005] via-[#AB000A] to-[#650006] flex flex-col justify-center gap-12 items-center ">
       <Image
-        src="/assets/CVlogo.png"
+        src="/assets/NewLogo.png"
         alt="Floating Laptop Image"
-        width={240}
-        height={82}
+        width={200}
+        height={72}
         className=""
       />
 
       <div>
-        <ul className="flex justify-center gap-10">
+        <ul className="flex justify-center gap-10 font-secondaryFont">
           <li>Home</li>
           <li>About Us</li>
           <li>Our Services</li>

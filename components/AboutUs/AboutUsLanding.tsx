@@ -1,3 +1,5 @@
+//  1. Image height of hersection must  be smaller 
+
 import Image from "next/image";
 import { mainFont } from "@/components/UI/Mainfontt";
 import React from "react";
@@ -18,7 +20,7 @@ const AboutUsLanding = () => {
 
         {/* Content section with higher z-index */}
         <div className="w-full flex flex-col relative z-10">
-          <div className="mt-[10%] mx-auto w-[80%]">
+          <div className="mt-[10%] mx-auto w-[76%]">
             {/* Heading text */}
             <div
               style={{ fontFamily: mainFont.style.fontFamily }}
@@ -36,15 +38,15 @@ const AboutUsLanding = () => {
           </div>
 
           {/* Image container */}
-          <div className="mt-4 mx-auto w-[80%]">
+          <div className="mt-4 mx-auto w-[80%]  ">
             <Image
               src="/assets/abouthero.jpeg"
               alt="hero section image"
               width={1600}
-              height={739}
-              layout="responsive"
-              priority
-              className="rounded-3xl shadow-[0px_0px_4px_0px_#89E2FF33] mx-auto"
+              height={239}
+              // layout="responsive"
+              // priority
+              className="rounded-3xl shadow-[0px_0px_4px_0px_#89E2FF33] object-cover object-bottom mx-auto"
             />
           </div>
         </div>
