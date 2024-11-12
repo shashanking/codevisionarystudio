@@ -236,3 +236,19 @@ body {
 .swiper-slide-active {
   opacity: 1 !important;
 }
+// Services Solution Section Styles
+.services-container {
+  > div:nth-child(odd) {
+    .group-hover\:opacity-100 img {
+      transform: translateY(-50%) rotate(-45deg) !important;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  
+  > div:nth-child(even) {
+    .group-hover\:opacity-100 img {
+      transform: translateY(-50%) rotate(45deg) !important;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
