@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "formik": "^2.4.6",
     "framer-motion": "^11.11.9",
     "lenis": "^1.1.14",
     "next": "14.2.15",
@@ -19,7 +21,9 @@
     "react-dom": "^18",
     "react-intersection-observer": "^9.13.1",
     "react-scroll-trigger": "^0.6.14",
-    "sharp": "^0.33.5"
+    "react-toastify": "^10.0.6",
+    "sharp": "^0.33.5",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",

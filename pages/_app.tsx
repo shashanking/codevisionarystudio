@@ -4,6 +4,8 @@ import { Navbar } from "@/components/common/Navbar/Navbar";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import "@/styles/globals.scss";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -24,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Navbar />
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   );
 }
