@@ -1,5 +1,6 @@
 import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const Navbar = () => {
@@ -9,14 +10,14 @@ export const Navbar = () => {
         <div className="max-w-[1920px] w-full mx-auto ">
           <div className="px-3 py-4 w-[85%] mx-auto flex justify-between items-center">
             <div>
-              <a href="/">
+              <Link href="/">
                 <Image
                   src="/assets/NewLogo.png"
                   alt="code-visonary-studio"
                   height={100}
                   width={100}
                 />
-              </a>
+              </Link>
             </div>            <div className="flex justify-end px-2 items-center gap-7 w-[50%]">
               <button className="bg-white/20 rounded-full border-none outline-none h-12 w-12 flex flex-col justify-center items-center gap-2">
                 <div className="w-5 h-1 bg-white rounded-md mr-[15%]" />

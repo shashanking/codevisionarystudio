@@ -10,6 +10,7 @@ import {
   faLinkedin,
   faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 const AboutUsFooter = () => {
   return (
     <div className=" w-full h-[467px] bg-gradient-to-b from-[#590005] via-[#AB000A] to-[#650006] flex flex-col justify-center gap-12 items-center ">
@@ -23,17 +24,23 @@ const AboutUsFooter = () => {
 
       <div>
         <ul className="flex justify-center gap-10 font-secondaryFont">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about_us">About Us</a></li>
-          <li><a href="/services">Our Services</a></li>
-          {/* <li><a href="/portfolio">Portfolio</a></li> */}
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/about_us">About Us</Link></li>
+          <li><Link href="/our_services">Our Services</Link></li>
+          {/* <li><Link href="/portfolio">Portfolio</Link></li> */}
           <li><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
         </ul>
       </div>
       <div className="flex justify-center w-[267px] h-[48px]  gap-10   ">
-        <a href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
-        <a href="https://www.instagram.com/codevisionarystudio/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
-        <a href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>      </div>
+        <Link href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer" legacyBehavior>
+          <a><FontAwesomeIcon icon={faFacebook} /></a>
+        </Link>
+        <Link href="https://www.instagram.com/codevisionarystudio/" target="_blank" rel="noopener noreferrer" legacyBehavior>
+          <a><FontAwesomeIcon icon={faInstagram} /></a>
+        </Link>
+        <Link href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer" legacyBehavior>
+          <a><FontAwesomeIcon icon={faLinkedin} /></a>
+        </Link> </div>
       <div className="w-full h-[1px] bg-white mx-auto "></div>
       <div
         style={{ fontFamily: mainFont.style.fontFamily }}
