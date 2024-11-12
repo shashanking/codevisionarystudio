@@ -20,7 +20,7 @@ import Link from "next/link";
 
 const menuItems = [
   { name: "About Us", link: "/about_us" },  // Update menu items with link paths
-  { name: "Our Services", link: "/services" },
+  { name: "Our Services", link: "/our_services" },
   { name: "Portfolio", link: "/portfolio" },
   { name: "Blogs", link: "/blogs" },
   { name: "Contact Us", link: "/contact" },

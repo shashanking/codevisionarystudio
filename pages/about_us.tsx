@@ -7,7 +7,7 @@ import AboutUsFooter from "@/components/AboutUs/AboutUsFooter";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div> 
       <AboutUsLanding />
       {/* About Us Animated Card Section */}
       <AboutUsAnimation />
