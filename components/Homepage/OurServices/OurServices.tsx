@@ -37,7 +37,7 @@ export const OurServices: React.FC = () => {
 
             <p className="text-center font-secondaryFont text-[1.1vw] font-[400]">
               Discover the comprehensive range of IT services we offer at Code
-              Visionary Studios. From web design and app development to branding
+              Visionary Studios. From web design and application development to branding
               and digital marketing, our expert team delivers innovative
               solutions that drive your business forward.
             </p>

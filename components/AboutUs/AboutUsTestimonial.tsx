@@ -26,8 +26,8 @@ const AboutUsTestimonial = () => {
                 <span className="group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
                   Excellence
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quaerat obcaecati incidunt eveniet nisi illo pariatur?
+                  We strive for the highest quality in every project, ensuring precision and client satisfaction through exceptional service and attention to detail.
+
                   </div>
                 </span>
               </div>
@@ -42,8 +42,8 @@ const AboutUsTestimonial = () => {
                 <span className="group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
                   Innovation
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quaerat obcaecati incidunt eveniet nisi illo pariatur?
+                  By embracing the latest technology and creative solutions, we craft unique, impactful digital experiences that set our clients apart.
+
                   </div>
                 </span>
               </div>
@@ -58,8 +58,8 @@ const AboutUsTestimonial = () => {
                 <span className="group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
                   Integrity
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quaerat obcaecati incidunt eveniet nisi illo pariatur?
+                  We prioritize honesty, transparency, and ethical practices, building trusted partnerships and delivering on promises with accountability.
+
                   </div>
                 </span>
               </div>

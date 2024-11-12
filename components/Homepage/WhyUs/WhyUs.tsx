@@ -1,10 +1,3 @@
- 
-// 1. aura effect must be circular 
-// 2. 2nd phase of animation not be there (left bottom corner effect)
-// 3. point 1 == blank mobile screen point 2 = components visible point 3 = components on frame 
-// 4. motion components not exactly on frame 
-
-
 import { mainFont } from "@/components/UI/Mainfontt";
 import { HomepageTagIconSvg, WhyUsSectionSvg } from "@/styles/Svgs/AllSvgs";
 import {
@@ -27,7 +20,33 @@ export const WhyUsSection = () => {
     target: mainContainerWrapperRef,
   });
 
+
   //  all main animations
+
+  // PHASE 1: Entry Animation (scroll: 0.1 -> 0.35)
+  // Elements slide in from outside viewport with fade in
+
+  // PHASE 2: Center Stage (scroll: 0.35 -> 0.8) 
+  // Elements align to center position and maintain full opacity
+
+  // PHASE 3: Exit Animation (scroll: 0.8 -> 1.0)
+  // Elements slide out of view with fade out
+
+  // Animation Definitions for Each Mobile Banner Image
+  // Each image has 3 movement phases:
+  // 1. Entry phase (0.1-0.35): Initial position to pre-center
+  // 2. Center phase (0.35-0.8): Movement to center
+  // 3. Exit phase (0.8-1.0): Center to final position
+
+  // Animation Smoothing
+  // Apply spring physics to make transitions fluid
+  // stiffness: 20 - Controls bounce
+  // damping: 20 - Controls oscillation
+
+  // Points Animation
+  // Controls the vertical sliding and opacity of the three feature points
+  // Synchronized with scroll progress to create a staggered reveal effect
+
   // image 1...
   const Image1ScrollXPhase1 = useTransform(
     scrollYProgress,
@@ -39,40 +58,29 @@ export const WhyUsSection = () => {
     [0.35, 0.8],
     ["150%", "0%"]
   );
-  const Image1ScrollXPhase3 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "-150%"]
-  );
+
 
   const Image1ScrollYPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     ["-150%", "0%"]
   );
-  const Image1ScrollYPhase2 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "150%"]
-  );
+
   const Image1OpacityPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     [0, 1]
   );
-  const Image1OpacityPhase2 = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   const Image1ScrollXCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image1ScrollXPhase1.get();
     }
 
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return Image1ScrollXPhase2.get();
     }
-    if (value > 0.8 && value <= 1) {
-      return Image1ScrollXPhase3.get();
-    }
+
     return "350%";
     //return "350%"; // Default or reset value if none match
   });
@@ -81,24 +89,20 @@ export const WhyUsSection = () => {
     if (value >= 0.1 && value <= 0.35) {
       return Image1ScrollYPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return "0%";
     }
-    if (value > 0.8 && value <= 1) {
-      return Image1ScrollYPhase2.get();
-    }
+
     return "-150%";
   });
   const Image1OpacityCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image1OpacityPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return 1;
     }
-    if (value > 0.8 && value <= 1) {
-      return Image1OpacityPhase2.get();
-    }
+
     return 0;
   });
 
@@ -113,40 +117,28 @@ export const WhyUsSection = () => {
     [0.35, 0.8],
     ["-150%", "0%"]
   );
-  const Image2ScrollXPhase3 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "-150%"]
-  );
+
 
   const Image2ScrollYPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     ["-150%", "0%"]
   );
-  const Image2ScrollYPhase2 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "150%"]
-  );
+
 
   const Image2OpacityPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     [0, 1]
   );
-  const Image2OpacityPhase2 = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   const Image2ScrollXCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image2ScrollXPhase1.get();
     }
 
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return Image2ScrollXPhase2.get();
-    }
-    if (value > 0.8 && value <= 1) {
-      return Image2ScrollXPhase3.get();
     }
     return "-350%";
   });
@@ -154,24 +146,20 @@ export const WhyUsSection = () => {
     if (value >= 0.1 && value <= 0.35) {
       return Image2ScrollYPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return "0%";
     }
-    if (value > 0.8 && value <= 1) {
-      return Image2ScrollYPhase2.get();
-    }
+
     return "-150%";
   });
   const Image2OpacityCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image2OpacityPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return 1;
     }
-    if (value > 0.8 && value <= 1) {
-      return Image2OpacityPhase2.get();
-    }
+
     return 0;
   });
 
@@ -186,39 +174,27 @@ export const WhyUsSection = () => {
     [0.35, 0.8],
     ["150%", "0%"]
   );
-  const Image3ScrollXPhase3 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "-150%"]
-  );
+
 
   const Image3ScrollYPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     ["-150%", "0%"]
   );
-  const Image3ScrollYPhase2 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "150%"]
-  );
+
   const Image3OpacityPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     [0, 1]
   );
-  const Image3OpacityPhase2 = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   const Image3ScrollXCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image3ScrollXPhase1.get();
     }
 
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return Image3ScrollXPhase2.get();
-    }
-    if (value > 0.8 && value <= 1) {
-      return Image3ScrollXPhase3.get();
     }
     return "250%";
   });
@@ -226,24 +202,20 @@ export const WhyUsSection = () => {
     if (value >= 0.1 && value <= 0.35) {
       return Image3ScrollYPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return "0%";
     }
-    if (value > 0.8 && value <= 1) {
-      return Image3ScrollYPhase2.get();
-    }
+
     return "-150%";
   });
   const Image3OpacityCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image3OpacityPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return 1;
     }
-    if (value > 0.8 && value <= 1) {
-      return Image3OpacityPhase2.get();
-    }
+
     return 0;
   });
 
@@ -259,40 +231,28 @@ export const WhyUsSection = () => {
     [0.35, 0.8],
     ["-150%", "0%"]
   );
-  const Image4ScrollXPhase3 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "-150%"]
-  );
+
 
   const Image4ScrollYPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     ["-150%", "0%"]
   );
-  const Image4ScrollYPhase2 = useTransform(
-    scrollYProgress,
-    [0.8, 1],
-    ["0%", "150%"]
-  );
+
 
   const Image4OpacityPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     [0, 1]
   );
-  const Image4OpacityPhase2 = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   const Image4ScrollXCombine = useTransform(scrollYProgress, (value) => {
     if (value >= 0.1 && value <= 0.35) {
       return Image4ScrollXPhase1.get();
     }
 
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return Image4ScrollXPhase2.get();
-    }
-    if (value > 0.8 && value <= 1) {
-      return Image4ScrollXPhase3.get();
     }
     return "-250%";
   });
@@ -300,11 +260,8 @@ export const WhyUsSection = () => {
     if (value >= 0.1 && value <= 0.35) {
       return Image4ScrollYPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return "0%";
-    }
-    if (value > 0.8 && value <= 1) {
-      return Image4ScrollYPhase2.get();
     }
     return "-250%";
   });
@@ -312,11 +269,8 @@ export const WhyUsSection = () => {
     if (value >= 0.1 && value <= 0.35) {
       return Image4OpacityPhase1.get();
     }
-    if (value > 0.35 && value <= 0.8) {
+    if (value > 0.35) {
       return 1;
-    }
-    if (value > 0.8 && value <= 1) {
-      return Image4OpacityPhase2.get();
     }
     return 0;
   });
@@ -412,11 +366,14 @@ export const WhyUsSection = () => {
     }
     return "0%";
   });
+  // Change Point 3 timing to start earlier
   const TranslateYAxisPoint3 = useTransform(
     scrollYProgress,
-    [0.8, 1],
+    [0.35, 0.8], // Changed from [0.8, 1] to align with Point 2's timing
     ["0%", "-240%"]
   );
+
+
   const OpacityPoint1 = useTransform(scrollYProgress, [0.1, 0.35], [1, 0]);
   const OpacityPoint2Phase1 = useTransform(
     scrollYProgress,
@@ -441,8 +398,11 @@ export const WhyUsSection = () => {
     return 0;
   });
 
-  const OpacityPoint3 = useTransform(scrollYProgress, [0.8, 1], [0, 1]);
-
+  const OpacityPoint3 = useTransform(
+    scrollYProgress,
+    [0.35, 0.8], // Changed from [0.8, 1] to match new timing
+    [0, 1]
+  );
   // male pointd animation smooth ...
   const TranslateYAxisPoint1Smooth = useSpring(TranslateYAxisPoint1, {
     stiffness: 20,
@@ -494,7 +454,7 @@ export const WhyUsSection = () => {
                     src="/assets/MobileImg.png"
                     height={350}
                     width={350}
-                    className="z-10 "
+                    className="z-10"
                   />
 
                   <motion.div
@@ -595,7 +555,7 @@ export const WhyUsSection = () => {
                   <p className="text-white font-secondaryFont font-[400] my-[2%] text-[1vw]">
                     Code Visionary Studio stands out for our innovative
                     solutions, personalized service, and proven track record.
-                    Our holistic approach to web design, app development,
+                    Our holistic approach to web design, application development,
                     branding, and marketing ensures your business thrives in the
                     digital age.
                   </p>
@@ -620,12 +580,10 @@ export const WhyUsSection = () => {
                     </div>
                     <div>
                       <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-[1.2vw]">
-                        Proven Track Record
+                        Innovative Solutions
                       </h4>
                       <p className="text-[#333333] text-[.85vw] font-secondaryFont font-[600]">
-                        Our portfolio of successful projects and satisfied
-                        clients speaks to our commitment to excellence and our
-                        ability to deliver results.
+                        Our team creates cutting-edge, custom mobile and web applications that transform ideas into impactful digital experiences.
                       </p>
                     </div>
                   </motion.div>
@@ -649,12 +607,10 @@ export const WhyUsSection = () => {
                     </div>
                     <div>
                       <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-[1.2vw]">
-                        Proven Track Record
+                        Growth-Driven Marketing
                       </h4>
                       <p className="text-[#333333] text-[.85vw] font-secondaryFont font-[600]">
-                        Our portfolio of successful projects and satisfied
-                        clients speaks to our commitment to excellence and our
-                        ability to deliver results.
+                      We boost brands through strategic marketing, fostering sustainable growth and strengthening brand identity in a competitive market.
                       </p>
                     </div>
                   </motion.div>
@@ -678,12 +634,11 @@ export const WhyUsSection = () => {
                     </div>
                     <div>
                       <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-[1.2vw]">
-                        Proven Track Record
+                        Trusted Expertise
                       </h4>
                       <p className="text-[#333333] text-[.85vw] font-secondaryFont font-[600]">
-                        Our portfolio of successful projects and satisfied
-                        clients speaks to our commitment to excellence and our
-                        ability to deliver results.
+                        With a commitment to excellence, we deliver reliable and high-quality services, ensuring client satisfaction and long-term partnerships.
+
                       </p>
                     </div>
                   </motion.div>

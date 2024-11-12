@@ -152,7 +152,7 @@ export const AboutSection = () => {
                   At Code Visionary Studio, we combine creativity, technology,
                   and strategic thinking to craft unique digital experiences.
                   Our talented team is committed to delivering high-quality web
-                  design, app development, branding, and marketing services
+                  design, application development, branding, and marketing services
                   tailored to meet your specific needs.
                 </motion.p>
               </div>

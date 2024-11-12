@@ -23,20 +23,17 @@ const AboutUsFooter = () => {
 
       <div>
         <ul className="flex justify-center gap-10 font-secondaryFont">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Our Services</li>
-          <li>Portfolio</li>
-          <li>Blog</li>
-          <li>Contact Us</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about_us">About Us</a></li>
+          <li><a href="/services">Our Services</a></li>
+          {/* <li><a href="/portfolio">Portfolio</a></li> */}
+          <li><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
         </ul>
       </div>
       <div className="flex justify-center w-[267px] h-[48px]  gap-10   ">
-        <FontAwesomeIcon icon={faFacebook} />
-        <FontAwesomeIcon icon={faInstagram} />
-        <FontAwesomeIcon icon={faLinkedin} />
-        <FontAwesomeIcon icon={faSquareXTwitter} />
-      </div>
+        <a href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
+        <a href="https://www.instagram.com/codevisionarystudio/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
+        <a href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>      </div>
       <div className="w-full h-[1px] bg-white mx-auto "></div>
       <div
         style={{ fontFamily: mainFont.style.fontFamily }}

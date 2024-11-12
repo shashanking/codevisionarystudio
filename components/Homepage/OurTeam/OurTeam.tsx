@@ -12,6 +12,18 @@ const teamList = [
     position: "Lead Technical Consultant",
   },
   {
+    image: "/assets/TeamImg1.png",
+    name: "Rini Chakraborty",
+    position: "Marketing Director",
+  },
+  
+
+  {
+    image: "/assets/TeamImg4.png",
+    // name: "Sayan Choudhury",
+    position: "Strategic Consultant",
+  },
+  {
     image: "/assets/TeamImg2.png",
     name: "Sahil Biswas",
     position: "Lead Frontend Developer",
@@ -22,15 +34,11 @@ const teamList = [
     position: "Lead UX/UI Designer",
   },
   {
-    image: "/assets/TeamImg4.png",
-    // name: "Sayan Choudhury",
-    position: "Strategic Consultant",
-  },
-  {
     image: "/assets/TeamImg1.png",
-    name: "Vikash Jha",
+    name: "Pradip Choudhury",
     position: "Marketing Director",
   },
+  
 ];
 
 export const OurTeam = () => {

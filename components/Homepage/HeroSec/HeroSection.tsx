@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
             Digital Reality
           </h2>
           <p className="2xl:text-[1.5vw] xl:text-[1.6vw] lg:text-[1.9vw] md:text-[2.2vw] text-[2.5vw] font-secondaryFont font-medium my-7 text-white">
-            Web Design, App Development, Branding & Marketing Services.
+            Web Design, Application Development, Branding & Marketing Services.
           </p>
 
           <button

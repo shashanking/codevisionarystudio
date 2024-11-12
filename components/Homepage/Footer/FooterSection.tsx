@@ -19,11 +19,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const menuItems = [
+  { name: "Home", link: "/" },
   { name: "About Us", link: "/about_us" },  // Update menu items with link paths
   { name: "Our Services", link: "/our_services" },
-  { name: "Portfolio", link: "/portfolio" },
-  { name: "Blogs", link: "/blogs" },
-  { name: "Contact Us", link: "/contact" },
+  // { name: "Portfolio", link: "/portfolio" },
+  { name: "Join Us", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
 ];
 
 const formFields = [
@@ -35,7 +35,7 @@ const formFields = [
 export const FooterSection = () => {
   return (
     // Consider using min-height instead of fixed height for better responsiveness
-    <div className="h-[685px] w-full bg-gradient-to-b from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-t-[60px] flex flex-col justify-between shadow-[0px_-4px_8px_0px_rgba(137,226,255,0.2)]">
+    <div id="contact-section" className="h-[685px] w-full bg-gradient-to-b from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-t-[60px] flex flex-col justify-between shadow-[0px_-4px_8px_0px_rgba(137,226,255,0.2)]">
       <div className="w-full flex justify-center">
         {/* 83% width might need media queries for very small screens */}
         <div className="w-[83%] mt-10">
@@ -58,7 +58,7 @@ export const FooterSection = () => {
               <select className="w-full h-[36px] leading-6 font-secondaryFont text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8">
                 <option value="">Subjects</option>
                 <option value="web">Web Development</option>
-                <option value="app">App Development</option>
+                <option value="app">Application Development</option>
                 <option value="design">UI/UX Design</option>
               </select>
             </form>
@@ -107,7 +107,7 @@ export const FooterSection = () => {
                 <div className="space-y-2 text-base text-white/90 font-secondaryFont">
                   <p>+91-1234567890</p>
                   <p>Address, Kolkata,<br />West Bengal, 700040</p>
-                  <p>sales@codevisionary.com</p>
+                  <p>codevisionarystudio@gmail.com</p>
                 </div>
               </div>
             </div>

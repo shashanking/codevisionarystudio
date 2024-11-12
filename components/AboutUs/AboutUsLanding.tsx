@@ -30,7 +30,7 @@ const AboutUsLanding = () => {
             </div>
             <p className="py-4 text-xl">
               At Code Visionary Studios, we believe in the power of innovation
-              and creativity. Our team excels in web design, app development,
+              and creativity. Our team excels in web design, application development,
               branding, and digital marketing, delivering solutions that drive
               success. Learn more about our philosophy, our journey, and the
               people who make it all possible.

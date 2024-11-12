@@ -32,7 +32,7 @@ const AboutUsAnimation = () => {
         </div>
         <p className="w-full text-lg font-secondaryFont leading-relaxed">
           Code Visionary Studios is dedicated to creating impactful digital
-          experiences. With a focus on web design, app development, branding,
+          experiences. With a focus on web design, application development, branding,
           and digital marketing, we provide comprehensive solutions tailored to
           your needs. Explore our values, our approach, and the team that makes
           it all happen.
