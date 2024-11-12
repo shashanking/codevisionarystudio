@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/Homepage/HeroSec/HeroSection";
 import { OurServices } from "@/components/Homepage/OurServices/OurServices";
 import { OurTeam } from "@/components/Homepage/OurTeam/OurTeam";
 import { Testimonials } from "@/components/Homepage/Testimonials/Testimonials";
+
 import { WhatWeDo } from "@/components/Homepage/WhatWeDo/WhatWeDo";
 import { WhyUsSection } from "@/components/Homepage/WhyUs/WhyUs";
 

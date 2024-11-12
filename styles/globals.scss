@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -44,9 +42,6 @@ html.lenis body {
 
 /* lenis css end  "important for smooth scroll" */
 
-
-
-
 .mainFont {
   font-family: "Earthobiter", sans-serif;
 }
@@ -76,9 +71,11 @@ body {
 // home page styles start
 .homePage__heroSectionOverlay {
   background: rgb(2, 0, 36);
-  background: linear-gradient(180deg,
-      rgba(2, 0, 36, 0) 0%,
-      rgba(0, 13, 15, 1) 70%);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(0, 13, 15, 1) 70%
+  );
 }
 
 // "Digital Reality" color animation
@@ -98,17 +95,19 @@ body {
 
 .gradient_text {
   display: inline-block;
-  background-image: repeating-linear-gradient(90deg,
-      #f23232,
-      #fea656,
-      #07ac7a,
-      #0cd69a,
-      #472ed4,
-      #5220c7,
-      #f2c532,
-      #56fe64,
-      #f23232,
-      #fea656);
+  background-image: repeating-linear-gradient(
+    90deg,
+    #f23232,
+    #fea656,
+    #07ac7a,
+    #0cd69a,
+    #472ed4,
+    #5220c7,
+    #f2c532,
+    #56fe64,
+    #f23232,
+    #fea656
+  );
   text-align: center;
   background-size: 1600%;
   -webkit-background-clip: text;
@@ -145,7 +144,7 @@ body {
   &__container {
     height: 685px;
     width: 100%;
-    background: linear-gradient(to bottom, #E44F58, #BF242d, #5F0006);
+    background: linear-gradient(to bottom, #e44f58, #bf242d, #5f0006);
     border-radius: 60px 60px 0 0;
     display: flex;
     flex-direction: column;
@@ -161,12 +160,12 @@ body {
     color: black;
     background: transparent;
     border-bottom: 1px solid black;
-    
+
     &::placeholder {
       color: rgba(0, 0, 0, 0.7);
       font-size: 0.875rem;
     }
-    
+
     &:focus {
       outline: none;
     }
@@ -174,7 +173,7 @@ body {
 
   &__submit-button {
     background: black;
-    color: #C44F56;
+    color: #c44f56;
     width: 100%;
     margin-top: 3rem;
     height: 3.5rem;
@@ -209,7 +208,7 @@ body {
 
   &__menu-item {
     cursor: pointer;
-    
+
     &:hover {
       color: rgba(255, 255, 255, 0.7);
     }
@@ -229,4 +228,11 @@ body {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.2);
   }
+}
+
+.swiper-slide {
+  opacity: 0.1 !important;
+}
+.swiper-slide-active {
+  opacity: 1 !important;
 }
