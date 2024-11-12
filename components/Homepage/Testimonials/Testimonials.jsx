@@ -44,7 +44,7 @@ export const Testimonials = () => {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-white text-[1.4vw] font-[600] font-secondaryFont">
-                              John Doe
+                              John Doe {id + 1}
                             </h4>
                             <p className="text-white font-secondaryFont text-[.9vw] font-[500] customLine__height">
                               Team Lead
