@@ -14,7 +14,7 @@
 .env
 
 # hostinger
-/vendor/
+
 
 # production
 /build
