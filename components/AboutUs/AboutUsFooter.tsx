@@ -32,6 +32,7 @@ const AboutUsFooter = () => {
         </ul>
       </div>
       <div className="flex justify-center w-[267px] h-[48px]  gap-10   ">
+        {/* Icon size very small  */}
         <Link href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer" legacyBehavior>
           <a><FontAwesomeIcon icon={faFacebook} /></a>
         </Link>

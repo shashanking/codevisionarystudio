@@ -7,6 +7,7 @@ const AboutUsBanner = () => {
     <div>
       <div className="w-full  flex items-center justify-center h-full mt-48 ">
         <div className="relative h-[725px] w-[725px] bg-[#0726306b] blur-xl rounded-full mx-auto"></div>
+        {/* bannerBg Image is small for larger screen  */}
           <div className="absolute  rounded-2xl w-[84%] max-w-full h-[500px] object-cover bg-[url(/assets/bannerBg.png)]   flex flex-row justify-evenly">
             <div className="w-[50%] flex flex-col justify-center gap-8 p-4 pl-20">
               <h1 className="text-5xl text-nowrap  font-bold ">

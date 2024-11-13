@@ -17,20 +17,22 @@ const OurServicesLanding = () => {
             </p>
           </div>
           <div className="flex justify-center gap-10 absolute z-10">
-            <div className=" w-[456px] h-[436px] rounded-[5em] bg-gradient-to-b from-[#C44F56] to-[#5E2629] py-12 px-16">
+            <div className=" w-[456px] h-[436px] rounded-[5em] bg-gradient-to-b from-[#C44F56] to-[#5E2629] py-8 px-16">
               <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl leading-[47px]">Our services</h1>
               <ul className="text-xl leading-[29px] list-disc flex flex-col justify-evenly w-[406px] h-[323px] font-secondaryFont">
                 <li>Website Design & Development</li>
                 <li>Mobile Application <br /> Design & Development</li>
                 <li>Branding </li>
-                <li>Digital marketing</li>
-                <li>ui ux</li>
-                <li>Web apps</li>
+                <li>Digital Marketing / Performance Marketing </li>
+                <li>UI UX</li>
+                <li>Web Application</li>
+                <li>Search Engine Optimisation (SEO)</li>
+                <li>Social Media Marketing </li>
               </ul>
             </div>
             <div className="  ">
 
-              <Image src="/assets/serviceshero.png" alt="hero section image" className="rounded-l-[10em]  h-[436px] " />
+              <Image src="/assets/serviceshero.png" alt="hero section image" width={1000} height={436} className="rounded-l-[10em]  h-[436px] " />
             </div>
           </div>
         </div>

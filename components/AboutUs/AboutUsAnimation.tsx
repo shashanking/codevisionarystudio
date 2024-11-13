@@ -5,6 +5,7 @@ const AboutUsAnimation = () => {
   return (
     <div className="h-[110vh] mt-32 md:mt-80 flex flex-col lg:flex-row justify-around gap-y-10 gap-x-4 w-[84%] mx-auto">
       {/* Card Section Start */}
+      {/* Height isuue on cards for the larger screen  */}
       <div className="w-[90vw] sm:w-[70vw] lg:w-[50vw] flex justify-center items-center gap-x-5 lg:gap-x-8 relative">
         {/* Yellow Card - Base position */}
         <div className="w-[336px] h-[350px] sm:w-[371px] lg:w-[336px]  sm:h-[370px] lg:h-[471px] relative lg:-right-10 rounded-2xl shadow-lg transform transition-transform">
@@ -25,6 +26,7 @@ const AboutUsAnimation = () => {
 
       {/* Text Section Start */}
       <div className="w-[90vw] sm:w-[70vw] lg:w-[40vw] flex flex-col justify-center gap-y-10">
+        {/* Size issue of the texts in small screen  */}
         <div
           style={{ fontFamily: mainFont.style.fontFamily }}
           className="w-full text-5xl uppercase leading-tight font-bold"
