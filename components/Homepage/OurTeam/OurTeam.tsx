@@ -7,34 +7,34 @@ import { useInView } from "@/hooks/useInView";
 
 const teamList = [
   {
-    image: "/assets/TeamImg1.png",
+    image: "/assets/vik_pic.jpg",
     name: "Vikash Jha",
     position: "Lead Technical Consultant",
   },
   {
-    image: "/assets/TeamImg1.png",
+    image: "/assets/rini_pic.jpg",
     name: "Rini Chakraborty",
     position: "Marketing Director",
   },
 
 
   {
-    image: "/assets/TeamImg4.png",
-    // name: "Sayan Choudhury",
+    image: "/assets/sayan_pic.jpg",
+    name: "Sayan Choudhury",
     position: "Strategic Consultant",
   },
   {
-    image: "/assets/TeamImg2.png",
+    image: "/assets/sahil_pic.jpg",
     name: "Sahil Biswas",
     position: "Lead Frontend Developer",
   },
   {
-    image: "/assets/TeamImg3.png",
-    // name: "Shashank Singh",
+    image: "/assets/shashank_pic.jpg",
+    name: "Shashank Singh",
     position: "Lead UX/UI Designer",
   },
   {
-    image: "/assets/TeamImg1.png",
+    image: "/assets/pradip_pic.jpg",
     name: "Pradip Choudhury",
     position: "Marketing Director",
   },
@@ -80,6 +80,17 @@ export const OurTeam = () => {
                   Our Team
                 </h4>
               </div>
+              <div>
+                <h1
+                  className="text-[2.8vw] text-center font-semibold text-white mb-4"
+                  style={{
+                    fontFamily: mainFont.style.fontFamily,
+                  }}
+                >
+                  Meet our Exceptional Team
+                </h1>
+
+              </div>
               <div className="mx-auto w-[80%] my-[1.5%]">
                 <p className="text-white font-secondaryFont font-[400] text-[1vw] text-center">
                   Meet the passionate professionals who drive the success of
@@ -105,23 +116,25 @@ export const OurTeam = () => {
                   >
                     <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
                       <Image
-                        height={500}
-                        width={400}
+                        height={260}
+                        width={302}
                         src={cur.image}
                         alt={cur.name || "Team member"}
-                        className="z-0"
+                        className="z-0 object-center"
                       />
                       <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
                     </div>
-                    {cur.name && (
-                      <h4 className="font-secondaryFont font-[500] text-[1.3vw] text-[#FFF] mt-1">
+                    <div className="text-center mt-4">
+                      <h4 className="font-secondaryFont font-[600] text-[1.3vw] text-white">
                         {cur.name}
                       </h4>
-                    )}
+                      <p className="font-secondaryFont font-[400] text-[1vw] text-white/80 mt-1">
+                        {cur.position}
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
-              </motion.div>
-            </div>
+              </motion.div>            </div>
           </div>
         </div>
       </div>

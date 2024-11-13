@@ -44,7 +44,7 @@ const OurServicesConnect = () => {
                                 padding: '0px 15px',
                             }}
                             className="flex items-center uppercase bg-white text-[#a92500]  justify-center rounded-full  w-[236px] h-[50px] "
-                            onClick={() => window.location.href = '/contact_us'}
+
                         >
                             Let&apos;s have a chat
                         </button></Link>
