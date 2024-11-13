@@ -9,6 +9,7 @@ import {
   faInstagram,
   faLinkedin,
   faSquareXTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 const AboutUsFooter = () => {
@@ -19,11 +20,12 @@ const AboutUsFooter = () => {
         alt="Floating Laptop Image"
         width={200}
         height={72}
-        className=""
+        className="cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       />
 
       <div>
-        <ul className="flex justify-center gap-10 font-secondaryFont">
+        <ul className="flex justify-center gap-10 font-secondaryFont  text-white ">
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about_us">About Us</Link></li>
           <li><Link href="/our_services">Our Services</Link></li>
@@ -31,7 +33,7 @@ const AboutUsFooter = () => {
           <li><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
         </ul>
       </div>
-      <div className="flex justify-center w-[267px] h-[48px]  gap-10   ">
+      <div className="flex justify-center w-[267px] h-[48px]  gap-10  text-white   ">
         {/* Icon size very small  */}
         <Link href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer" legacyBehavior>
           <a><FontAwesomeIcon icon={faFacebook} /></a>
@@ -41,10 +43,14 @@ const AboutUsFooter = () => {
         </Link>
         <Link href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer" legacyBehavior>
           <a><FontAwesomeIcon icon={faLinkedin} /></a>
-        </Link> </div>
+        </Link>
+        <Link href="https://youtube.com/@codevisionarystudio?si=SovfCVSejRX4Gpun" target="_blank" rel="noopener noreferrer" legacyBehavior>
+          <a><FontAwesomeIcon icon={faYoutube} /></a>
+        </Link>
+      </div>
       <div className="w-full h-[1px] bg-white mx-auto "></div>
       <div
-        style={{ fontFamily: mainFont.style.fontFamily }}
+        style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
         className="text-center  "
       >
         2024 | All rights reserved by <span> Code visonary studio</span>
@@ -52,5 +58,4 @@ const AboutUsFooter = () => {
     </div>
   );
 };
-
 export default AboutUsFooter;

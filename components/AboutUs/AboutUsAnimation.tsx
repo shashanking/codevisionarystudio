@@ -28,12 +28,12 @@ const AboutUsAnimation = () => {
       <div className="w-[90vw] sm:w-[70vw] lg:w-[40vw] flex flex-col justify-center gap-y-10">
         {/* Size issue of the texts in small screen  */}
         <div
-          style={{ fontFamily: mainFont.style.fontFamily }}
+          style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
           className="w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase leading-tight font-bold"
         >
           We create impactful digital experiences that drive success
         </div>
-        <p className="w-full text-lg font-secondaryFont leading-relaxed">
+        <p className="w-full text-lg font-secondaryFont leading-relaxed  text-white ">
           Code Visionary Studios is dedicated to creating impactful digital
           experiences. With a focus on web design, application development, branding,
           and digital marketing, we provide comprehensive solutions tailored to

@@ -16,7 +16,7 @@ const AboutUsTestimonial = () => {
           <div className="flex flex-col gap-6 justify-center items-center px-0">
             {/* Main heading with custom font */}
             <div
-              style={{ fontFamily: mainFont.style.fontFamily }}
+              style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
               className="font-semibold text-4xl uppercase w-[94%] max-w-[788px] h-[120px] text-left"
             >
               We Value Integrity and Transparency
@@ -24,7 +24,7 @@ const AboutUsTestimonial = () => {
             {/* First testimonial card */}
             <div className="w-[90%] max-w-[788px] h-[120px] border border-[#007FA9] rounded-xl flex items-center justify-between pl-8 text-4xl font-bold hover:bg-white hover:text-black group">
               <div className="flex flex-col justify-center gap-20">
-                <span className="group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
+                <span className="text-white group-hover:text-black group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5 ">
                   Excellence
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
                     We strive for the highest quality in every project, ensuring
@@ -47,7 +47,7 @@ const AboutUsTestimonial = () => {
             {/* Second testimonial card */}
             <div className="w-[90%] max-w-[788px] h-[120px] border border-[#007FA9] rounded-xl flex items-center justify-between pl-8 text-4xl font-bold hover:bg-white hover:text-black group">
               <div className="flex flex-col justify-center gap-20">
-                <span className="group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
+                <span className="text-white group-hover:text-black group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
                   Innovation
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
                     By embracing the latest technology and creative solutions,
@@ -70,7 +70,7 @@ const AboutUsTestimonial = () => {
             {/* Third testimonial card */}
             <div className="w-[90%] max-w-[788px] h-[120px] border border-[#007FA9] rounded-xl flex items-center justify-between pl-8 text-4xl font-bold hover:bg-white hover:text-black group">
               <div className="flex flex-col justify-center gap-20">
-                <span className="group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
+                <span className="text-white group-hover:text-black group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
                   Integrity
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
                     We prioritize honesty, transparency, and ethical practices,
@@ -103,45 +103,45 @@ const AboutUsTestimonial = () => {
               {/* Years of Experience */}
               <div className="text-center">
                 <h1
-                  style={{ fontFamily: mainFont.style.fontFamily }}
+                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
                   className="text-7xl uppercase font-bold"
                 >
                   <CounterUp endCountNum={4} duration={6} />
                 </h1>
-                <div className="text-xl uppercase">Years of Experience</div>
+                <div className="text-xl uppercase text-white ">Years of Experience</div>
               </div>
 
               {/* Projects */}
               <div className="text-center">
                 <h1
-                  style={{ fontFamily: mainFont.style.fontFamily }}
+                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
                   className="text-7xl uppercase font-bold"
                 >
                   <CounterUp endCountNum={100} duration={6} />
                 </h1>
-                <div className="text-xl uppercase">Projects</div>
+                <div className="text-xl uppercase text-white ">Projects</div>
               </div>
 
               {/* Satisfied Customers */}
               <div className="text-center">
                 <h1
-                  style={{ fontFamily: mainFont.style.fontFamily }}
+                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
                   className="text-7xl uppercase font-bold"
                 >
                   <CounterUp endCountNum={20} duration={6} />
                 </h1>
-                <div className="text-xl uppercase">Satisfied Customers</div>
+                <div className="text-xl uppercase text-white ">Satisfied Customers</div>
               </div>
 
               {/* Hours Invested */}
               <div className="text-center">
                 <h1
-                  style={{ fontFamily: mainFont.style.fontFamily }}
+                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
                   className="text-7xl uppercase font-bold"
                 >
                   <CounterUp endCountNum={1500} duration={6} />
                 </h1>
-                <div className="text-xl uppercase">Hours Invested</div>
+                <div className="text-xl uppercase text-white ">Hours Invested</div>
               </div>
             </div>
           </div>

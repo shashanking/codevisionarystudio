@@ -1,5 +1,6 @@
 import React from "react";
 import { mainFont } from "../UI/Mainfontt";
+import Link from "next/link";
 
 const OurServicesConnect = () => {
     return (
@@ -36,15 +37,17 @@ const OurServicesConnect = () => {
                     >
                         Get a free consultation on your project - leave a request on the website or contact me in any convenient way.
                     </p>
-                    <button
-                        style={{
-                            fontFamily: mainFont.style.fontFamily,
-                            padding: '0px 15px',
-                        }}
-                        className="flex items-center uppercase bg-white text-[#a92500]  justify-center rounded-full  w-[236px] h-[50px] "
-                    >
-                        Let&apos;s have a chat
-                    </button>
+                    <Link href="/contact_us">
+                        <button
+                            style={{
+                                fontFamily: mainFont.style.fontFamily,
+                                padding: '0px 15px',
+                            }}
+                            className="flex items-center uppercase bg-white text-[#a92500]  justify-center rounded-full  w-[236px] h-[50px] "
+                            onClick={() => window.location.href = '/contact_us'}
+                        >
+                            Let&apos;s have a chat
+                        </button></Link>
                 </div>
             </div>
         </div>

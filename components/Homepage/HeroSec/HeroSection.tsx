@@ -1,4 +1,5 @@
 import { mainFont } from "@/components/UI/Mainfontt";
+import Link from "next/link";
 import React from "react";
 
 export const HeroSection: React.FC = () => {
@@ -45,15 +46,16 @@ export const HeroSection: React.FC = () => {
           <p className="2xl:text-[1.5vw] xl:text-[1.6vw] lg:text-[1.9vw] md:text-[2.2vw] text-[2.5vw] font-secondaryFont font-medium my-7 text-white">
             Web Design, Application Development, Branding & Marketing Services.
           </p>
-
-          <button
+          <Link href="/contact_us"><button
             style={{
               fontFamily: mainFont.style.fontFamily,
             }}
             className="uppercase text-[#C44F56] bg-white rounded-full border-none outline-none px-6 py-2.5 text-[1.5vw] mt-7 font-bold"
+
           >
             Get Started
           </button>
+          </Link>
         </div>
       </div>
     </div>

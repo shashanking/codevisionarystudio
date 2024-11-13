@@ -5,42 +5,42 @@ import Image from "next/image";
 const services = [
   {
     title: "Website Design & Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Crafting visually stunning and user-centered websites tailored to enhance your brand's online presence",
     image: "/assets/service-sol-1.jpeg",
   },
   {
     title: "Mobile Application Design & Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Creating seamless and engaging mobile experiences that connect users to your brand effectively.",
     image: "/assets/service-sol-2.png",
   },
   {
     title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Developing a unique and memorable brand identity that resonates with your audience and sets you apart.",
     image: "/assets/service-sol-3.png",
   },
   {
     title: "Digital Marketing / Performance Marketing",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Driving growth with data-driven strategies that maximize ROI and elevate your brand's online visibility.",
     image: "/assets/service-sol-4.png"
   },
   {
     title: "UI/UX",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Designing intuitive and visually engaging user experiences that captivate and retain audiences.",
     image: "/assets/service-sol-5.jpeg"
   },
   {
     title: "Web Application",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Creating powerful and scalable web applications tailored to meet your business objectives.",
     image: "/assets/service-sol-2.png"
   },
   {
     title: "Search Engine Optimization (SEO)",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Optimizing your digital presence to enhance visibility, boost traffic, and improve search engine rankings.",
     image: "/assets/service-sol-1.jpeg"
   },
   {
     title: "Social Media Marketing",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Building and managing social media strategies that engage audiences and foster brand loyalty.",
     image: "/assets/service-sol-3.png"
   },
 ];
@@ -49,7 +49,7 @@ const OurServicesAnimatedSec = () => {
   return (
     <div className="min-h-[100vh] mt-60 mb-40 bg-dark text-white py-16 px-8">
       <h2
-        style={{ fontFamily: mainFont.style.fontFamily }}
+        style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
         className="text-center text-4xl mb-12 tracking-wide font-bold"
       >
         YOUR ONE-STOP SOLUTION FOR <br />

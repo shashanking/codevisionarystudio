@@ -23,12 +23,12 @@ const AboutUsLanding = () => {
           <div className="mt-[10%] mx-auto w-[76%]">
             {/* Heading text */}
             <div
-              style={{ fontFamily: mainFont.style.fontFamily }}
+              style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
               className="font-semibold text-[72px] leading-[72px] uppercase"
             >
               We Believe in Innovation and Creativity
             </div>
-            <p className="py-4 text-xl">
+            <p className="py-4 text-xl text-white">
               At Code Visionary Studios, we believe in the power of innovation
               and creativity. Our team excels in web design, application development,
               branding, and digital marketing, delivering solutions that drive

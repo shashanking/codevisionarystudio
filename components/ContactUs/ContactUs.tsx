@@ -28,7 +28,7 @@ const validationSchema = Yup.object({
   lName: Yup.string().required("Last name required"),
   email: Yup.string().email().required("Email is required"),
   phoneNumber: Yup.number().required("Phone number required"),
-  message: Yup.string().required("Message is required"),
+  message: Yup.string(),
 });
 
 const ContactUs = () => {
@@ -79,7 +79,7 @@ const ContactUs = () => {
         >
           Get in touch
         </h1>
-        <p className="text-xl leading-7">
+        <p className="text-xl leading-7 text-white ">
           Reach out, and lets create a universe of possibilities together!
         </p>
       </div>
@@ -93,12 +93,12 @@ const ContactUs = () => {
           <div className="flex flex-col justify-between gap-4  w-[35%] ">
             <div className="text-left">
               <h1
-                style={{ fontFamily: mainFont.style.fontFamily }}
+                style={{ fontFamily: mainFont.style.fontFamily, color: "#fff" }}
                 className="text-3xl leading-9 w-full"
               >
-                Let's connect constellations
+                Let&apos;s connect constellations
               </h1>
-              <p className="text-lg w-full">
+              <p className="text-lg w-full text-white ">
                 Lets align our constellations! Reach out and let the magic of
                 collaboration illuminate our skies.
               </p>
@@ -148,7 +148,7 @@ const ContactUs = () => {
               />
               <button
                 type="submit"
-                className="w-[428px] h-[50px] font-secondaryFont bg-gradient-to-r  from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-lg transition-all duration-300"
+                className="w-[428px] h-[50px]  text-white font-secondaryFont bg-gradient-to-r  from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-lg transition-all duration-300"
               >
                 Submit
               </button>

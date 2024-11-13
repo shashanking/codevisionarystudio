@@ -21,14 +21,14 @@ import { toast } from "react-toastify";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
- 
+
 const menuItems = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about_us" }, // Update menu items with link paths
   { name: "Our Services", link: "/our_services" },
-  { name: "ContactUs", link: "/contact_us" },
+  { name: "Contact Us", link: "/contact_us" },
   { name: "Join Us", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
-  
+
 ];
 
 const formFields = [
@@ -93,7 +93,7 @@ export const FooterSection = () => {
         {/* 83% width might need media queries for very small screens */}
         <div className="w-[83%] mt-10">
           <h1
-            style={{ fontFamily: mainFont.style.fontFamily }}
+            style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
             className="text-4xl font-bold text-black uppercase tracking-wider mb-6"
           >
             Contact Us
@@ -125,16 +125,21 @@ export const FooterSection = () => {
                 className="w-full h-[36px] leading-6 font-secondaryFont text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8"
               >
                 <option value="">Subjects</option>
-                <option value="web development">Web Development</option>
-                <option value="app development">Application Development</option>
+                <option value="web development">Website Design and Development</option>
+                <option value="app development">Mobile Application Development</option>
+                <option value="UI/UX Design">Web Application Development</option>
                 <option value="UI/UX Design">UI/UX Design</option>
+                <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
+                <option value="UI/UX Design">Social Media Marketiing</option>
+
+                <option value="UI/UX Design">Branding</option>
               </select>
             </form>
           </div>
 
           {/* Fixed height button - consider responsive height */}
           <button
-            style={{ fontFamily: mainFont.style.fontFamily }}
+            style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
             onClick={handleSubmit}
             type="submit"
             className="submit-button bg-black text-[#C44F56] hover:text-white w-full mt-12 h-14 rounded-full text-lg font-medium uppercase flex items-center justify-center transition-colors relative overflow-hidden group"
@@ -153,6 +158,7 @@ export const FooterSection = () => {
                 width={200}
                 height={70}
                 className="object-contain"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               />
               <p className="text-base font-secondaryFont leading-relaxed text-white/90">
                 Your trusted partner in digital transformation. We create
@@ -165,7 +171,7 @@ export const FooterSection = () => {
               {/* Fixed width might cause issues on smaller screens */}
               <div className="flex flex-col gap-3 w-[126px] mr-10 ">
                 <h1
-                  style={{ fontFamily: mainFont.style.fontFamily }}
+                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
                   className="text-xl leading-6 font-semibold text-white"
                 >
                   Menu
@@ -189,17 +195,17 @@ export const FooterSection = () => {
               {/* Fixed width might cause issues on smaller screens */}
               <div className="flex flex-col gap-3 w-[309px]">
                 <h2
-                  style={{ fontFamily: mainFont.style.fontFamily }}
+                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
                   className="text-xl leading-6 font-semibold text-white"
                 >
                   Contact Info
                 </h2>
                 <div className="space-y-2 text-base text-white/90 font-secondaryFont">
-                  <p>+91-1234567890</p>
+                  <p>+91-8240833838</p>
                   <p>
-                    Address, Kolkata,
+                    Kolkata,
                     <br />
-                    West Bengal, 700040
+                    West Bengal, 700142
                   </p>
                   <p>codevisionarystudio@gmail.com</p>
                 </div>
@@ -216,7 +222,7 @@ export const FooterSection = () => {
         <div className="h-[100px] flex items-center">
           {/* Large text size might need scaling for mobile */}
           <div
-            style={{ fontFamily: mainFont.style.fontFamily }}
+            style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
             className="animate-marquee whitespace-nowrap text-[100px] leading-[98px] uppercase text-black/20"
           >
             {[1, 2, 3].map((_, index) => (

@@ -21,7 +21,7 @@ export const OurServices: React.FC = () => {
                 style={{
                   fontFamily: mainFont.style.fontFamily,
                 }}
-                className="font-bold text-[1.1]vw"
+                className="font-bold text-[1.1]vw text-white"
               >
                 Our services
               </h4>
@@ -30,12 +30,12 @@ export const OurServices: React.FC = () => {
               style={{
                 fontFamily: mainFont.style.fontFamily,
               }}
-              className="font-bold text-[2.7vw] my-[.5%]"
+              className="font-bold text-[2.7vw] my-[.5%] text-white"
             >
               Our Expertise
             </h2>
 
-            <p className="text-center font-secondaryFont text-[1.1vw] font-[400]">
+            <p className="text-center font-secondaryFont text-[1.1vw] font-[400] text-white">
               Discover the comprehensive range of IT services we offer at Code
               Visionary Studios. From web design and application development to branding
               and digital marketing, our expert team delivers innovative
@@ -46,17 +46,17 @@ export const OurServices: React.FC = () => {
               <div className="flex justify-center w-full gap-5">
                 <div className="w-[50%] bg-[#FFFFFF]/20 backdrop:blur-md flex justify-center px-3 py-5 rounded-lg">
                   <div className="w-[50%] flex flex-col justify-start items-start gap-3">
-                    <h4 className="font-secondaryFont text-[1.2vw] font-[500]">
+                    <h4 className="font-secondaryFont text-[1.2vw] font-[500] text-white">
                       Website Design & Development
                     </h4>
-                    <p className="font-secondaryFont text-[.8vw] font-[400]">
+                    <p className="font-secondaryFont text-[.8vw] font-[400] text-white">
                       Creating visually stunning and highly functional websites
                       that elevate your online presence. Our expert team blends
                       creativity with technical expertise to deliver custom web
                       solutions tailored to your unique business needs.
                     </p>
                     <button
-                      className="font-bold text-[1vw]"
+                      className="font-bold text-[1vw] text-white"
                       style={{
                         fontFamily: mainFont.style.fontFamily,
                       }}
@@ -91,7 +91,7 @@ export const OurServices: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col justify-center items-start gap-3 h-full bg-[#FFFFFF]/20 backdrop:blur-md px-3 py-5 rounded-lg">
-                    <h3 className="font-secondaryFont text-[1.2vw] font-[500]">
+                    <h3 className="font-secondaryFont text-[1.2vw] font-[500] text-white">
                       Branding
                     </h3>
                     <div className="w-full relative flex justify-center items-center">
@@ -108,7 +108,7 @@ export const OurServices: React.FC = () => {
               </div>
               <div className="flex justify-center w-full gap-5">
                 <div className="flex-1 flex flex-col justify-center items-start gap-1 h-full bg-[#FFFFFF]/20 backdrop:blur-md px-3 py-0 rounded-lg">
-                  <h3 className="font-secondaryFont text-[1.2vw] font-[500] mt-3">
+                  <h3 className="font-secondaryFont text-[1.2vw] font-[500] mt-3 text-white">
                     Digital Marketing
                   </h3>
                   <div className="w-full h-[150px] relative flex justify-center items-center">
@@ -123,7 +123,7 @@ export const OurServices: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex-1 flex flex-col justify-center items-start gap-1 h-full bg-[#FFFFFF]/20 backdrop:blur-md px-3 py-0 rounded-lg">
-                  <h3 className="font-secondaryFont text-[1.2vw] font-[500] mt-3">
+                  <h3 className="font-secondaryFont text-[1.2vw] font-[500] mt-3 text-white">
                     UI/UX Design
                   </h3>
                   <div className="w-full h-[150px] relative flex justify-center items-center">
@@ -138,7 +138,7 @@ export const OurServices: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex-1 flex flex-col justify-center items-start gap-1 h-full bg-[#FFFFFF]/20 backdrop:blur-md px-3 py-5 rounded-lg">
-                  <h3 className="font-secondaryFont text-[1.2vw] font-[500]">
+                  <h3 className="font-secondaryFont text-[1.2vw] font-[500] text-white">
                     Web Applications
                   </h3>
                   <div className="w-full h-[150px] relative flex justify-center items-center">

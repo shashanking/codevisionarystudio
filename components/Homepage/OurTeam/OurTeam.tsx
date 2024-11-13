@@ -71,7 +71,7 @@ export const OurTeam = () => {
               <div className="flex justify-center items-center gap-4 my-3 w-[40%] mx-auto">
                 <HomepageTagIconSvg />
                 <h4
-                  className="text-[1.1vw] font-bold uppercase"
+                  className="text-[1.3vw] font-bold uppercase"
                   style={{
                     fontFamily: mainFont.style.fontFamily,
                     color: "#fff",

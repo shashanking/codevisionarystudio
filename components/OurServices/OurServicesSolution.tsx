@@ -47,7 +47,7 @@ const services = [
 const OurServicesSolution = () => {
     return (
         <div className="min-h-[100vh] mt-20 mb-40 bg-dark text-white py-16 px-8">
-            <h2 style={{ fontFamily: mainFont.style.fontFamily }} className="text-center text-4xl mb-12 tracking-wide font-bold">
+            <h2 style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }} className="text-center text-4xl mb-12 tracking-wide font-bold">
                 YOUR ONE-STOP SOLUTION FOR <br />
                 DIGITAL EXCELLENCE
             </h2>
