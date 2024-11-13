@@ -3,7 +3,7 @@
         'name' => 'codevisionarystudio/website',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '0da5eabe68dd2fa9319a16e8476e72ae77bd6f3e',
+        'reference' => '62e56d4c1cc8771bb276b2db9d68ad5e0594690a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codevisionarystudio/website' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '0da5eabe68dd2fa9319a16e8476e72ae77bd6f3e',
+            'reference' => '62e56d4c1cc8771bb276b2db9d68ad5e0594690a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

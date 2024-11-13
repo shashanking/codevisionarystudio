@@ -44,7 +44,7 @@ export const HeroSection: React.FC = () => {
             Digital Reality
           </h2>
           <p className="2xl:text-[1.5vw] xl:text-[1.6vw] lg:text-[1.9vw] md:text-[2.2vw] text-[2.5vw] font-secondaryFont font-medium my-7 text-white">
-            Web Design, Application Development, Branding & Marketing Services.
+            Web Design, Application Development, Branding & Marketing Solutions.
           </p>
           <Link href="/contact_us"><button
             style={{
@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
             className="uppercase text-[#C44F56] bg-white rounded-full border-none outline-none px-6 py-2.5 text-[1.5vw] mt-7 font-bold"
 
           >
-            Get Started !
+            Get Started
           </button>
           </Link>
         </div>
