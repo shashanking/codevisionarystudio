@@ -6,7 +6,7 @@ const services = [
     {
         title: "Website Design & Development",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        image: "/assets/service-sol-1.jpeg"
+        image: "/assets/service-sol-1.jpeg" 
     },
     {
         title: "Mobile Application Design & Development",
@@ -57,6 +57,9 @@ const OurServicesSolution = () => {
                                     <Image
                                         src="/assets/arrow-right.png"
                                         alt="arrow"
+                                        width={54
+                                        }
+                                        height={54}
                                         className="w-[54px] h-[54px] transition-all duration-300 group-hover:[filter:invert(1)] group-hover:rotate-[-45deg]"
                                     />
                                 </button>
@@ -66,6 +69,8 @@ const OurServicesSolution = () => {
                             <Image
                                 src={service.image}
                                 alt={service.title}
+                                width={309}
+                                height={217}
                                 className="w-[309px] h-[217px] object-cover object-center rounded-lg shadow-2xl "
                             />
                         </div>

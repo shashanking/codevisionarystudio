@@ -125,6 +125,7 @@ export const OurTeam = () => {
                   solutions that help our clients thrive in the digital world.
                 </p>
               </div>
+              {/* When our teams visible on viewport it must be fixed then start a horizontal animation with the scroll after the animation ends then the next paart will load   */}
               <motion.div
                 ref={scope}
                 drag="x"

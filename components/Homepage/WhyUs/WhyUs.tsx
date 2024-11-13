@@ -614,8 +614,12 @@ export const WhyUsSection = () => {
                       </p>
                     </div>
                   </motion.div>
-
-                  <motion.div
+                  {/* Isuue on larger screen
+                     1. Thrid point is not coming
+                    Isuue on smaller screen
+                    1. Exit animation on the third text
+                    2. space on top of the total div  */}
+                  <motion.div 
                     style={{
                       y: TranslateYAxisPoint3Smooth,
                       opacity: OpacityPoint3Smooth,
