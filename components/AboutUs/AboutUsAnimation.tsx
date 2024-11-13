@@ -1,4 +1,5 @@
 import { mainFont } from "@/components/UI/Mainfontt";
+import Image from "next/image";
 
 const AboutUsAnimation = () => {
   return (
@@ -7,17 +8,17 @@ const AboutUsAnimation = () => {
       <div className="w-[90vw] sm:w-[70vw] lg:w-[50vw] flex justify-center items-center gap-x-5 lg:gap-x-8 relative">
         {/* Yellow Card - Base position */}
         <div className="w-[336px] h-[350px] sm:w-[371px] lg:w-[336px]  sm:h-[370px] lg:h-[471px] relative lg:-right-10 rounded-2xl shadow-lg transform transition-transform">
-          <img src="/assets/aboutoneimg.png" alt="About One" className="w-full h-full object-cover rounded-2xl" />
+          <Image src="/assets/aboutoneimg.png" alt="About One" className="w-full h-full object-cover rounded-2xl" />
         </div>
 
         {/* Pink Card - 10px below yellow */}
         <div className="w-[336px] h-[350px] sm:w-[371px] lg:w-[336px]  sm:h-[370px] lg:h-[471px] relative top-[20px] left-[-60px] lg:-right-5 rounded-2xl shadow-lg transform transition-transform">
-          <img src="/assets/abouttwoimg.jpeg" alt="About Two" className="w-full h-full object-cover rounded-2xl" />
+          <Image src="/assets/abouttwoimg.jpeg" alt="About Two" className="w-full h-full object-cover rounded-2xl" />
         </div>
 
         {/* Grey Card - 10px below pink */}
         <div className="w-[336px] h-[350px] sm:w-[371px] lg:w-[336px]  sm:h-[370px] lg:h-[471px] relative top-[40px] left-[-165px] rounded-2xl shadow-lg transform transition-transform">
-          <img src="/assets/aboutthreeimg.png" alt="About Three" className="w-full h-full object-cover rounded-2xl" />
+          <Image src="/assets/aboutthreeimg.png" alt="About Three" className="w-full h-full object-cover rounded-2xl" />
         </div>
       </div>
       {/* Card Section End */}

@@ -1,6 +1,7 @@
 import React from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import CounterUp from "./CounterUp";
+import Image from "next/image";
 // import { div } from "framer-motion/client";
 
 // Component to display testimonials and statistics in the About Us section
@@ -32,7 +33,7 @@ const AboutUsTestimonial = () => {
                 </span>
               </div>
               <div className="pr-8 w-[30%]">
-                <img src="/assets/review_1.png" alt="Review" className="group-hover:invert" />
+                <Image src="/assets/review_1.png" alt="Review" className="group-hover:invert" />
               </div>
             </div>
 
@@ -48,7 +49,7 @@ const AboutUsTestimonial = () => {
                 </span>
               </div>
               <div className="pr-8 w-[30%]">
-                <img src="/assets/review_2.png" alt="Review" className="group-hover:invert" />
+                <Image src="/assets/review_2.png" alt="Review" className="group-hover:invert" />
               </div>
             </div>
 
@@ -64,7 +65,7 @@ const AboutUsTestimonial = () => {
                 </span>
               </div>
               <div className="pr-8 w-[30%]">
-                <img src="/assets/review_3.png" alt="Review" className="group-hover:invert" />
+                <Image src="/assets/review_3.png" alt="Review" className="group-hover:invert" />
               </div>
             </div>
           </div>

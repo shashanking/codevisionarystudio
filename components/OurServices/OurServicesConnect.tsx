@@ -25,7 +25,7 @@ const OurServicesConnect = () => {
                             textAlign: 'left',
                         }}
                     >
-                        YOU'VE GOT AN IDEA? LET'S TALK!
+                        YOU&apos;VE GOT AN IDEA? LET&apos;S TALK!
                     </h1>
                     <p
                         style={{
@@ -43,7 +43,7 @@ const OurServicesConnect = () => {
                         }}
                         className="flex items-center uppercase bg-white text-[#007FA9]  justify-center rounded-full  w-[236px] h-[50px] "
                     >
-                        Let's have a chat
+                        Let&apos;s have a chat
                     </button>
                 </div>
             </div>

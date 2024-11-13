@@ -1,5 +1,6 @@
 import React from "react";
 import { mainFont } from "../UI/Mainfontt";
+import Image from "next/image";
 
 const services = [
     {
@@ -53,7 +54,7 @@ const OurServicesSolution = () => {
                             </div>
                             <div className="relative">
                                 <button className="flex items-center justify-center w-[84px] h-[84px] border border-gray-400 rounded-full transition group-hover:bg-red-500 group-hover:border-red-500">
-                                    <img
+                                    <Image
                                         src="/assets/arrow-right.png"
                                         alt="arrow"
                                         className="w-[54px] h-[54px] transition-all duration-300 group-hover:[filter:invert(1)] group-hover:rotate-[-45deg]"
@@ -62,7 +63,7 @@ const OurServicesSolution = () => {
                             </div>
                         </div>
                         <div className="absolute right-[20%] top-[50%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
-                            <img
+                            <Image
                                 src={service.image}
                                 alt={service.title}
                                 className="w-[309px] h-[217px] object-cover object-center rounded-lg shadow-2xl "

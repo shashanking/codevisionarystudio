@@ -30,7 +30,7 @@ const OurServicesLanding = () => {
             </div>
             <div className="  ">
 
-              <img src="/assets/serviceshero.png" alt="hero section image" className="rounded-l-[10em]  h-[436px] " />
+              <Image src="/assets/serviceshero.png" alt="hero section image" className="rounded-l-[10em]  h-[436px] " />
             </div>
           </div>
         </div>
