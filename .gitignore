@@ -13,6 +13,9 @@
 /.next/
 .env
 
+# hostinger
+/vendor/
+
 # production
 /build
 
