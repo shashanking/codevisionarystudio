@@ -9,34 +9,35 @@ const teamList = [
   {
     image: "/assets/vik_pic.jpg",
     name: "Vikash Jha",
-    position: "Lead Technical Consultant",
+    // position: "Lead Technical Consultant",
   },
   {
     image: "/assets/rini_pic.jpg",
     name: "Rini Chakraborty",
-    position: "Marketing Director",
+    // position: "Marketing Director",
   },
 
 
   {
     image: "/assets/sayan_pic.jpg",
     name: "Sayan Choudhury",
-    position: "Strategic Consultant",
+    // position: "Strategic Consultant",
   },
   {
     image: "/assets/sahil_pic.jpg",
     name: "Sahil Biswas",
-    position: "Lead Frontend Developer",
+    // position: "Lead UX/UI Designer",
+
   },
   {
     image: "/assets/shashank_pic.jpg",
     name: "Shashank Singh",
-    position: "Lead UX/UI Designer",
+    // position: "Lead Developer",
   },
   {
     image: "/assets/pradip_pic.jpg",
     name: "Pradip Choudhury",
-    position: "Marketing Director",
+    // position: "Marketing Director",
   },
 
 ];
@@ -62,12 +63,12 @@ export const OurTeam = () => {
   }, []);
 
   return (
-    <div ref={containerRef} style={{ height: '200vh' }}>
+    <div ref={containerRef} style={{ height: '250vh' }}>
       <div className="sticky top-0 overflow-hidden">
-        <div className="max-w-[1920px] mx-auto min-h-[100vh] relative flex justify-center items-end">
+        <div className="max-w-[1920px] mx-auto min-h-[100vh] relative flex justify-center items-center">
           <HomeAboutSecSvg />
           <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-            <div className="w-[85%]">
+            <div className="w-[85%] translate-y-[-5%]">
               <div className="flex justify-center items-center gap-4 my-3 w-[40%] mx-auto">
                 <HomepageTagIconSvg />
                 <h4
@@ -113,14 +114,15 @@ export const OurTeam = () => {
                     initial={{ filter: "grayscale(1)" }}
                     whileHover={{ filter: "grayscale(0)" }}
                     className="flex-shrink-0"
+                    transition={{ duration: 0.3 }}
                   >
                     <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
                       <Image
-                        height={260}
-                        width={302}
+                        height={130} // Reduced from 260 to 130 (50% reduction)
+                        width={322}
                         src={cur.image}
                         alt={cur.name || "Team member"}
-                        className="z-0 object-center"
+                        className="z-0 object-center object-cover h-[400px] w-[320] rounded-lg" // Added fixed height and object-cover
                       />
                       <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
                     </div>
@@ -129,7 +131,7 @@ export const OurTeam = () => {
                         {cur.name}
                       </h4>
                       <p className="font-secondaryFont font-[400] text-[1vw] text-white/80 mt-1">
-                        {cur.position}
+                        {/* {cur.position} */}
                       </p>
                     </div>
                   </motion.div>
