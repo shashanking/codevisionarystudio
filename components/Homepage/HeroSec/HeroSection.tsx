@@ -53,7 +53,7 @@ export const HeroSection: React.FC = () => {
             className="uppercase text-[#C44F56] bg-white rounded-full border-none outline-none px-6 py-2.5 text-[1.5vw] mt-7 font-bold"
 
           >
-            Get Started
+            Get Started !
           </button>
           </Link>
         </div>
