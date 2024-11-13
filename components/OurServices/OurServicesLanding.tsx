@@ -12,7 +12,7 @@ const OurServicesLanding = () => {
             <p className="text-lg py-10 font-secondaryFont">
               Explore the diverse services offered by Code Visionary Studios. We
               specialize in creating custom web designs, developing cutting-edge
-              apps, crafting unique brand identities, and driving growth through
+              applications, crafting unique brand identities, and driving growth through
               digital marketing.
             </p>
           </div>

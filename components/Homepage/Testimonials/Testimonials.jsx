@@ -93,7 +93,7 @@ export const Testimonials = () => {
               <p className="text-white font-secondaryFont text-[1vw] font-[400] my-[3%]">
                 Discover how Code Visionary Studios has made a difference for
                 our clients. Our testimonials showcase the positive impact of
-                our web design, app development, branding, and digital marketing
+                our web design, application development, branding, and digital marketing
                 services.
               </p>
             </div>

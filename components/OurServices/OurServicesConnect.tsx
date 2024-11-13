@@ -27,7 +27,7 @@ const OurServicesConnect = () => {
                     >
                         YOU&apos;VE GOT AN IDEA? LET&apos;S TALK!
                     </h1>
-                    <p
+                    <p className="font-secondaryFont"
                         style={{
                             fontSize: '1.2rem',
                             marginBottom: '40px',
@@ -41,7 +41,7 @@ const OurServicesConnect = () => {
                             fontFamily: mainFont.style.fontFamily,
                             padding: '0px 15px',
                         }}
-                        className="flex items-center uppercase bg-white text-[#007FA9]  justify-center rounded-full  w-[236px] h-[50px] "
+                        className="flex items-center uppercase bg-white text-[#a92500]  justify-center rounded-full  w-[236px] h-[50px] "
                     >
                         Let&apos;s have a chat
                     </button>

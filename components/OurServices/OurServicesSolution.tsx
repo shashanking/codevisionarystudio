@@ -6,7 +6,7 @@ const services = [
     {
         title: "Website Design & Development",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        image: "/assets/service-sol-1.jpeg" 
+        image: "/assets/service-sol-1.jpeg"
     },
     {
         title: "Mobile Application Design & Development",
@@ -19,7 +19,7 @@ const services = [
         image: "/assets/service-sol-3.png"
     },
     {
-        title: "Digital Marketing",
+        title: "Digital Marketing / Performance Marketing",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         image: "/assets/service-sol-4.png"
     },
@@ -27,11 +27,26 @@ const services = [
         title: "UI/UX",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         image: "/assets/service-sol-5.jpeg"
-    }
+    },
+    {
+        title: "Web Application",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        image: "/assets/service-sol-2.jpeg"
+    },
+    {
+        title: "Search Engine Optimization (SEO)",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        image: "/assets/service-sol-1.jpeg"
+    },
+    {
+        title: "Social Media Marketing",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        image: "/assets/service-sol-3.jpeg"
+    },
 ];
 const OurServicesSolution = () => {
     return (
-        <div className="h-[100vh] mt-20 mb-40 bg-dark text-white py-16 px-8">
+        <div className="min-h-[100vh] mt-20 mb-40 bg-dark text-white py-16 px-8">
             <h2 style={{ fontFamily: mainFont.style.fontFamily }} className="text-center text-4xl mb-12 tracking-wide font-bold">
                 YOUR ONE-STOP SOLUTION FOR <br />
                 DIGITAL EXCELLENCE

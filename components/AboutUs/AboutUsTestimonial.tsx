@@ -38,6 +38,8 @@ const AboutUsTestimonial = () => {
                   src="/assets/review_1.png"
                   alt="Review"
                   className="group-hover:invert"
+                  width={100}
+                  height={100}
                 />
               </div>
             </div>
@@ -59,6 +61,8 @@ const AboutUsTestimonial = () => {
                   src="/assets/review_2.png"
                   alt="Review"
                   className="group-hover:invert"
+                  width={100}
+                  height={100}
                 />
               </div>
             </div>
@@ -80,6 +84,8 @@ const AboutUsTestimonial = () => {
                   src="/assets/review_3.png"
                   alt="Review"
                   className="group-hover:invert"
+                  width={100}
+                  height={100}
                 />
               </div>
             </div>

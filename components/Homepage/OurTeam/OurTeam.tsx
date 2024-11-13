@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Image from "next/image";
 import { mainFont } from "@/components/UI/Mainfontt";
@@ -16,7 +16,7 @@ const teamList = [
     name: "Rini Chakraborty",
     position: "Marketing Director",
   },
-  
+
 
   {
     image: "/assets/TeamImg4.png",
@@ -38,80 +38,43 @@ const teamList = [
     name: "Pradip Choudhury",
     position: "Marketing Director",
   },
-  
+
 ];
-
 export const OurTeam = () => {
-  const [scope, animate] = useAnimate();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const container = containerRef.current;
+    const scrollContainer = scrollContainerRef.current;
+    if (!container || !scrollContainer) return;
 
-  const handelanimation = async () => {
-    await animate(
-      scope.current,
-      {
-        x: ["200%", 0],
-      },
-      {
-        duration: 1.5,
-        ease: "backInOut",
-        delay: 0.4,
-      }
-    );
+    const handleScroll = () => {
+      const rect = container.getBoundingClientRect();
+      const scrollPercentage = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
+      const translateX = scrollPercentage * (scrollContainer.scrollWidth - window.innerWidth);
 
-    /* This part of the code is checking if the `scope.current` exists (not null or undefined). If it
-    does exist, it retrieves the children elements of the `scope.current` element. Then, it iterates
-    over each child element and extracts the numerical id from the element's id attribute (assuming
-    the id is in the format "ID-someNumber"). */
-    if (scope.current) {
-      const children = scope.current.children;
+      scrollContainer.style.transform = `translateX(-${translateX}px)`;
+    };
 
-      Array.from(children).forEach((item: any) => {
-        const id = Number(item.id.split("-")[1]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-        if (id % 2 === 0) {
-          animate(
-            `#ID-${id}`,
-            {
-              y: "2%",
-            },
-            {
-              duration: 0.8,
-              ease: "circInOut",
-              delay: 0.6,
-            }
-          );
-        } else {
-          animate(
-            `#ID-${id}`,
-            {
-              y: "-2%",
-            },
-            {
-              duration: 0.8,
-              ease: "circInOut",
-              delay: 0.6,
-            }
-          );
-        }
-      });
-    }
-  };
-
-  useInView(sectionRef, handelanimation);
   return (
-    <>
-      <div ref={sectionRef}>
+    <div ref={containerRef} style={{ height: '200vh' }}>
+      <div className="sticky top-0 overflow-hidden">
         <div className="max-w-[1920px] mx-auto min-h-[100vh] relative flex justify-center items-end">
           <HomeAboutSecSvg />
-          <div className="absolute top-0  left-0 w-full h-full flex justify-center items-center">
-            <div className="w-[85%] ">
+          <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+            <div className="w-[85%]">
               <div className="flex justify-center items-center gap-4 my-3 w-[40%] mx-auto">
                 <HomepageTagIconSvg />
                 <h4
                   className="text-[1.1vw] font-bold uppercase"
                   style={{
                     fontFamily: mainFont.style.fontFamily,
+                    color: "#fff",
                   }}
                 >
                   Our Team
@@ -125,42 +88,36 @@ export const OurTeam = () => {
                   solutions that help our clients thrive in the digital world.
                 </p>
               </div>
-              {/* When our teams visible on viewport it must be fixed then start a horizontal animation with the scroll after the animation ends then the next paart will load   */}
               <motion.div
-                ref={scope}
-                drag="x"
-                dragConstraints={{
-                  left: -1000,
-                  right: 400,
+                ref={scrollContainerRef}
+                className="flex items-center w-full gap-6 my-[3%] pr-[150vw]"
+                style={{
+                  willChange: 'transform',
                 }}
-                // dragConstraints={dragConstraints}
-                dragTransition={{ bounceStiffness: 300, bounceDamping: 10 }}
-                dragElastic={0.5}
-                className="flex items-center w-full gap-6 my-[3%]"
               >
-                {/* customMargin */}
                 {teamList.map((cur, id) => (
                   <motion.div
-                    initial={{ filter: "grayscale(1)" }}
-                    whileHover={{ filter: "grayscale(0)" }}
-                    transition={{ ease: "circInOut", duration: 0.2 }}
-                    className="flex-shrink-0 cursor-grab active:cursor-grabbing selection:bg-transparent "
                     key={id}
                     id={`ID-${id + 1}`}
+                    initial={{ filter: "grayscale(1)" }}
+                    whileHover={{ filter: "grayscale(0)" }}
+                    className="flex-shrink-0"
                   >
-                    <div className="relative  lg:landscape:w-[300px] lg:landscape:h-[390px]">
+                    <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
                       <Image
                         height={500}
                         width={400}
                         src={cur.image}
-                        alt="neelImg"
+                        alt={cur.name || "Team member"}
                         className="z-0"
                       />
                       <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
                     </div>
-                    <h4 className="font-secondaryFont font-[500] text-[1.3vw] text-[#FFF] mt-1">
-                      {cur.name}
-                    </h4>
+                    {cur.name && (
+                      <h4 className="font-secondaryFont font-[500] text-[1.3vw] text-[#FFF] mt-1">
+                        {cur.name}
+                      </h4>
+                    )}
                   </motion.div>
                 ))}
               </motion.div>
@@ -168,6 +125,7 @@ export const OurTeam = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
