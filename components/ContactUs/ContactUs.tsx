@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -32,6 +32,27 @@ const validationSchema = Yup.object({
 });
 
 const ContactUs = () => {
+  useEffect(() => {
+    // Load the GTM script
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16644368488';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize GTM
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function() {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', 'AW-16644368488');
+
+    // Cleanup function to remove the script when component unmounts
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+  
   // Update the ContactUs component with formik
   const { handleSubmit, values, handleChange, handleBlur, resetForm } = useFormik<FormValues>({
     initialValues: {
