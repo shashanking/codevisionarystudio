@@ -18,9 +18,9 @@ const formFields: Array<{
   placeholder: string;
   name: keyof FormValues;
 }> = [
-    { type: "email", placeholder: "Email Id", name: "email" },
-    { type: "text", placeholder: "Phone Number", name: "phoneNumber" },
-  ];
+  { type: "email", placeholder: "Email Id", name: "email" },
+  { type: "text", placeholder: "Phone Number", name: "phoneNumber" },
+];
 
 // Add validation schema
 const validationSchema = Yup.object({
@@ -33,43 +33,44 @@ const validationSchema = Yup.object({
 
 const ContactUs = () => {
   // Update the ContactUs component with formik
-  const { handleSubmit, values, handleChange, handleBlur, resetForm } = useFormik<FormValues>({
-    initialValues: {
-      fName: "",
-      lName: "",
-      email: "",
-      phoneNumber: "",
-      message: "",
-    },
-    validationSchema,
-    onSubmit: async (values) => {
-      try {
-        const template = {
-          to_name: "codevisionarystudio",
-          from_first_name: values.fName,
-          from_last_name: values.lName,
-          from_email: values.email,
-          message: values.message,
-          from_number: values.phoneNumber,
-        };
+  const { handleSubmit, values, handleChange, handleBlur, resetForm } =
+    useFormik<FormValues>({
+      initialValues: {
+        fName: "",
+        lName: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+      },
+      validationSchema,
+      onSubmit: async (values) => {
+        try {
+          const template = {
+            to_name: "codevisionarystudio",
+            from_first_name: values.fName,
+            from_last_name: values.lName,
+            from_email: values.email,
+            message: values.message,
+            from_number: values.phoneNumber,
+          };
 
-        const sendEmail = await emailjs.send(
-          process.env.NEXT_PUBLIC_SERVICE_ID ?? '',
-          process.env.NEXT_PUBLIC_CONTACT_US_TEMPLATE_ID ?? '',
-          template,
-          process.env.NEXT_PUBLIC_PUBLIC_KEY
-        );
+          const sendEmail = await emailjs.send(
+            process.env.NEXT_PUBLIC_SERVICE_ID ?? "",
+            process.env.NEXT_PUBLIC_CONTACT_US_TEMPLATE_ID ?? "",
+            template,
+            process.env.NEXT_PUBLIC_PUBLIC_KEY
+          );
 
-        if (sendEmail.status === 200) {
-          toast.success("Email sent! Our team will get back to you soon");
-          resetForm(); // This will clear all form fields
+          if (sendEmail.status === 200) {
+            toast.success("Email sent! Our team will get back to you soon");
+            resetForm(); // This will clear all form fields
+          }
+        } catch (error) {
+          console.error(error);
+          toast.error("Something went wrong! Please try again later");
         }
-      } catch (error) {
-        console.error(error);
-        toast.error("Something went wrong! Please try again later");
-      }
-    },
-  });
+      },
+    });
   return (
     <div className="w-full h-screen text-center gap-20 flex flex-col justify-center">
       <div className="">
@@ -87,9 +88,7 @@ const ContactUs = () => {
         <div className="absolute bg-[#3124bf4f] rounded-full blur-3xl h-[252px] w-[252px] left-[7%] -top-[20%] -z-10 "></div>
         <div className="absolute bg-[#3124bf4f] rounded-full blur-3xl h-[252px] w-[252px] right-[7%] -top-[20%] -z-10 "></div>
         <div className="absolute bg-[#3124bf4f] rounded-full blur-3xl h-[252px] w-[252px] left-[7%] -bottom-[40%] -z-10 "></div>
-        <div
-          className=" relative  z-10 flex justify-around items-center w-[75%] shadow-[backdrop-filter: blur(380px)] border-[#0A0D170D] bg-[#06060654] h-[110%] rounded-lg "
-        >
+        <div className=" relative  z-10 flex justify-around items-center w-[75%] shadow-[backdrop-filter: blur(380px)] border-[#0A0D170D] bg-[#06060654] h-[110%] rounded-lg ">
           <div className="flex flex-col justify-between gap-4  w-[35%] ">
             <div className="text-left">
               <h1
@@ -153,12 +152,16 @@ const ContactUs = () => {
                 Submit
               </button>
             </form>
-          </div>          <div>
-
-            <video autoPlay loop muted className="w-[560px] h-[560px] object-cover rounded-2xl shadow-2xl">
+          </div>{" "}
+          <div>
+            <video
+              autoPlay
+              loop
+              muted
+              className="w-[560px] h-[560px] object-cover rounded-2xl shadow-2xl"
+            >
               <source src="/assets/contact_video.mp4" type="video/mp4" />
             </video>
-
           </div>
         </div>
       </div>

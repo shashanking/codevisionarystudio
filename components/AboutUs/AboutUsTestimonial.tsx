@@ -70,7 +70,7 @@ const AboutUsTestimonial = () => {
             {/* Third testimonial card */}
             <div className="w-[90%] max-w-[788px] h-[120px] border border-[#007FA9] rounded-xl flex items-center justify-between pl-8 text-4xl font-bold hover:bg-white hover:text-black group">
               <div className="flex flex-col justify-center gap-20">
-                <span className="text-white group-hover:text-black group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5">
+                <span className="text-white group-hover:text-black group-hover:-translate-x-4 group-hover:-translate-y-2 group-hover:scale-90 transition-all translate-x-5"> 
                   Integrity
                   <div className="text-[16px] font-light leading-[20px] opacity-0 group-hover:opacity-100 transition-all group-hover:translate-y-5">
                     We prioritize honesty, transparency, and ethical practices,
