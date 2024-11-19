@@ -19,9 +19,9 @@ const formFields: Array<{
   placeholder: string;
   name: keyof FormValues;
 }> = [
-  { type: "email", placeholder: "Email Id", name: "email" },
-  { type: "text", placeholder: "Phone Number", name: "phoneNumber" },
-];
+    { type: "email", placeholder: "Email Id", name: "email" },
+    { type: "text", placeholder: "Phone Number", name: "phoneNumber" },
+  ];
 
 const validationSchema = Yup.object({
   fName: Yup.string().required("First name required"),
@@ -76,7 +76,7 @@ const ContactUsFormSec = () => {
 
   return (
     <div className="w-full h-screen flex justify-center">
-      <div className="flex justify-center mt-20 items-center gap-12 w-[83%] h-[88%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
+      <div id="contact-form" className="flex justify-center mt-20  items-center gap-12 w-[83%] h-[88%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
         <div className="w-[58%] ml-4 ">
           <div className="text-left mb-12">
             <h1
@@ -86,7 +86,7 @@ const ContactUsFormSec = () => {
               LET'S GET IN TOUCH
             </h1>
             <p className="text-xl leading-7 text-white mt-4">
-              Connect with us to explore endless possibilities! Lorem ipsum<br/>  dolo
+              Connect with us to explore endless possibilities! Lorem ipsum<br />  dolo
               r sit, amet consectetur adipsicing
             </p>
           </div>
