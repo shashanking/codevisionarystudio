@@ -1,15 +1,17 @@
 import React from "react";
-import { mainFont } from "@/components/UI/Mainfontt";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { mainFont } from "@/components/UI/Mainfontt";
+
 interface FormValues {
   fName: string;
   lName: string;
   email: string;
   phoneNumber: string;
   message: string;
+  subject: string;
 }
 
 const formFields: Array<{
@@ -20,13 +22,14 @@ const formFields: Array<{
   { type: "email", placeholder: "Email Id", name: "email" },
   { type: "text", placeholder: "Phone Number", name: "phoneNumber" },
 ];
-// Add validation schema
+
 const validationSchema = Yup.object({
   fName: Yup.string().required("First name required"),
   lName: Yup.string().required("Last name required"),
   email: Yup.string().email().required("Email is required"),
   phoneNumber: Yup.number().required("Phone number required"),
   message: Yup.string(),
+  subject: Yup.string(),
 });
 
 const ContactUsFormSec = () => {
@@ -38,6 +41,7 @@ const ContactUsFormSec = () => {
         email: "",
         phoneNumber: "",
         message: "",
+        subject: "",
       },
       validationSchema,
       onSubmit: async (values) => {
@@ -49,6 +53,7 @@ const ContactUsFormSec = () => {
             from_email: values.email,
             message: values.message,
             from_number: values.phoneNumber,
+            subject: values.subject,
           };
 
           const sendEmail = await emailjs.send(
@@ -60,7 +65,7 @@ const ContactUsFormSec = () => {
 
           if (sendEmail.status === 200) {
             toast.success("Email sent! Our team will get back to you soon");
-            resetForm(); // This will clear all form fields
+            resetForm();
           }
         } catch (error) {
           console.error(error);
@@ -68,30 +73,30 @@ const ContactUsFormSec = () => {
         }
       },
     });
+
   return (
     <div className="w-full h-screen flex justify-center">
-      <div className="flex justify-center items-center gap-20 w-[80%] h-[100%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
-        <div className="w-1/2 ">
-          <div className="text-left">
+      <div className="flex justify-center mt-20 items-center gap-12 w-[83%] h-[88%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
+        <div className="w-[58%] ml-4 ">
+          <div className="text-left mb-12">
             <h1
-              style={{ fontFamily: mainFont.style.fontFamily, color: "#fff" }}
-              className="text-3xl leading-9 w-full"
+              className="text-4xl font-bold tracking-wide"
+              style={{ fontFamily: mainFont.style.fontFamily }}
             >
-              Let&apos;s Get In Touch
+              LET'S GET IN TOUCH
             </h1>
-            <p className="text-lg w-full text-white my-6 ">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-              debitis similique sed deserunt hic vitae, eligendi quisquam
-              architecto dolor beatae!
+            <p className="text-xl leading-7 text-white mt-4">
+              Connect with us to explore endless possibilities! Lorem ipsum<br/>  dolo
+              r sit, amet consectetur adipsicing
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="flex flex-col ">
-            <div className="flex w-full gap-6 mb-4">
+          <form onSubmit={handleSubmit} className=" w-full flex flex-col ">
+            <div className="flex w-full  mb-5 flex-1">
               <input
                 type="text"
                 name="fName"
                 placeholder="First Name"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className=" w-full h-[50px] pl-6 mr-6 font-secondaryFont leading-6 text-md rounded-full border border-[#FFFFFF33] text-white bg-[#000D0F] focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.fName}
@@ -100,85 +105,94 @@ const ContactUsFormSec = () => {
                 type="text"
                 name="lName"
                 placeholder="Last Name"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="w-full h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-full border border-[#FFFFFF33] text-white bg-[#000D0F] focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.lName}
               />
             </div>
-            <div className="flex w-full gap-6 mb-4 ">
+            <div className="flex w-full mb-5 flex-1">
               <input
                 type="text"
-                name="fName"
+                name="phoneNumber"
                 placeholder="Phone Number"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="w-full h-[50px] pl-6 mr-6 font-secondaryFont leading-6 text-md rounded-full border border-[#FFFFFF33] text-white bg-[#000D0F] focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.phoneNumber}
               />
               <input
-                type="text"
-                name="lName"
+                type="email"
+                name="email"
                 placeholder="Email Id"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="w-full h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-full border border-[#FFFFFF33] text-white bg-[#000D0F] focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
               />
             </div>
-            <select
+            <div className="flex w-full  mb-5 flex-1 rounded-full border border-[#FFFFFF33]">
+              <select
                 onChange={handleChange}
                 onBlur={handleBlur}
                 name="subject"
-                className="w-[474px] border-white h-[50px] pl-6 mb-4 font-secondaryFont leading-6 text-md rounded-lg  text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="w-[96%] border-white h-[50px] my-auto pl-6  font-secondaryFont leading-6 text-md  text-white bg-transparent focus:outline-none placeholder:text-white placeholder:text-sm"
               >
-                <option value="">Services</option>
+                <option value="">Service</option>
                 <option value="web development">Website Design and Development</option>
                 <option value="app development">Mobile Application Development</option>
                 <option value="UI/UX Design">Web Application Development</option>
                 <option value="UI/UX Design">UI/UX Design</option>
                 <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
                 <option value="UI/UX Design">Social Media Marketiing</option>
-
                 <option value="UI/UX Design">Branding</option>
               </select>
+            </div>
             <input
               type="text"
               name="message"
               placeholder="Message"
-              className="w-[474px] h-[150px] pl-6 mb-4 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+              className="w-full h-[150px] pl-6 mb-8 font-secondaryFont leading-6 text-md rounded-[16px] 
+              border border-[#FFFFFF33] text-white bg-[#000D0F] focus:outline-none placeholder:text-white placeholder:text-sm"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.message}
             />
             <button
-              style={{ fontFamily: mainFont.style.fontFamily }}
               type="submit"
-              className="w-[138px] h-[50px] bg-white text-black flex gap-4 items-center justify-center font-secondaryFont rounded-full transition-all duration-300"
+              style={{ fontFamily: mainFont.style.fontFamily }}
+              className="w-[187px] h-[50px] text-black font-bold bg-white rounded-full transition duration-300 ease-in-out 
+              hover:bg-gradient-to-r hover:from-[#2bb2e0]  hover:to-[#23849d] hover:text-white"
             >
-              Submit <img src="/assets/submit_plane.png" alt="" />
+              Submit
             </button>
           </form>
         </div>
-        <div className="w-1/2 flex flex-col">
+        <div className="w-[2px] h-[80%] bg-gradient-to-b from-[#007FA9] to-[#000D0F]  "></div>
+        <div className="w-[42%] h-[81%] ml-0.5 flex flex-col ">
           <div>
-            <h1  style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl ">Call us</h1>
-            <p className="font-secondaryFont text-lg pt-5">
+            <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl ">
+              Call us
+            </h1>
+            <p className="font-secondaryFont text-xl leading-7 pt-2">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Veritatis totam magnam quia magni suscipit possimus.
             </p>
             <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4">
-               <img src="/assets/ph_phone_fill.png" alt="" /> +91-1234567890</p>
+              <img src="/assets/ph_phone_fill.png" alt="" /> +91-1234567890
+            </p>
           </div>
           <div>
-            <h1  style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl ">Email</h1>
-            <p className="font-secondaryFont text-lg pt-5">
+            <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl ">
+              Email
+            </h1>
+            <p className="font-secondaryFont text-xl leading-7 pt-2">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Veritatis totam magnam quia magni suscipit possimus.
             </p>
             <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4">
-                <img src="/assets/ic_outline_email.png" alt="" />
-                Example@gmail.com
+              <img src="/assets/ic_outline_email.png" alt="" />
+              codevisionarystudio@gmail.com
             </p>
           </div>
         </div>

@@ -1,10 +1,10 @@
-import ContactUsFormSec from "@/components/ContactUsUpdated/ContactUsFormSec";
-import ContactUs from "@/components/ContactUsUpdated/ContactUsLanding";
+import ContactUsFormSec from "@/components/ContactUs/ContactUsFormSec";
+import ContactUs from "@/components/ContactUs/ContactUsLanding";
 
 export default function ContactUsPage() {
   return (
     <>
-      <ContactUs />
+      {/* <ContactUs /> */}
       <ContactUsFormSec />
     </>
   );
