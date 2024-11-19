@@ -1,6 +1,7 @@
 import { AboutSecondSection } from "@/components/Homepage/AboutSec/AboutSecondSection";
 import { AboutSection } from "@/components/Homepage/AboutSec/AboutSection";
 import { FooterSection } from "@/components/Homepage/Footer/FooterSection";
+import { GallerySection } from "@/components/Homepage/GallerySection/GallerySection";
 
 import { HeroSection } from "@/components/Homepage/HeroSec/HeroSection";
 import { OurServices } from "@/components/Homepage/OurServices/OurServices";
@@ -19,6 +20,7 @@ export default function Home() {
       <WhatWeDo />
       <OurServices />
       <WhyUsSection />
+      <GallerySection />
       <OurTeam />
       <Testimonials />
       <FooterSection />
