@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,9 +10,10 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-const AboutUsFooter = () => {
+
+const FooterTwo = ({ useBlackBackground = false }) => {
   return (
-    <div className=" w-full h-[467px] bg-gradient-to-b from-[#590005] via-[#AB000A] to-[#650006] flex flex-col justify-center gap-12 items-center ">
+    <div className={`w-full h-[467px] ${useBlackBackground ? 'bg-[#000D0F]' : 'bg-gradient-to-b from-[#590005] via-[#AB000A] to-[#650006]'} flex flex-col justify-center gap-12 items-center `}>
       <Image
         src="/assets/NewLogo.png"
         alt="Floating Laptop Image"
@@ -29,7 +28,7 @@ const AboutUsFooter = () => {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about_us">About Us</Link></li>
           <li><Link href="/our_services">Our Services</Link></li>
-          {/* <li><Link href="/portfolio">Portfolio</Link></li> */}
+          <li><Link href="/contact_us">Contact Us</Link></li>
           <li><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
         </ul>
       </div>
@@ -58,4 +57,5 @@ const AboutUsFooter = () => {
     </div>
   );
 };
-export default AboutUsFooter;
+
+export default FooterTwo;

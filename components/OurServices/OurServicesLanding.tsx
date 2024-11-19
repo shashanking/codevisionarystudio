@@ -15,7 +15,7 @@ const OurServicesLanding = () => {
               applications, crafting unique brand identities, and driving growth through
               digital marketing.
             </p>
-          </div>
+          </div> 
           <div className="flex justify-center gap-10 absolute z-10">
             <div className=" w-[456px] h-[436px] rounded-[5em] bg-gradient-to-b from-[#C44F56] to-[#5E2629] py-8 px-16">
               <h1 style={{ fontFamily: mainFont.style.fontFamily ,color: "#ffffff"}} className="text-4xl leading-[47px]">Our services</h1>
