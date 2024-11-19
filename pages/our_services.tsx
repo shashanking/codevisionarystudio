@@ -12,7 +12,7 @@ const OurServices = () => {
       {/* <OurServicesSolution />  */}
       <OurServicesAnimatedSec />
       <OurServicesConnect />
-      <FooterTwo />
+      <FooterTwo useBlackBackground={false} />
     </div>
   )
 }

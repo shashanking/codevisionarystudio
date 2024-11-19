@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { mainFont } from "@/components/UI/Mainfontt";
+import Image from "next/image";
 
 interface FormValues {
   fName: string;
@@ -83,7 +84,7 @@ const ContactUsFormSec = () => {
               className="text-4xl font-bold tracking-wide"
               style={{ fontFamily: mainFont.style.fontFamily }}
             >
-              LET'S GET IN TOUCH
+              LET&apos;S GET IN TOUCH
             </h1>
             <p className="text-xl leading-7 text-white mt-4">
               Connect with us to explore endless possibilities! Lorem ipsum<br />  dolo
@@ -179,7 +180,7 @@ const ContactUsFormSec = () => {
               Veritatis totam magnam quia magni suscipit possimus.
             </p>
             <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4">
-              <img src="/assets/ph_phone_fill.png" alt="" /> +91-1234567890
+              <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={20} /> +91-1234567890
             </p>
           </div>
           <div>
@@ -191,7 +192,7 @@ const ContactUsFormSec = () => {
               Veritatis totam magnam quia magni suscipit possimus.
             </p>
             <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4">
-              <img src="/assets/ic_outline_email.png" alt="" />
+              <Image src="/assets/ic_outline_email.png" alt="" height={20} width={20} />
               codevisionarystudio@gmail.com
             </p>
           </div>

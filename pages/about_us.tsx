@@ -16,7 +16,7 @@ const AboutUs = () => {
       {/* About Us Banner Section */}
       <AboutUsBanner />
       {/* About Us Footer Section */}
-      <FooterTwo />
+      <FooterTwo  useBlackBackground={false} />
     </div>
 
   )
