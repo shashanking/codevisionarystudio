@@ -69,9 +69,9 @@ const ContactUsFormSec = () => {
       },
     });
   return (
-    <div className="w-full h-screen flex justify-center">
-      <div className="flex justify-center items-center gap-20 w-[80%] h-[100%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
-        <div className="w-1/2 ">
+    <div className="w-full h-[110vh] flex justify-center">
+      <div  className="flex justify-center items-center gap-20 w-[80%] h-[100%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
+        <div dir="ltr" className="w-1/2 border  pr-12  border-r-[#1c596e] border-y-transparent border-x-transparent ">
           <div className="text-left">
             <h1
               style={{ fontFamily: mainFont.style.fontFamily, color: "#fff" }}
@@ -91,7 +91,7 @@ const ContactUsFormSec = () => {
                 type="text"
                 name="fName"
                 placeholder="First Name"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-full border border-white text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.fName}
@@ -100,7 +100,7 @@ const ContactUsFormSec = () => {
                 type="text"
                 name="lName"
                 placeholder="Last Name"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-full border border-white text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.lName}
@@ -111,7 +111,7 @@ const ContactUsFormSec = () => {
                 type="text"
                 name="fName"
                 placeholder="Phone Number"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-full border border-white text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.phoneNumber}
@@ -120,7 +120,7 @@ const ContactUsFormSec = () => {
                 type="text"
                 name="lName"
                 placeholder="Email Id"
-                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="h-[50px] pl-6 font-secondaryFont leading-6 text-md rounded-full border border-white text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
@@ -130,7 +130,7 @@ const ContactUsFormSec = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 name="subject"
-                className="w-[474px] border-white h-[50px] pl-6 mb-4 font-secondaryFont leading-6 text-md rounded-lg  text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+                className="w-[474px] h-[50px] px-6 mb-4 font-secondaryFont leading-6 text-md rounded-full border border-white text-white  bg-[#FFFFFF0D]" 
               >
                 <option value="">Services</option>
                 <option value="web development">Website Design and Development</option>
@@ -139,14 +139,13 @@ const ContactUsFormSec = () => {
                 <option value="UI/UX Design">UI/UX Design</option>
                 <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
                 <option value="UI/UX Design">Social Media Marketiing</option>
-
                 <option value="UI/UX Design">Branding</option>
               </select>
             <input
               type="text"
               name="message"
               placeholder="Message"
-              className="w-[474px] h-[150px] pl-6 mb-4 font-secondaryFont leading-6 text-md rounded-lg border-[#FFFFFF33] text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
+              className="w-[474px] h-[150px] pl-6 mb-4 font-secondaryFont leading-6 text-md rounded-lg border border-white text-white bg-[#FFFFFF0D]  focus:outline-none placeholder:text-white placeholder:text-sm"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.message}
