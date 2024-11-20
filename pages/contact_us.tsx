@@ -1,13 +1,16 @@
-import ContactUsFooter from "@/components/ContactUsUpdated/ContactUsFooter";
-import ContactUsFormSec from "@/components/ContactUsUpdated/ContactUsFormSec";
-import ContactUs from "@/components/ContactUsUpdated/ContactUsLanding";
+import ContactUsFormSec from "@/components/ContactUs/ContactUsFormSec";
+import ContactUs from "@/components/ContactUs/ContactUsLanding";
+import FooterTwo from "@/components/common/Footer/FooterTwo"; // assuming FooterTwo is imported from this location
 
-export default function ContactUsPage() {
+const ContactUsPage = () => {
   return (
-    <>
+    <div>
       <ContactUs />
+
       <ContactUsFormSec />
-      <ContactUsFooter />
-    </>
+      <FooterTwo useBlackBackground={true}  />
+    </div>
   );
-}
+};
+
+export default ContactUsPage;

@@ -20,20 +20,15 @@ const ContactUs = () => {
           Visionary Studios.
         </div>
         <div className=" flex justify-center  items-center w-[100%] mt-10 ">
-          <div className="w-[17%]  h-[72px]  rounded-full flex items-center justify-between pl-8   hover:bg-white hover:text-black group">
+          <div className="w-[12%]  h-[72px]  rounded-full flex items-center justify-between pl-8   hover:bg-white hover:text-black group">
             <div className="flex items-center justify-between ">
               <span className="flex justify-between items-center h-full group-hover:text-black group-hover:-translate-x-4  transition-all translate-x-5">
-                {/* <Image
+                <Image
                   src="/assets/phonecall1.png"
                   alt="Message"
                   className="group-hover:invert bg-white h-[56px] w-[56px] rounded-full scale-75"
                   width={25}
                   height={25}
-                /> */}
-                <img
-                  src="/assets/phonecall1.png"
-                  alt="Message"
-                  className="group-hover:invert bg-white h-[56px] w-[56px] rounded-full scale-75"
                 />
                 <div
                   className="font-semibold text-xl h-full text-center  opacity-0 group-hover:opacity-100 transition-all "
@@ -45,20 +40,15 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="min-w-[17%] w-[26%] h-[72px]  rounded-full flex items-center justify-between pl-8  hover:bg-white hover:text-black group">
+          <div className="min-w-[17%] w-[24%] h-[72px]  rounded-full flex items-center justify-between pl-8  hover:bg-white hover:text-black group">
             <div className="flex flex-col justify-center gap-20">
               <span className="flex justify-between items-center h-full group-hover:text-black group-hover:-translate-x-4  transition-all translate-x-5">
-                {/* <Image
+                <Image
                   src="/assets/chat1.png"
                   alt="Message"
                   className="group-hover:invert bg-white h-[56px] w-[56px] rounded-full scale-75"
                   width={25}
                   height={25}
-                /> */}
-                <img
-                  src="/assets/chat1.png"
-                  alt="Message"
-                  className="group-hover:invert bg-white h-[56px] w-[56px] rounded-full scale-75"
                 />
                 <div
                   className="font-semibold text-xl text-center h-full  opacity-0 group-hover:opacity-100 transition-all "

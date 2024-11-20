@@ -7,7 +7,7 @@ import {
   faInstagram,
   faLinkedin,
   faSquareXTwitter,
-  faYoutube,
+  faYoutube, 
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 

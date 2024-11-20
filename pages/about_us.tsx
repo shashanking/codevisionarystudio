@@ -3,11 +3,11 @@ import AboutUsLanding from '@/components/AboutUs/AboutUsLanding'
 import AboutUsAnimation from "@/components/AboutUs/AboutUsAnimation";
 import AboutUsTestimonial from "@/components/AboutUs/AboutUsTestimonial";
 import AboutUsBanner from "@/components/AboutUs/AboutUsBanner";
-import AboutUsFooter from "@/components/AboutUs/AboutUsFooter";
+import FooterTwo from "@/components/common/Footer/FooterTwo";
 
 const AboutUs = () => {
   return (
-    <div> 
+    <div>
       <AboutUsLanding />
       {/* About Us Animated Card Section */}
       <AboutUsAnimation />
@@ -16,7 +16,7 @@ const AboutUs = () => {
       {/* About Us Banner Section */}
       <AboutUsBanner />
       {/* About Us Footer Section */}
-      <AboutUsFooter />
+      <FooterTwo />
     </div>
 
   )
