@@ -20,17 +20,15 @@ const ContactUs = () => {
           style={{ fontFamily: mainFont.style.fontFamily }}
           className="text-7xl text-white leading-[100px] font-bold"
         >
-          Get in Touch with Code Visionary Studios
+          <h1>Get in Touch with Code Visionary Studios</h1>
         </div>
-        <div className="text-lg leading-[30px] w-[100%] mt-5">
-          Stay ahead in the digital world with our expert insights, industry
-          trends, and creative inspiration. Explore our blog <br /> for valuable
-          tips, thought leadership, and the latest innovations from Code
-          Visionary Studios.
+        <div className="text-lg leading-[30px] w-[100%] text-white mt-5">
+          Specializing in software development, React and Flutter applications, and cutting-edge IT solutions,
+          we craft tailored web and mobile applications designed for scalability and innovation.
         </div>
       </div>
       <div className="flex justify-center items-center w-[100%] mt-[38%] absolute z-50">
-        <a href="tel:+1234567890" className="relative w-[72px] h-[72px] rounded-full flex items-center justify-start hover:w-[186px] transition-all duration-300 pl-2 hover:bg-white hover:text-black group ml-4">
+        <a href="tel:+918240833838" className="relative w-[72px] h-[72px] rounded-full flex items-center justify-start hover:w-[186px] transition-all duration-300 pl-2 hover:bg-white hover:text-black group ml-4">
           <div className="flex items-center justify-center">
             <span className="flex items-center h-full group-hover:text-black transition-all duration-300">
               <Image
