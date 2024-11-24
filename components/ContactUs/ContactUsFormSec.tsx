@@ -81,7 +81,7 @@ const ContactUsFormSec = () => {
           if (sendEmail.status === 200) {
             toast.success("Form submitted successfully! Our team will get back to you soon");
             resetForm();
-            router.push('/thank-you');
+            router.push('/thank_you');
           }
         } catch (error) {
           console.error(error);
