@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 import { createLead } from "@/lib/firestore";
+import { useRouter } from 'next/router';
 
 interface FormValues {
   fName: string;
@@ -35,6 +36,7 @@ const validationSchema = Yup.object({
 });
 
 const ContactUsFormSec = () => {
+  const router = useRouter();
   const { handleSubmit, values, handleChange, handleBlur, resetForm } =
     useFormik<FormValues>({
       initialValues: {
@@ -79,6 +81,7 @@ const ContactUsFormSec = () => {
           if (sendEmail.status === 200) {
             toast.success("Form submitted successfully! Our team will get back to you soon");
             resetForm();
+            router.push('/thank-you');
           }
         } catch (error) {
           console.error(error);
@@ -99,7 +102,7 @@ const ContactUsFormSec = () => {
               LET&apos;S GET IN TOUCH
             </h1>
             <p className="text-xl leading-7 text-white mt-4">
-            Code Visionary Studio, we transform ideas into impactful digital experiences.
+              Code Visionary Studio, we transform ideas into impactful digital experiences.
             </p>
           </div>
           <form onSubmit={handleSubmit} className=" w-full flex flex-col ">
