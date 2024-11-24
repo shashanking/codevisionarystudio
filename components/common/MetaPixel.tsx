@@ -1,4 +1,6 @@
 import Script from 'next/script';
+import Image from 'next/image';
+import { useEffect } from 'react';
 import * as fbq from '../Pixel/facebook/pixel-1';
 
 interface MetaPixelProps {
@@ -6,22 +8,28 @@ interface MetaPixelProps {
 }
 
 const MetaPixel = ({ trackLead = false }: MetaPixelProps) => {
-  // Move router and event tracking to client-side only
-  if (typeof window !== 'undefined') {
-    import('next/router').then(({ useRouter }) => {
-      const router = useRouter();
+  useEffect(() => {
+    // Skip during SSR
+    if (typeof window === 'undefined') return;
 
-      router.events?.on('routeChangeComplete', () => {
-        fbq.pageview();
-      });
-
-      // Initial page load
+    // Handle route changes
+    const handleRouteChange = () => {
       fbq.pageview();
-      if (trackLead) {
-        fbq.lead();
-      }
-    });
-  }
+    };
+
+    // Initial page load
+    fbq.pageview();
+    if (trackLead) {
+      fbq.lead();
+    }
+
+    // Add route change listener
+    window.addEventListener('routechangecomplete', handleRouteChange);
+
+    return () => {
+      window.removeEventListener('routechangecomplete', handleRouteChange);
+    };
+  }, [trackLead]);
 
   return (
     <>
@@ -44,13 +52,16 @@ const MetaPixel = ({ trackLead = false }: MetaPixelProps) => {
         }}
       />
       <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src={`https://www.facebook.com/tr?id=${fbq.FB_PIXEL_ID}&ev=PageView&noscript=1`}
-          alt=""
-        />
+        <div style={{ position: 'absolute' }}>
+          <Image
+            width={1}
+            height={1}
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${fbq.FB_PIXEL_ID}&ev=PageView&noscript=1`}
+            alt=""
+            unoptimized
+          />
+        </div>
       </noscript>
     </>
   );

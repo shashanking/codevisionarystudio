@@ -1,8 +1,9 @@
-import ContactUsFormSec from "@/components/ContactUs/ContactUsFormSec";
-import ContactUs from "@/components/ContactUs/ContactUsLanding";
-import FooterTwo from "@/components/common/Footer/FooterTwo";
-import Head from "next/head";
-import MetaPixel from "@/components/common/MetaPixel";
+import Head from 'next/head';
+import ContactUs from '../components/ContactUs/ContactUsLanding';
+import ContactUsFormSec from '../components/ContactUs/ContactUsFormSec';
+import FooterTwo from '../components/common/Footer/FooterTwo';  
+import MetaPixel from '../components/common/MetaPixel';
+import '../lib/routeEvents';
 
 const ContactUsPage = () => {
   return (
