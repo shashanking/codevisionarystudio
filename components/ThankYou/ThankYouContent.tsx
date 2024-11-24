@@ -13,7 +13,7 @@ const ThankYouContent = () => {
         </h1>
         <div className="space-y-4 text-lg text-white/80 mb-8">
           <p>
-            We've received your message and appreciate you taking the time to contact us.
+            We&apos;ve received your message and appreciate you taking the time to contact us.
           </p>
           <p>
             Our team will review your inquiry and get back to you within 24-48 hours.
