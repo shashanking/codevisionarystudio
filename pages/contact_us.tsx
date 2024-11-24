@@ -1,15 +1,22 @@
 import ContactUsFormSec from "@/components/ContactUs/ContactUsFormSec";
 import ContactUs from "@/components/ContactUs/ContactUsLanding";
-import FooterTwo from "@/components/common/Footer/FooterTwo"; // assuming FooterTwo is imported from this location
+import FooterTwo from "@/components/common/Footer/FooterTwo";
+import Head from "next/head";
+import MetaPixel from "@/components/common/MetaPixel";
 
 const ContactUsPage = () => {
   return (
-    <div>
-      <ContactUs />
-
-      <ContactUsFormSec />
-      <FooterTwo useBlackBackground={true}  />
-    </div>
+    <>
+      <Head>
+        <title>Contact Us - Code Visionary Studio</title>
+        <MetaPixel />
+      </Head>
+      <div className="min-h-screen bg-[#000D0F] flex flex-col">
+        <ContactUs />
+        <ContactUsFormSec />
+        <FooterTwo useBlackBackground={true} />
+      </div>
+    </>
   );
 };
 
