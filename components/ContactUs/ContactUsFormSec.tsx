@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
+import { createLead } from "@/lib/firestore";
 
 interface FormValues {
   fName: string;
@@ -53,10 +54,11 @@ const ContactUsFormSec = () => {
             from_last_name: values.lName,
             from_email: values.email,
             message: values.message,
-            from_number: values.phoneNumber,
+            from_contact: values.phoneNumber,
             subject: values.subject,
           };
 
+          // Send email
           const sendEmail = await emailjs.send(
             process.env.NEXT_PUBLIC_SERVICE_ID ?? "",
             process.env.NEXT_PUBLIC_CONTACT_US_TEMPLATE_ID ?? "",
@@ -64,8 +66,18 @@ const ContactUsFormSec = () => {
             process.env.NEXT_PUBLIC_PUBLIC_KEY
           );
 
+          // Create lead in Firestore
+          await createLead({
+            first_name: values.fName,
+            last_name: values.lName,
+            phone: values.phoneNumber,
+            email: values.email,
+            subject: values.subject,
+            msg: values.message,
+          });
+
           if (sendEmail.status === 200) {
-            toast.success("Email sent! Our team will get back to you soon");
+            toast.success("Form submitted successfully! Our team will get back to you soon");
             resetForm();
           }
         } catch (error) {
@@ -76,19 +88,18 @@ const ContactUsFormSec = () => {
     });
 
   return (
-    <div className="w-full h-screen flex justify-center">
-      <div id="contact-form" className="flex justify-center mt-20  items-center gap-12 w-[83%] h-[88%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
+    <div id="contact-form" className="w-full h-screen flex justify-center">
+      <div className="flex justify-center mt-20  items-center gap-12 w-[83%] h-[88%] shadow-[0px_0px_4px_0px_#89E2FF33] px-8 rounded-xl ">
         <div className="w-[58%] ml-4 ">
           <div className="text-left mb-12">
             <h1
-              className="text-4xl font-bold tracking-wide"
+              className="text-4xl font-bold tracking-wide text-white"
               style={{ fontFamily: mainFont.style.fontFamily }}
             >
               LET&apos;S GET IN TOUCH
             </h1>
             <p className="text-xl leading-7 text-white mt-4">
-              Connect with us to explore endless possibilities! Lorem ipsum<br />  dolo
-              r sit, amet consectetur adipsicing
+            Code Visionary Studio, we transform ideas into impactful digital experiences.
             </p>
           </div>
           <form onSubmit={handleSubmit} className=" w-full flex flex-col ">
@@ -172,26 +183,24 @@ const ContactUsFormSec = () => {
         <div className="w-[2px] h-[80%] bg-gradient-to-b from-[#007FA9] to-[#000D0F]  "></div>
         <div className="w-[42%] h-[81%] ml-0.5 flex flex-col ">
           <div>
-            <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl ">
+            <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl text-white">
               Call us
             </h1>
-            <p className="font-secondaryFont text-xl leading-7 pt-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Veritatis totam magnam quia magni suscipit possimus.
+            <p className="font-secondaryFont text-xl leading-7 pt-2 text-white">
+              Create, scale, or refine your digital presence — let&apos;s build something extraordinary together!
             </p>
-            <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4">
-              <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={20} /> +91-1234567890
+            <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4 text-white">
+              <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={20} /> +91-8240833838
             </p>
           </div>
           <div>
-            <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl ">
+            <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-4xl text-white">
               Email
             </h1>
-            <p className="font-secondaryFont text-xl leading-7 pt-2">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Veritatis totam magnam quia magni suscipit possimus.
+            <p className="font-secondaryFont text-xl leading-7 pt-2 text-white">
+              Contact us today and bring your vision to life
             </p>
-            <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4">
+            <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4 text-white">
               <Image src="/assets/ic_outline_email.png" alt="" height={20} width={20} />
               codevisionarystudio@gmail.com
             </p>
