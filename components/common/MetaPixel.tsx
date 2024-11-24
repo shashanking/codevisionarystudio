@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
 import * as fbq from '../Pixel/facebook/pixel-1';
 
 interface MetaPixelProps {
@@ -8,23 +6,22 @@ interface MetaPixelProps {
 }
 
 const MetaPixel = ({ trackLead = false }: MetaPixelProps) => {
-  const router = useRouter();
+  // Move router and event tracking to client-side only
+  if (typeof window !== 'undefined') {
+    import('next/router').then(({ useRouter }) => {
+      const router = useRouter();
 
-  useEffect(() => {
-    // This pageview only triggers the first time (it's important for Pixel to have real information)
-    fbq.pageview();
+      router.events?.on('routeChangeComplete', () => {
+        fbq.pageview();
+      });
 
-    if (trackLead) {
-      fbq.lead();
-    }
-
-    const handleRouteChange = () => {
+      // Initial page load
       fbq.pageview();
-    };
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => router.events.off('routeChangeComplete', handleRouteChange);
-  }, [router.events, trackLead]);
+      if (trackLead) {
+        fbq.lead();
+      }
+    });
+  }
 
   return (
     <>
