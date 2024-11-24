@@ -9,7 +9,7 @@ const ContactUsPage = () => {
     <>
       <Head>
         <title>Contact Us - Code Visionary Studio</title>
-        <MetaPixel />
+        <MetaPixel trackLead={true} />
       </Head>
       <div className="min-h-screen bg-[#000D0F] flex flex-col">
         <ContactUs />
