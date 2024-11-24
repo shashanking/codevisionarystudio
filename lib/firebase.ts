@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBTU1jaoTcGz5sVs_gYuUfKzr2NWDtp2nk",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "code-visionary-studio-baa96.firebaseapp.com",
   projectId: "code-visionary-studio-baa96",
   storageBucket: "code-visionary-studio-baa96.firebasestorage.app",
