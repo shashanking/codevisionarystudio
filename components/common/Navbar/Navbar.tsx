@@ -17,14 +17,13 @@ export const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed z-50 top-0 w-full bg-transparent ${
-          currentScrollPosition > 5
+        className={`fixed z-50 top-0 w-full bg-transparent ${currentScrollPosition > 5
             ? "bg-white/20 backdrop-blur-none"
             : "bg-transparent backdrop-blur-none"
-        }`}
+          }`}
       >
         <div className="max-w-[1920px] w-full mx-auto ">
-          <div className="px-3 py-2 w-[85%] mx-auto flex justify-between items-center">
+          <div className=" py-2 w-[85%] md:w-[95%] mx-auto flex justify-between items-center">
             <div>
               <Link href="/">
                 <Image
@@ -35,25 +34,27 @@ export const Navbar = () => {
                 />
               </Link>
             </div>{" "}
-            <div className="flex justify-end px-2 items-center gap-7 w-[50%]">
+            <div className="flex justify-end items-center gap-7 w-[50%]">
               <button className="bg-white/20 rounded-full border-none outline-none h-10 w-10 flex flex-col justify-center items-center gap-2">
                 <div className="w-4 h-1 bg-white rounded-md mr-[15%]" />
                 <div className="w-4 h-1 bg-white rounded-md ml-[15%]" />
               </button>
-              <Link
-                href="/contact_us"
-                className="w-[30%] px-4 flex justify-between items-center gap-5 outline-none rounded-3xl py-1.5 bg-[#C44F56] border-4 border-white"
-              >
-                <span
-                  style={{
-                    fontFamily: mainFont.style.fontFamily,
-                  }}
-                  className="text-[1.1vw] font-[700]"
+              <div className="hidden md:block">
+                <Link
+                  href="/contact_us"
+                  className="w-[150px] px-4 py-2 flex justify-between items-center gap-5 outline-none rounded-3xl  bg-[#C44F56] border-4 border-white"
                 >
-                  Contact Us
-                </span>
-                <div className="h-2 w-2 rounded-full bg-white" />
-              </Link>
+                  <span
+                    style={{
+                      fontFamily: mainFont.style.fontFamily,
+                    }}
+                    className="text-[1.1vw] font-[700]"
+                  >
+                    Contact Us
+                  </span>
+                  <div className="h-2 w-2 rounded-full bg-white" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

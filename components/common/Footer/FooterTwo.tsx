@@ -24,35 +24,45 @@ const FooterTwo = ({ useBlackBackground = false }) => {
       />
 
       <div>
-        <ul className="flex justify-center gap-10 font-secondaryFont  text-white ">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about_us">About Us</Link></li>
-          <li><Link href="/our_services">Our Services</Link></li>
-          <li><Link href="/contact_us">Contact Us</Link></li>
-          <li><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
+        <ul className="flex justify-center gap-10 font-secondaryFont text-white text-base flex-wrap">
+          <li className="hover:text-[#89E2FF] transition-colors"><Link href="/">Home</Link></li>
+          <li className="hover:text-[#89E2FF] transition-colors"><Link href="/about_us">About Us</Link></li>
+          <li className="hover:text-[#89E2FF] transition-colors"><Link href="/our_services">Our Services</Link></li>
+          <li className="hover:text-[#89E2FF] transition-colors"><Link href="/contact_us">Contact Us</Link></li>
+          <li className="hover:text-[#89E2FF] transition-colors"><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
         </ul>
       </div>
-      <div className="flex justify-center w-[267px] h-[48px]  gap-10  text-white   ">
-        {/* Icon size very small  */}
-        <Link href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer" legacyBehavior>
-          <a><FontAwesomeIcon icon={faFacebook} /></a>
+
+      <div className="flex justify-center items-center gap-10 text-white">
+        <Link href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer">
+          <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#000D0F] transition-all">
+            <FontAwesomeIcon icon={faFacebook} className="text-2xl" />
+          </div>
         </Link>
-        <Link href="https://www.instagram.com/codevisionarystudio/" target="_blank" rel="noopener noreferrer" legacyBehavior>
-          <a><FontAwesomeIcon icon={faInstagram} /></a>
+        <Link href="https://www.instagram.com/codevisionarystudio/" target="_blank" rel="noopener noreferrer">
+          <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#000D0F] transition-all">
+            <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+          </div>
         </Link>
-        <Link href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer" legacyBehavior>
-          <a><FontAwesomeIcon icon={faLinkedin} /></a>
+        <Link href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer">
+          <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#000D0F] transition-all">
+            <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+          </div>
         </Link>
-        <Link href="https://youtube.com/@codevisionarystudio?si=SovfCVSejRX4Gpun" target="_blank" rel="noopener noreferrer" legacyBehavior>
-          <a><FontAwesomeIcon icon={faYoutube} /></a>
+        <Link href="https://youtube.com/@codevisionarystudio?si=SovfCVSejRX4Gpun" target="_blank" rel="noopener noreferrer">
+          <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#000D0F] transition-all">
+            <FontAwesomeIcon icon={faYoutube} className="text-2xl" />
+          </div>
         </Link>
       </div>
-      <div className="w-full h-[1px] bg-white mx-auto "></div>
+
+      <div className="w-full h-[1px] bg-white/30"></div>
+
       <div
-        style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
-        className="text-center  "
+        style={{ fontFamily: mainFont.style.fontFamily }}
+        className="text-center text-white/90"
       >
-        2024 | All rights reserved by <span> Code visonary studio</span>
+        2024 | All rights reserved by <span className="text-white">Code Visionary Studio</span>
       </div>
     </div>
   );
