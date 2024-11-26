@@ -42,7 +42,7 @@ export const Navbar = () => {
               <div className="hidden md:block">
                 <Link
                   href="/contact_us"
-                  className="w-[160px] px-4 py-2 flex justify-between items-center gap-5 outline-none rounded-3xl  bg-[#C44F56] border-4 border-white"
+                  className="w-[180px] px-4 py-2 flex justify-between items-center gap-5 outline-none rounded-3xl  bg-[#C44F56] border-4 border-white"
                 >
                   <span
                     style={{
