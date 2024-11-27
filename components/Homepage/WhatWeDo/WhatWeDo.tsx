@@ -87,7 +87,7 @@ export const WhatWeDo = () => {
             </div>
             <div className="w-[85%] mx-auto relative z-40 p-2">
               <h3
-                className="text-center font-bold text-[2vw] text-white"
+                className="text-center font-bold 2xl:text-[2vw] xl:text-[2vw] lg:text-[2vw] md:landscape:text-[2vw] md:portrait:text-[3vw] text-[13vw] text-white"
                 style={{
                   fontFamily: mainFont.style.fontFamily,
                 }}

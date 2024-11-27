@@ -53,7 +53,7 @@ export const AboutSecondSection = () => {
               <HomeAboutSecSvg />
             </div>
             <div className="h-full w-full absolute top-0 left-0 flex justify-center items-center">
-              <div className="w-[85%] mx-auto  grid grid-cols-2 gap-4">
+              <div className="w-[85%] mx-auto  grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:landscape:grid-cols-2 grid-cols-1 gap-4">
                 <motion.div
                   style={{
                     y: scrollImg1YSmooth,
@@ -69,12 +69,13 @@ export const AboutSecondSection = () => {
                     alt="product-img"
                   />
                 </motion.div>
+
                 <motion.div
                   style={{
                     y: scrollImg2Y,
                     opacity: opacityImg2,
                   }}
-                  className="-mb-[10%] flex justify-start items-end relative z-30"
+                  className="-mb-[10%] 2xl:flex xl:flex lg:flex md:landscape:flex  justify-start items-end relative z-30"
                 >
                   <Image
                     width={300}
@@ -135,7 +136,7 @@ export const AboutSecondSection = () => {
                     y: scrollImg6Y,
                     // opacity: opacityImg2,
                   }}
-                  className="-mb-[0%] flex justify-start items-end relative z-30"
+                  className="-mb-[0%] 2xl:flex xl:flex lg:flex md:landscape:flex hidden justify-start items-end relative z-30"
                 >
                   <Image
                     width={300}
