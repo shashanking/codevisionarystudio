@@ -10,7 +10,7 @@ const ThankYouPage = () => {
         <title>Thank You - Code Visionary Studio</title>
       </Head>
       <Pixel name="FACEBOOK_PIXEL_1" trackLead={false} />
-      <div className="min-h-screen bg-[#000D0F] flex flex-col">
+      <div className=" w-full bg-[#000D0F] flex flex-col">
         <ThankYouContent />
         <FooterTwo useBlackBackground={true} />
       </div>

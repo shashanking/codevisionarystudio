@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 import Link from "next/link";
+import { m } from "framer-motion";
 
 export const Navbar = () => {
   const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
@@ -18,8 +19,8 @@ export const Navbar = () => {
     <>
       <div
         className={`fixed z-50 top-0 w-full bg-transparent ${currentScrollPosition > 5
-            ? "bg-white/20 backdrop-blur-none"
-            : "bg-transparent backdrop-blur-none"
+          ? "bg-white/20 backdrop-blur-none"
+          : "bg-transparent backdrop-blur-none"
           }`}
       >
         <div className="max-w-[1920px] w-full mx-auto ">
@@ -39,21 +40,63 @@ export const Navbar = () => {
                 <div className="w-4 h-1 bg-white rounded-md mr-[15%]" />
                 <div className="w-4 h-1 bg-white rounded-md ml-[15%]" />
               </button>
-              <div className="hidden md:block">
-                <Link
-                  href="/contact_us"
-                  className="w-[170px] px-4 py-2 flex justify-between items-center gap-5 outline-none rounded-3xl  bg-[#C44F56] border-4 border-white"
+              <div className="hidden md:block relative">
+                {/* Don't be shy text - outside button */}
+                <div
+                  style={{
+                    fontFamily: mainFont.style.fontFamily,
+                  }}
+                  className="absolute  h-[18px] left-[52.97px] -top-[64.34px] text-[24px] leading-[24px] text-white text-center opacity-0 group-hover:opacity-100 transform rotate-[11.24deg] transition-all duration-300 z-20"
                 >
-                  <span
-                    style={{
-                      fontFamily: mainFont.style.fontFamily,
-                    }}
-                    className="text-[1.1vw] font-[700]"
+                  Don&aapos;t be shy
+                </div>
+
+                <div className="relative w-[200px] h-[62px] group">
+                  {/* White border/background */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-white to-white rounded-[58px]" />
+
+                  {/* Red background */}
+                  <div className="absolute top-[4px] left-[4px] right-[4px] bottom-[4px] bg-[#C44F56] rounded-[58px]" />
+
+                  {/* Content container */}
+                  <Link
+                    href="/contact_us"
+                    className="absolute inset-0 flex items-center "
                   >
-                    Contact Us
-                  </span>
-                  <div className="h-2 w-2 rounded-full bg-white" />
-                </Link>
+                    {/* Contact us text */}
+                    <span
+                      style={{
+                        fontFamily: mainFont.style.fontFamily,
+                      }}
+                      className="text-[18px] leading-[24px] text-white z-10 ml-6"
+                    >
+                      Contact us
+                    </span>
+
+                    {/* White dot */}
+                    <div className="absolute right-[20px] w-[16px] h-[16px] bg-white rounded-full group-hover:opacity-0 transition-all duration-300" />
+
+                    {/* Arrow icon */}
+                    <div className="absolute right-[20px] w-[22px] h-[22px] opacity-0 group-hover:opacity-100 transform rotate-90 transition-all duration-300">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="text-white"
+                      >
+                        <path
+                          d="M11 3L11 19M11 3L17 9M11 3L5 9"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import ContactUsLanding from './ContactUsLanding';
-import ContactUsLandingMobile from './ContactUsLandingMobile';
-import ContactUsLandingTablet from './ContactUsLandingTablet';
-import ContactUsFormSec from './ContactUsFormSec';
-import ContactUsFormSecMobile from './ContactUsFormSecMobile';
+import ContactUsLanding from './ContactUsLanding/ContactUsLanding';
+import ContactUsLandingMobile from './ContactUsLanding/ContactUsLandingMobile';
+import ContactUsLandingTablet from './ContactUsLanding/ContactUsLandingTablet';
+import ContactUsFormSec from './ContactUsForm/ContactUsFormSec';
+import ContactUsFormSecMobile from './ContactUsForm/ContactUsFormSecMobile';
 
 interface ResponsiveProps {
   type: 'landing' | 'form';
