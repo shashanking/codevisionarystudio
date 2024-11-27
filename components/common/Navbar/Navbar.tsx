@@ -48,7 +48,7 @@ export const Navbar = () => {
                   }}
                   className="absolute  h-[18px] left-[52.97px] -top-[64.34px] text-[24px] leading-[24px] text-white text-center opacity-0 group-hover:opacity-100 transform rotate-[11.24deg] transition-all duration-300 z-20"
                 >
-                  Don't be shy
+                  Don&aapos;t be shy
                 </div>
 
                 <div className="relative w-[200px] h-[62px] group">
