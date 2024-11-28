@@ -26,6 +26,7 @@ const menuItems = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about_us" }, // Update menu items with link paths
   { name: "Our Services", link: "/our_services" },
+  { name: "Portfolio", link: "/portfolio" },
   { name: "Contact Us", link: "/contact_us" },
   { name: "Join Us", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
 
