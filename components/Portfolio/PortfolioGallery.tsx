@@ -15,19 +15,11 @@ interface ProjectDetails {
 const projects: ProjectDetails[] = [
   {
     title: "Money blaster",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum risus, fermentum tincidunt eleifend quis, efficitur convallis lectus. Donec mattis orci est, vel tincidunt odio dignissim in.",
+    description: "Code Visionary Studio proudly presents Money Blaster, Designed to streamline data accumulation and provide certified results, our app ensures fair play, seamless matchmaking, and real-time updates.",
     work: "UI/UX Design, Application and dashboard development.",
     duration: "45 Days",
     techStack: "Flutter, firebase, git, flutter flow",
-    link: "www.example.com"
-  },
-  {
-    title: "Car repair",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum risus, fermentum tincidunt eleifend quis, efficitur convallis lectus. Donec mattis orci est, vel tincidunt odio dignissim in.",
-    work: "UI/UX Design, Application and dashboard development.",
-    duration: "45 Days",
-    techStack: "Flutter, firebase, git, flutter flow",
-    link: "www.example.com"
+    link: "moneyblastertournament.com"
   },
   {
     title: "Contract crafters",
@@ -35,8 +27,17 @@ const projects: ProjectDetails[] = [
     work: "UI/UX Design, Application and dashboard development.",
     duration: "45 Days",
     techStack: "Flutter, firebase, git, flutter flow",
-    link: "www.example.com"
-  }
+    link: ""
+  },
+  {
+    title: "Car repair",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum risus, fermentum tincidunt eleifend quis, efficitur convallis lectus. Donec mattis orci est, vel tincidunt odio dignissim in.",
+    work: "UI/UX Design, Application and dashboard development.",
+    duration: "45 Days",
+    techStack: "Flutter, firebase, git, flutter flow",
+    link: ""
+  },
+
 ];
 
 const PortfolioGallery = () => {
@@ -77,10 +78,10 @@ const PortfolioGallery = () => {
 
   const leftImagesY = useTransform(snappedProgress, [0, 1], ['-210vh', '0vh']);
   const rightImagesY = useTransform(snappedProgress, [0, 1], ['40vh', '-170vh']);
-  
+
   // Initial fade in only at the start
   const detailsOpacity = useTransform(snappedProgress, [0.2, 0.333333333333333], [0, 1]);
-  
+
   // Separate transforms for title and description with matching scroll distances
   const titleScrollY = useTransform(
     snappedProgress,
@@ -170,9 +171,9 @@ const PortfolioGallery = () => {
           {/* Project Details */}
           <motion.div
             className="absolute bottom-0 left-[8%] right-[8%] w-[100%] h-[31vh] text-white flex gap-20"
-            style={{ 
-              opacity: detailsOpacity, 
-              zIndex: 51 
+            style={{
+              opacity: detailsOpacity,
+              zIndex: 51
             }}
           >
             {/* Left side with separate title and description containers */}
@@ -188,7 +189,7 @@ const PortfolioGallery = () => {
                     <motion.h2
                       key={`title-${project.title}`}
                       className="font-[Earth Orbiter Bold] text-[48px] leading-[48px] text-white absolute w-full"
-                      style={{ 
+                      style={{
                         fontFamily: mainFont.style.fontFamily,
                         top: `${index * 120}px`, // Matched spacing with descriptions
                         maxWidth: "90%"
@@ -211,8 +212,8 @@ const PortfolioGallery = () => {
                     <motion.p
                       key={`desc-${project.title}`}
                       className="font-secondaryFont text-xl leading-[30px] text-white absolute w-full"
-                      style={{ 
-                        top: `${index * 120}px`, 
+                      style={{
+                        top: `${index * 120}px`,
                         maxWidth: "90%"
                       }}
                     >
@@ -225,16 +226,16 @@ const PortfolioGallery = () => {
 
             {/* Right side - Project Details Grid */}
             <div className="flex-1 pt-8 overflow-hidden">
-              <motion.div 
+              <motion.div
                 className="relative flex"
-                style={{ 
+                style={{
                   x: detailsScrollX
                 }}
                 transition={springTransition}
               >
                 {projects.map((project) => (
-                  <div 
-                    key={`details-${project.title}`} 
+                  <div
+                    key={`details-${project.title}`}
                     className="min-w-full grid grid-cols-2 gap-6"
                   >
                     <div className="space-y-2">

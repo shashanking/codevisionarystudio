@@ -11,15 +11,13 @@ const PortfolioLanding = () => {
       {/* Main Text Content */}
       <div className="absolute w-full max-w-[1122px] h-[190px] left-1/2 -translate-x-1/2 top-[250px] px-4">
         <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-[clamp(48px,5vw,96px)] leading-[1] text-center font-bold text-white">
-          Creative Excellence <br /> in Action
+          Innovative Solutions <br /> That Drive Action
         </h1>
       </div>
 
       <div className="absolute w-full max-w-[1254px] left-1/2 -translate-x-1/2 top-[488px] px-6">
-        <p className="font-secondaryFont text-[clamp(16px,1.25vw,20px)] leading-[1.5] text-center text-white">
-          Browse through our portfolio to see examples of our work across various industries.
-          Each project highlights our commitment to delivering top-notch web design, app development,
-          branding, and digital marketing solutions.
+        <p className="font-secondaryFont text-[clamp(18px,1.25vw,24px)] leading-[1.5] text-center text-white">
+          Our creations empower businesses to captivate audiences and inspire action. Let&apos;s turn your vision into a solution that drives results.
         </p>
       </div>
 
