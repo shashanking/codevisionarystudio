@@ -2,6 +2,13 @@ import React from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import Link from "next/link";
 import { motion as m, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 interface MenuPageProps {
   isOpen: boolean;
@@ -11,7 +18,7 @@ interface MenuPageProps {
 const menuItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about_us" },
-  { name: "Our Services", path: "/services" },
+  { name: "Our Services", path: "/our_services" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Contact Us", path: "/contact_us" },
 ];
@@ -132,31 +139,26 @@ const MenuPage: React.FC<MenuPageProps> = ({ isOpen, onClose }) => {
                   transition={{ delay: 0.6 }}
                   className="mt-12 flex gap-6 justify-center"
                 >
-                  {/* Add your social media links here */}
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/60 hover:text-white transition-colors duration-300"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/60 hover:text-white transition-colors duration-300"
-                  >
-                    LinkedIn
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/60 hover:text-white transition-colors duration-300"
-                  >
-                    Twitter
-                  </a>
+                  <Link href="https://www.facebook.com/profile.php?id=61564480971649" target="_blank" rel="noopener noreferrer">
+                    <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white/60 hover:border-white hover:bg-white hover:text-[#0F0F0F] text-white/60 hover:text-[#0F0F0F] transition-all">
+                      <FontAwesomeIcon icon={faFacebook} className="text-2xl" />
+                    </div>
+                  </Link>
+                  <Link href="https://www.instagram.com/codevisionarystudio/" target="_blank" rel="noopener noreferrer">
+                    <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white/60 hover:border-white hover:bg-white hover:text-[#0F0F0F] text-white/60 hover:text-[#0F0F0F] transition-all">
+                      <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+                    </div>
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/104408508/" target="_blank" rel="noopener noreferrer">
+                    <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white/60 hover:border-white hover:bg-white hover:text-[#0F0F0F] text-white/60 hover:text-[#0F0F0F] transition-all">
+                      <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+                    </div>
+                  </Link>
+                  <Link href="https://youtube.com/@codevisionarystudio?si=SovfCVSejRX4Gpun" target="_blank" rel="noopener noreferrer">
+                    <div className="w-10 h-10 p-2 flex items-center justify-center rounded-full border border-white/60 hover:border-white hover:bg-white hover:text-[#0F0F0F] text-white/60 hover:text-[#0F0F0F] transition-all">
+                      <FontAwesomeIcon icon={faYoutube} className="text-2xl" />
+                    </div>
+                  </Link>
                 </m.div>
               </div>
             </div>

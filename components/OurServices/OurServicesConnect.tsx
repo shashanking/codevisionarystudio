@@ -4,50 +4,44 @@ import Link from "next/link";
 
 const OurServicesConnect = () => {
     return (
-        <div className="min-h-[100vh] mb-20 flex items-center">
+        <div className="min-h-[50vh] md:min-h-[100vh] mb-10 md:mb-20 flex items-center">
             <div
-                className="our-services-connect w-full flex"
+                className="our-services-connect w-full flex items-center"
                 style={{
                     backgroundImage: 'url("/assets/service_connect_banner_bg.png")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    padding: '120px 0',
+                    padding: '60px 0',
                     color: 'white',
                 }}
             >
-                <div id="main" className="pl-20 w-[40%] flex flex-col items-start">
+                <div className="px-6 md:pl-20 w-full md:w-[50%] lg:w-[40%] flex flex-col items-start">
                     <h1
                         style={{
                             fontFamily: mainFont.style.fontFamily,
-                            fontSize: '3rem',
-                            fontWeight: 'bold',
                             letterSpacing: '0.05em',
-                            marginBottom: '30px',
-                            textAlign: 'left',
                         }}
+                        className="text-[28px] md:text-[3rem] font-bold mb-5 md:mb-8 text-left leading-tight"
                     >
-                        YOU&apos;VE GOT AN IDEA? LET&apos;S TALK!
+                        YOU&apos;VE GOT AN IDEA?
+                        <br className="hidden md:block" />
+                        LET&apos;S TALK!
                     </h1>
-                    <p className="font-secondaryFont"
-                        style={{
-                            fontSize: '1.2rem',
-                            marginBottom: '40px',
-                            textAlign: 'left',
-                        }}
+                    <p 
+                        className="font-secondaryFont text-sm md:text-[1.2rem] mb-8 md:mb-10 text-left leading-relaxed text-white/90"
                     >
                         Get a free consultation on your project - leave a request on the website or contact me in any convenient way.
                     </p>
-                    <Link href="/contact_us">
+                    <Link href="/contact_us" className="w-full md:w-auto">
                         <button
                             style={{
                                 fontFamily: mainFont.style.fontFamily,
-                                padding: '0px 15px',
                             }}
-                            className="flex items-center uppercase bg-white text-[#a92500]  justify-center rounded-full  w-[236px] h-[50px] "
-
+                            className="flex w-full md:w-[236px] h-[45px] md:h-[50px] items-center uppercase bg-white text-[#a92500] justify-center rounded-full text-sm md:text-base hover:bg-[#a92500] hover:text-white transition-colors duration-300"
                         >
                             Let&apos;s have a chat
-                        </button></Link>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
