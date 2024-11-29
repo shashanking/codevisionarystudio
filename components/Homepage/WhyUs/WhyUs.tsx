@@ -442,9 +442,9 @@ export const WhyUsSection = () => {
             ref={scope}
             className="sticky top-0 h-screen w-screen flex justify-center"
           >
-            <div className="w-[85%] mx-auto flex justify-between items-center gap-5">
-              <div className="w-1/2  flex justify-center items-center bg-green-00">
-                <div className="relative w-full bg-red-90 flex justify-center items-center py-4 overflow-hidden">
+            <div className="w-[90%] md:w-[85%] mx-auto flex flex-col-reverse md:flex-row justify-between py-14 items-center gap-10 md:gap-5">
+              <div className="w-full md:w-1/2 flex justify-center items-center">
+                <div className="relative w-full flex justify-center items-center py-4 overflow-hidden">
                   <div className="absolute top-0 left-0 z-0 w-full h-full flex justify-center items-center">
                     <WhyUsSectionSvg />
                   </div>
@@ -454,7 +454,7 @@ export const WhyUsSection = () => {
                     src="/assets/MobileImg.png"
                     height={350}
                     width={350}
-                    className="z-10"
+                    className="z-10 w-[180px] md:w-[350px]"
                   />
 
                   <motion.div
@@ -471,7 +471,7 @@ export const WhyUsSection = () => {
                       src="/assets/mobileBanner.png"
                       height={350}
                       width={205}
-                      className="z-20"
+                      className="z-20 w-[110px] md:w-[205px]"
                     />
                   </motion.div>
 
@@ -489,7 +489,7 @@ export const WhyUsSection = () => {
                       src="/assets/mobileBanner2.png"
                       height={350}
                       width={205}
-                      className="z-20"
+                      className="z-20 w-[110px] md:w-[205px]"
                     />
                   </motion.div>
 
@@ -507,7 +507,7 @@ export const WhyUsSection = () => {
                       src="/assets/mobileBanner3.png"
                       height={350}
                       width={205}
-                      className="z-20"
+                      className="z-20 w-[110px] md:w-[205px]"
                     />
                   </motion.div>
 
@@ -525,34 +525,34 @@ export const WhyUsSection = () => {
                       src="/assets/mobileBanner4.png"
                       height={350}
                       width={205}
-                      className="z-20"
+                      className="z-20 w-[110px] md:w-[205px]"
                     />
                   </motion.div>
                 </div>
               </div>
-              <div className="w-1/2">
-                <div className="flex justify-start items-center gap-5">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
+                <div className="flex justify-center md:justify-start items-center gap-5 mb-4">
                   <HomepageTagIconSvg />
                   <h5
                     style={{
                       fontFamily: mainFont.style.fontFamily,
                     }}
-                    className="text-white text-[1.1vw]"
+                    className="text-white text-base md:text-[1.1vw]"
                   >
                     Why Us
                   </h5>
                 </div>
-                <div className="w-[70%] my-[2%]">
+                <div className="w-[95%] md:w-[70%] mb-6">
                   <h3
                     style={{
                       fontFamily: mainFont.style.fontFamily,
                       lineHeight: "normal",
                     }}
-                    className="text-white text-[2.2vw] customLine__height"
+                    className="text-white text-2xl md:text-[2.2vw] customLine__height text-center md:text-left"
                   >
                     What Makes Us Different
                   </h3>
-                  <p className="text-white font-secondaryFont font-[400] my-[2%] text-[1vw]">
+                  <p className="text-white font-secondaryFont font-[400] mt-3 text-sm md:text-[1vw] text-center md:text-left">
                     Code Visionary Studio stands out for our innovative
                     solutions, personalized service, and proven track record.
                     Our holistic approach to web design, application development,
@@ -560,29 +560,29 @@ export const WhyUsSection = () => {
                     digital age.
                   </p>
                 </div>
-                <div className=" h-32 overflow-hidden">
+                <div className="h-32 overflow-hidden w-full">
                   <motion.div
                     style={{
                       y: TranslateYAxisPoint1Smooth,
                       opacity: OpacityPoint1Smooth,
                     }}
-                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[80%] my-[3%]"
+                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[90%] md:w-[80%] my-[3%] mx-auto md:mx-0"
                   >
-                    <div className="bg-black h-14 w-14 rounded-full flex justify-center items-center flex-shrink-0">
+                    <div className="bg-black h-10 w-10 md:h-14 md:w-14 rounded-full flex justify-center items-center flex-shrink-0">
                       <h4
                         style={{
                           fontFamily: mainFont.style.fontFamily,
                         }}
-                        className="text-white font-[500] text-[2.1vw]"
+                        className="text-white font-[500] text-lg md:text-[2.1vw]"
                       >
                         1
                       </h4>
                     </div>
                     <div>
-                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-[1.2vw]">
+                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-base md:text-[1.2vw]">
                         Innovative Solutions
                       </h4>
-                      <p className="text-[#333333] text-[.85vw] font-secondaryFont font-[600]">
+                      <p className="text-[#333333] text-xs md:text-[.85vw] font-secondaryFont font-[600]">
                         Our team creates cutting-edge, custom mobile and web applications that transform ideas into impactful digital experiences.
                       </p>
                     </div>
@@ -593,56 +593,51 @@ export const WhyUsSection = () => {
                       y: TranslateYAxisPoint2Smooth,
                       opacity: OpacityPoint2Smooth,
                     }}
-                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[80%] my-[3%]"
+                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[90%] md:w-[80%] my-[3%] mx-auto md:mx-0"
                   >
-                    <div className="bg-black h-14 w-14 rounded-full flex justify-center items-center flex-shrink-0">
+                    <div className="bg-black h-10 w-10 md:h-14 md:w-14 rounded-full flex justify-center items-center flex-shrink-0">
                       <h4
                         style={{
                           fontFamily: mainFont.style.fontFamily,
                         }}
-                        className="text-white font-[500] text-[2.1vw]"
+                        className="text-white font-[500] text-lg md:text-[2.1vw]"
                       >
                         2
                       </h4>
                     </div>
                     <div>
-                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-[1.2vw]">
-                        Growth-Driven Marketing
+                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-base md:text-[1.2vw]">
+                        Client-Centric Approach
                       </h4>
-                      <p className="text-[#333333] text-[.85vw] font-secondaryFont font-[600]">
-                      We boost brands through strategic marketing, fostering sustainable growth and strengthening brand identity in a competitive market.
+                      <p className="text-[#333333] text-xs md:text-[.85vw] font-secondaryFont font-[600]">
+                        We prioritize understanding your unique needs and goals to deliver tailored solutions that exceed expectations.
                       </p>
                     </div>
                   </motion.div>
-                  {/* Isuue on larger screen
-                     1. Thrid point is not coming
-                    Isuue on smaller screen
-                    1. Exit animation on the third text
-                    2. space on top of the total div  */}
-                  <motion.div 
+
+                  <motion.div
                     style={{
                       y: TranslateYAxisPoint3Smooth,
                       opacity: OpacityPoint3Smooth,
                     }}
-                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[80%] my-[3%]"
+                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[90%] md:w-[80%] my-[3%] mx-auto md:mx-0"
                   >
-                    <div className="bg-black h-14 w-14 rounded-full flex justify-center items-center flex-shrink-0">
+                    <div className="bg-black h-10 w-10 md:h-14 md:w-14 rounded-full flex justify-center items-center flex-shrink-0">
                       <h4
                         style={{
                           fontFamily: mainFont.style.fontFamily,
                         }}
-                        className="text-white font-[500] text-[2.1vw]"
+                        className="text-white font-[500] text-lg md:text-[2.1vw]"
                       >
                         3
                       </h4>
                     </div>
                     <div>
-                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-[1.2vw]">
-                        Trusted Expertise
+                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-base md:text-[1.2vw]">
+                        End-to-End Excellence
                       </h4>
-                      <p className="text-[#333333] text-[.85vw] font-secondaryFont font-[600]">
-                        With a commitment to excellence, we deliver reliable and high-quality services, ensuring client satisfaction and long-term partnerships.
-
+                      <p className="text-[#333333] text-xs md:text-[.85vw] font-secondaryFont font-[600]">
+                        From concept to deployment, we ensure quality and innovation at every step of your project journey.
                       </p>
                     </div>
                   </motion.div>

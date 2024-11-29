@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 import Link from "next/link";
-import { m } from "framer-motion";
+import MenuPage from "../Menu/MenuPage";
 
 export const Navbar = () => {
   const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScrollPosition = () => {
     setCurrentScrollPosition(window.scrollY);
@@ -13,18 +14,24 @@ export const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollPosition);
+    return () => window.removeEventListener("scroll", handleScrollPosition);
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
       <div
-        className={`fixed z-50 top-0 w-full bg-transparent ${currentScrollPosition > 5
-          ? "bg-white/20 backdrop-blur-none"
-          : "bg-transparent backdrop-blur-none"
-          }`}
+        className={`fixed z-50 top-0 w-full bg-transparent ${
+          currentScrollPosition > 5
+            ? "bg-white/20 backdrop-blur-none"
+            : "bg-transparent backdrop-blur-none"
+        }`}
       >
-        <div className="max-w-[1920px] w-full mx-auto ">
-          <div className=" py-2 w-[85%] md:w-[95%] mx-auto flex justify-between items-center">
+        <div className="max-w-[1920px] w-full mx-auto">
+          <div className="py-2 w-[85%] md:w-[95%] mx-auto flex justify-between items-center">
             <div>
               <Link href="/">
                 <Image
@@ -34,11 +41,14 @@ export const Navbar = () => {
                   width={90}
                 />
               </Link>
-            </div>{" "}
+            </div>
             <div className="flex justify-end items-center gap-7 w-[50%]">
-              <button className="bg-white/20 rounded-full border-none outline-none h-10 w-10 flex flex-col justify-center items-center gap-2">
-                <div className="w-4 h-1 bg-white rounded-md mr-[15%]" />
-                <div className="w-4 h-1 bg-white rounded-md ml-[15%]" />
+              <button 
+                onClick={toggleMenu}
+                className="relative z-50 bg-white/20 rounded-full border-none outline-none h-10 w-10 flex flex-col justify-center items-center gap-2 cursor-pointer"
+              >
+                <div className={`w-4 h-1 bg-white rounded-md transition-all duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-1.5' : 'mr-[15%]'}`} />
+                <div className={`w-4 h-1 bg-white rounded-md transition-all duration-300 ${isMenuOpen ? 'transform -rotate-45 -translate-y-1.5' : 'ml-[15%]'}`} />
               </button>
               <div className="hidden md:block relative">
                 {/* Don't be shy text - outside button */}
@@ -46,9 +56,9 @@ export const Navbar = () => {
                   style={{
                     fontFamily: mainFont.style.fontFamily,
                   }}
-                  className="absolute  h-[18px] left-[52.97px] -top-[64.34px] text-[24px] leading-[24px] text-white text-center opacity-0 group-hover:opacity-100 transform rotate-[11.24deg] transition-all duration-300 z-20"
+                  className="absolute h-[18px] left-[52.97px] -top-[64.34px] text-[24px] leading-[24px] text-white text-center opacity-0 group-hover:opacity-100 transform rotate-[11.24deg] transition-all duration-300 z-20"
                 >
-                  Don&aapos;t be shy
+                  Don&apos;t be shy
                 </div>
 
                 <div className="relative w-[200px] h-[62px] group">
@@ -61,7 +71,7 @@ export const Navbar = () => {
                   {/* Content container */}
                   <Link
                     href="/contact_us"
-                    className="absolute inset-0 flex items-center "
+                    className="absolute inset-0 flex items-center"
                   >
                     {/* Contact us text */}
                     <span
@@ -102,6 +112,9 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Menu Page */}
+      <MenuPage isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   );
 };
