@@ -19,8 +19,9 @@ export default function Home() {
       <AboutSecondSection />
       <WhatWeDo />
       <OurServices />
+      <WhyUsSection />
       <div className="hidden md:block">
-        <WhyUsSection />
+
         <GallerySection />
       </div>
       <OurTeam />
