@@ -170,93 +170,95 @@ const PortfolioGallery = () => {
 
           {/* Project Details */}
           <motion.div
-            className="absolute bottom-0 left-[8%] right-[8%] w-[100%] h-[31vh] text-white flex gap-20"
+            className="absolute bottom-0 left-0 right-0 w-full h-[31vh] text-white px-4 pb-6 md:pb-8 md:px-0 -translate-y-4 md:-translate-y-6"
             style={{
               opacity: detailsOpacity,
               zIndex: 51
             }}
           >
-            {/* Left side with separate title and description containers */}
-            <div className="flex-1 pr-4 pt-8">
-              {/* Titles Container */}
-              <div className="h-[60px] mb-6 overflow-hidden"> {/* Increased height */}
-                <motion.div
-                  className="relative"
-                  style={{ y: titleScrollY }}
-                  transition={springTransition}
-                >
-                  {projects.map((project, index) => (
-                    <motion.h2
-                      key={`title-${project.title}`}
-                      className="font-[Earth Orbiter Bold] text-[48px] leading-[48px] text-white absolute w-full"
-                      style={{
-                        fontFamily: mainFont.style.fontFamily,
-                        top: `${index * 120}px`, // Matched spacing with descriptions
-                        maxWidth: "90%"
-                      }}
-                    >
-                      {project.title}
-                    </motion.h2>
-                  ))}
-                </motion.div>
-              </div>
-
-              {/* Description Container */}
-              <div className="h-[120px] overflow-hidden">
-                <motion.div
-                  className="relative"
-                  style={{ y: descScrollY }}
-                  transition={springTransition}
-                >
-                  {projects.map((project, index) => (
-                    <motion.p
-                      key={`desc-${project.title}`}
-                      className="font-secondaryFont text-xl leading-[30px] text-white absolute w-full"
-                      style={{
-                        top: `${index * 120}px`,
-                        maxWidth: "90%"
-                      }}
-                    >
-                      {project.description}
-                    </motion.p>
-                  ))}
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Right side - Project Details Grid */}
-            <div className="flex-1 pt-8 overflow-hidden">
-              <motion.div
-                className="relative flex"
-                style={{
-                  x: detailsScrollX
-                }}
-                transition={springTransition}
-              >
-                {projects.map((project) => (
-                  <div
-                    key={`details-${project.title}`}
-                    className="min-w-full grid grid-cols-2 gap-6"
+            <div className="max-w-[96%] mx-auto flex flex-col md:flex-row md:gap-24">
+              {/* Left side with separate title and description containers */}
+              <div className="flex-1 pt-4 md:pt-6 md:pr-8">
+                {/* Titles Container */}
+                <div className="h-[48px] md:h-[60px] mb-2 mt-2 md:mb-6 overflow-hidden">
+                  <motion.div
+                    className="relative"
+                    style={{ y: titleScrollY }}
+                    transition={springTransition}
                   >
-                    <div className="space-y-2">
-                      <h3 className="font-secondaryFont font-bold text-2xl text-white">Work</h3>
-                      <p className="font-secondaryFont text-xl text-white">{project.work}</p>
+                    {projects.map((project, index) => (
+                      <motion.h2
+                        key={`title-${project.title}`}
+                        className="font-[Earth Orbiter Bold] text-3xl md:text-[36px] leading-tight md:leading-[48px] text-white absolute w-full"
+                        style={{
+                          fontFamily: mainFont.style.fontFamily,
+                          top: `${index * 120}px`,
+                          maxWidth: "100%"
+                        }}
+                      >
+                        {project.title}
+                      </motion.h2>
+                    ))}
+                  </motion.div>
+                </div>
+
+                {/* Description Container */}
+                <div className="h-[90px] md:h-[120px] overflow-hidden">
+                  <motion.div
+                    className="relative"
+                    style={{ y: descScrollY }}
+                    transition={springTransition}
+                  >
+                    {projects.map((project, index) => (
+                      <motion.p
+                        key={`desc-${project.title}`}
+                        className="font-secondaryFont text-sm md:text-xl leading-tight md:leading-[30px] text-white/90 absolute w-full"
+                        style={{
+                          top: `${index * 120}px`,
+                          maxWidth: "100%"
+                        }}
+                      >
+                        {project.description}
+                      </motion.p>
+                    ))}
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Right side - Project Details Grid */}
+              <div className="flex-1 pt-3  md:pt-6 overflow-hidden">
+                <motion.div
+                  className="relative flex"
+                  style={{
+                    x: detailsScrollX
+                  }}
+                  transition={springTransition}
+                >
+                  {projects.map((project) => (
+                    <div
+                      key={`details-${project.title}`}
+                      className="min-w-full grid grid-cols-2 gap-x-4 gap-y-3 md:gap-6"
+                    >
+                      <div className="space-y-1 md:space-y-2">
+                        <h3 className="font-secondaryFont font-bold text-base md:text-2xl text-white">Work</h3>
+                        <p className="font-secondaryFont text-sm md:text-xl text-white/90">{project.work}</p>
+                      </div>
+                      <div className="space-y-1 md:space-y-2">
+                        <h3 className="font-secondaryFont font-bold text-base md:text-2xl text-white">Duration</h3>
+                        <p className="font-secondaryFont text-sm md:text-xl text-white/90">{project.duration}</p>
+                      </div>
+                      <div className="space-y-1 md:space-y-2">
+                        <h3 className="font-secondaryFont font-bold text-base md:text-2xl text-white">Tech Stack</h3>
+                        <p className="font-secondaryFont text-sm md:text-xl text-white/90">{project.techStack}</p>
+                      </div>
+                      <div className="space-y-1 md:space-y-2">
+                        <h3 className="font-secondaryFont font-bold text-base md:text-2xl text-white">Link</h3>
+                        <p className="font-secondaryFont text-sm md:text-xl text-white/90">{project.link}</p>
+                      </div>
                     </div>
-                    <div className="space-y-2">
-                      <h3 className="font-secondaryFont font-bold text-2xl text-white">Duration</h3>
-                      <p className="font-secondaryFont text-xl text-white">{project.duration}</p>
-                    </div>
-                    <div className="space-y-2">
-                      <h3 className="font-secondaryFont font-bold text-2xl text-white">Tech Stack</h3>
-                      <p className="font-secondaryFont text-xl text-white">{project.techStack}</p>
-                    </div>
-                    <div className="space-y-2">
-                      <h3 className="font-secondaryFont font-bold text-2xl text-white">Link</h3>
-                      <p className="font-secondaryFont text-xl text-white">{project.link}</p>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
+                  ))}
+                </motion.div>
+              </div>
             </div>
           </motion.div>
 
