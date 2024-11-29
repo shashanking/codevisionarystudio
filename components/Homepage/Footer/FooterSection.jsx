@@ -28,7 +28,7 @@ const menuItems = [
   { name: "Our Services", link: "/our_services" },
   { name: "Portfolio", link: "/portfolio" },
   { name: "Contact Us", link: "/contact_us" },
-  { name: "Join Us", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
+  { name: "Join Our Team", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
 
 ];
 

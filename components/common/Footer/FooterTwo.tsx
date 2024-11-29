@@ -30,7 +30,7 @@ const FooterTwo = ({ useBlackBackground = false }) => {
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/our_services">Our Services</Link></li>
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/portfolio">Portfolio</Link></li>
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/contact_us">Contact Us</Link></li>
-          <li className="hover:text-[#89E2FF] transition-colors"><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
+          <li className="hover:text-[#89E2FF] transition-colors"><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Our Team</a></li>
         </ul>
       </div>
 

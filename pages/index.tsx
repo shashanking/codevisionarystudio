@@ -20,7 +20,7 @@ export default function Home() {
       <WhatWeDo />
       <OurServices />
       <WhyUsSection />
-      <div className="hidden md:block">
+      <div className="hidden ">
 
         <GallerySection />
       </div>
