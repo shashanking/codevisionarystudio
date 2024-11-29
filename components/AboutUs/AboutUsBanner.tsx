@@ -32,7 +32,7 @@ const AboutUsBanner = () => {
               Let&apos;s Start a Conversation
             </h1>
             <p className="text-[14px] leading-[21px] md:text-xl text-white max-w-[326px] md:max-w-none font-secondaryFont">
-              Whether you're starting a new project or looking to enhance your
+              Whether you&apos;re starting a new project or looking to enhance your
               current digital strategy, Code Visionary Studios is here to
               assist you. Reach out to us today to learn more about our
               services and how we can help your business succeed.
