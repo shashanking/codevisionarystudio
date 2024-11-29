@@ -88,20 +88,20 @@ export const FooterSection = () => {
     // Consider using min-height instead of fixed height for better responsiveness
     <div
       id="contact-section"
-      className="h-[685px] w-full bg-gradient-to-b from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-t-[60px] flex flex-col justify-between shadow-[0px_-4px_8px_0px_rgba(137,226,255,0.2)]"
+      className="min-h-[685px] w-full bg-gradient-to-b from-[#E44F58] via-[#BF242d] to-[#5F0006] rounded-t-[60px] flex flex-col justify-between shadow-[0px_-4px_8px_0px_rgba(137,226,255,0.2)]"
     >
       <div className="w-full flex justify-center">
         {/* 83% width might need media queries for very small screens */}
-        <div className="w-[83%] mt-10">
+        <div className="w-[90%] md:w-[83%] mt-10">
           <h1
             style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
-            className="text-4xl font-bold text-black uppercase tracking-wider mb-6"
+            className="text-3xl md:text-4xl font-bold text-black uppercase tracking-wider mb-6"
           >
             Contact Us
           </h1>
 
           {/* Form fields in row layout - needs media query for mobile column layout */}
-          <div className="flex justify-between gap-4 mt-6 w-full ">
+          <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-4 mt-6 w-full ">
             {formFields.map((field, index) => (
               <form key={index} className="flex-1">
                 {/* Fixed height input might need adjustment for different screen sizes */}
@@ -143,15 +143,15 @@ export const FooterSection = () => {
             style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
             onClick={handleSubmit}
             type="submit"
-            className="submit-button bg-black text-[#C44F56] hover:text-white w-full mt-12 h-14 rounded-full text-lg font-medium uppercase flex items-center justify-center transition-colors relative overflow-hidden group"
+            className="submit-button bg-black text-[#C44F56] hover:text-white w-full mt-8 md:mt-12 h-12 md:h-14 rounded-full text-base md:text-lg font-medium uppercase flex items-center justify-center transition-colors relative overflow-hidden group"
           >
             Submit
           </button>
 
           {/* Two-column layout needs media query for mobile stack layout */}
-          <div className="flex justify-between gap-10 mt-20">
+          <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10 mt-12 md:mt-8">
             {/* Fixed width percentage might need adjustment for mobile */}
-            <div className="w-[40%] space-y-6">
+            <div className="w-full md:w-[40%] space-y-6">
               {/* Consider responsive image sizing */}
               <Image
                 src="/assets/NewLogo.png"
@@ -161,31 +161,28 @@ export const FooterSection = () => {
                 className="object-contain"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               />
-              <p className="text-base font-secondaryFont leading-relaxed text-white/90">
+              <p className="text-sm md:text-base font-secondaryFont leading-relaxed text-white/90">
                 Your trusted partner in digital transformation. We create
                 innovative solutions that drive business growth.
               </p>
             </div>
 
             {/* Fixed width percentage might need adjustment for mobile */}
-            <div className="w-[45%] flex justify-end">
-              {/* Fixed width might cause issues on smaller screens */}
-              <div className="flex flex-col gap-3 w-[126px] mr-10 ">
+            <div className="w-full md:w-[45%] flex justify-between md:justify-end gap-8 md:gap-0">
+              <div className="flex flex-col gap-3 w-[45%] md:w-[126px] md:mr-10">
                 <h1
                   style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
-                  className="text-xl leading-6 font-semibold text-white"
+                  className="text-lg md:text-xl leading-6 font-semibold text-white"
                 >
                   Menu
                 </h1>
-                <ul className="space-y-2 text-base text-white/90 font-secondaryFont">
+                <ul className="space-y-2 text-sm md:text-base text-white/90 font-secondaryFont">
                   {menuItems.map((item, index) => (
                     <li
                       key={index}
                       className="hover:text-white/70 cursor-pointer"
                     >
                       <Link href={item.link}>
-                        {" "}
-                        {/* Use Link component to create the route */}
                         {item.name}
                       </Link>
                     </li>
@@ -193,22 +190,23 @@ export const FooterSection = () => {
                 </ul>
               </div>
 
-              {/* Fixed width might cause issues on smaller screens */}
-              <div className="flex flex-col gap-3 w-[309px]">
+              <div className="flex flex-col gap-3 w-[45%] md:w-[309px]">
                 <h2
                   style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
-                  className="text-xl leading-6 font-semibold text-white"
+                  className="text-lg md:text-xl leading-6 font-semibold text-white"
                 >
                   Contact Info
                 </h2>
-                <div className="space-y-2 text-base text-white/90 font-secondaryFont">
+                <div className="space-y-2 text-sm md:text-base text-white/90 font-secondaryFont ">
                   <p>+91-8240833838</p>
                   <p>
                     Kolkata,
                     <br />
                     West Bengal, 700142
                   </p>
-                  <p>codevisionarystudio@gmail.com</p>
+                  <p className="break-words">
+                    codevisionarystudio@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -216,26 +214,27 @@ export const FooterSection = () => {
         </div>
       </div>
 
-      {/* Marquee section - might need adjustment for very small screens */}
-      <div className="w-full overflow-hidden bg-transparent">
+      {/* Marquee section */}
+      <div className="w-full overflow-hidden bg-transparent mt-10 md:mt-0">
         <div className="w-full h-[1px] bg-white/90" />
-        {/* Fixed height might need adjustment */}
-        <div className="h-[100px] flex items-center">
-          {/* Large text size might need scaling for mobile */}
+        <div className="h-[60px] md:h-[100px] flex items-center">
           <div
-            style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
-            className="animate-marquee whitespace-nowrap text-[100px] leading-[98px] uppercase text-black/20"
+            style={{ 
+              fontFamily: mainFont.style.fontFamily, 
+              color: "transparent",
+              WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)"
+            }}
+            className="animate-marquee whitespace-nowrap text-[40px] md:text-[80px] leading-[40px] md:leading-[80px] uppercase"
           >
             {[1, 2, 3].map((_, index) => (
               <React.Fragment key={index}>
                 Code Visionary Studio
-                {/* Fixed image size might need responsive adjustment */}
                 <Image
                   src="/assets/copy_icon.png"
                   alt="Copy Icon"
-                  width={200}
-                  height={200}
-                  className="ml-8 mr-8 object-contain"
+                  width={80}
+                  height={80}
+                  className="ml-4 mr-4 md:ml-8 md:mr-8 object-contain w-[30px] md:w-[80px] inline-block"
                 />
               </React.Fragment>
             ))}

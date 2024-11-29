@@ -48,64 +48,13 @@ export const Testimonials = () => {
   return (
     <>
       <div>
-        <div className="max-w-=[1920px] min-h-[100vh] mx-auto flex justify-center items-center">
-          <div className="w-[85%] mx-auto  flex justify-between items-center gap-4">
-            <div className="flex-1  overflow-hidden flex justify-between items-center">
-              <button
-                onClick={() => swiperRef.current?.swiper.slidePrev()}
-                className="w-10 h-10 relative z-40 rounded-full bg-white/60 flex justify-center items-center"
-              >
-                <ArrowLeft className="text-black" />
-              </button>
-              <div className="w-[60%] mx-auto">
-                <Swiper
-                  effect={"cards"}
-                  grabCursor={false}
-                  modules={[EffectCards]}
-                  className="mySwiper"
-                  ref={swiperRef}
-                >
-                  {testimonials.map((testimonial, id) => (
-                    <SwiperSlide key={testimonial.id}>
-                      <div className="min-h-[350px] rounded-lg w-full bg-white/40 brightness-75 backdrop-blur-3xl p-5">
-                        <div className="flex justify-center items-center gap-5">
-                          {/* <div className="relative h-14 w-14">
-                            <Image
-                              src="/assets/TeamImg1.png"
-                              alt={testimonial.name}
-                              fill
-                              className="rounded-full object-cover object-top"
-                            />
-                          </div> */}
-                          <div className="flex-1">
-                            <h4 className="text-white text-[1.4vw] font-[600] font-secondaryFont">
-                              {testimonial.name}
-                            </h4>
-                            <p className="text-white font-secondaryFont text-[.9vw] font-[500] customLine__height">
-                              {testimonial.position}
-                            </p>
-                          </div>
-                        </div>
-                        <p className="font-secondaryFont font-[400] mt-[8%] text-[1.1vw] text-white">
-                          {testimonial.testimonial}
-                        </p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-              <button
-                onClick={() => swiperRef.current?.swiper.slideNext()}
-                className="w-10 h-10 relative z-40 rounded-full bg-white/60 flex justify-center items-center"
-              >
-                <ArrowRight className="text-black" />
-              </button>
-            </div>
-            <div className="flex-1 p-2">
-              <div className="flex justify-start items-center gap-4 my-3">
+        <div className="max-w-[1920px] min-h-[100vh] mx-auto flex justify-center items-center">
+          <div className="w-[95%] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
+            <div className="flex-1 p-2 text-center md:text-left w-full md:w-auto order-1 md:order-2">
+              <div className="flex justify-center md:justify-start items-center gap-4 my-3">
                 <HomepageTagIconSvg />
                 <h4
-                  className="text-[1.1vw] font-bold uppercase"
+                  className="text-base md:text-[1.1vw] font-bold uppercase"
                   style={{
                     fontFamily: mainFont.style.fontFamily,
                     color: "#fff",
@@ -118,16 +67,60 @@ export const Testimonials = () => {
                 style={{
                   fontFamily: mainFont.style.fontFamily,
                 }}
-                className="text-white font-[700] text-[2.5vw] customLine__height"
+                className="text-white font-[700] text-2xl md:text-[2.5vw] customLine__height mb-4 md:mb-0"
               >
                 What Our Clients Say
               </h3>
-              <p className="text-white font-secondaryFont text-[1vw] font-[400] my-[3%]">
+              <p className="text-white font-secondaryFont text-sm md:text-[1vw] font-[400] my-[3%]">
                 Discover how Code Visionary Studios has made a difference for
                 our clients. Our testimonials showcase the positive impact of
                 our web design, application development, branding, and digital marketing
                 services.
               </p>
+            </div>
+
+            <div className="flex-1 w-full md:w-auto overflow-hidden flex justify-between items-center mt-8 md:mt-0 order-2 md:order-1">
+              <button
+                onClick={() => swiperRef.current?.swiper.slidePrev()}
+                className="w-8 md:w-10 h-8 md:h-10 relative z-40 rounded-full bg-white/60 flex justify-center items-center"
+              >
+                <ArrowLeft className="text-black w-4 md:w-6 h-4 md:h-6" />
+              </button>
+              <div className="w-[80%] md:w-[60%] mx-auto">
+                <Swiper
+                  effect={"cards"}
+                  grabCursor={false}
+                  modules={[EffectCards]}
+                  className="mySwiper"
+                  ref={swiperRef}
+                >
+                  {testimonials.map((testimonial, id) => (
+                    <SwiperSlide key={testimonial.id}>
+                      <div className="min-h-[350px] rounded-lg w-full bg-white/40 brightness-75 backdrop-blur-3xl p-8 mx-2 md:p-5">
+                        <div className="flex justify-center items-center gap-5">
+                          <div className="flex-1">
+                            <h4 className="text-white text-lg md:text-[1.4vw] font-[600] font-secondaryFont">
+                              {testimonial.name}
+                            </h4>
+                            <p className="text-white font-secondaryFont text-sm md:text-[.9vw] font-[500] customLine__height">
+                              {testimonial.position}
+                            </p>
+                          </div>
+                        </div>
+                        <p className="font-secondaryFont font-[400] mt-[8%] text-base md:text-[1.1vw] text-white">
+                          {testimonial.testimonial}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+              <button
+                onClick={() => swiperRef.current?.swiper.slideNext()}
+                className="w-8 md:w-10 h-8 md:h-10 relative z-40 rounded-full bg-white/60 flex justify-center mx-2 items-center"
+              >
+                <ArrowRight className="text-black w-4 md:w-6 h-4 md:h-6" />
+              </button>
             </div>
           </div>
         </div>

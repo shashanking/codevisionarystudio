@@ -72,7 +72,7 @@ export const OurTeam = () => {
               <div className="flex justify-center items-center gap-4 my-3 w-[40%] mx-auto">
                 <HomepageTagIconSvg />
                 <h4
-                  className="text-[1.3vw] font-bold uppercase"
+                  className="text-base md:text-[1.3vw] font-bold uppercase"
                   style={{
                     fontFamily: mainFont.style.fontFamily,
                     color: "#fff",
@@ -83,7 +83,7 @@ export const OurTeam = () => {
               </div>
               <div>
                 <h1
-                  className="text-[2.8vw] text-center font-semibold text-white mb-4"
+                  className="text-2xl md:text-[2.8vw] text-center font-semibold text-white mb-4"
                   style={{
                     fontFamily: mainFont.style.fontFamily,
                   }}
@@ -92,8 +92,8 @@ export const OurTeam = () => {
                 </h1>
 
               </div>
-              <div className="mx-auto w-[80%] my-[1.5%]">
-                <p className="text-white font-secondaryFont font-[400] text-[1vw] text-center">
+              <div className="mx-auto w-[90%] md:w-[80%] my-[1.5%]">
+                <p className="text-white font-secondaryFont font-[400] text-[12px] mb-4 md:text-[1vw] text-center">
                   Meet the passionate professionals who drive the success of
                   Code Visionary Studios. Our team&apos;s diverse backgrounds and
                   expertise come together to create powerful, integrated
@@ -118,19 +118,19 @@ export const OurTeam = () => {
                   >
                     <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
                       <Image
-                        height={130} // Reduced from 260 to 130 (50% reduction)
+                        height={130}
                         width={322}
                         src={cur.image}
                         alt={cur.name || "Team member"}
-                        className="z-0 object-center object-cover h-[400px] w-[320] rounded-lg" // Added fixed height and object-cover
+                        className="z-0 object-center object-cover h-[400px] w-[320] rounded-lg"
                       />
                       <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
                     </div>
                     <div className="text-center mt-4">
-                      <h4 className="font-secondaryFont font-[600] text-[1.3vw] text-white">
+                      <h4 className="font-secondaryFont font-[600] text-lg md:text-[1.3vw] text-white">
                         {cur.name}
                       </h4>
-                      <p className="font-secondaryFont font-[400] text-[1vw] text-white/80 mt-1">
+                      <p className="font-secondaryFont font-[400] text-base md:text-[1vw] text-white/80 mt-1">
                         {/* {cur.position} */}
                       </p>
                     </div>
@@ -143,4 +143,3 @@ export const OurTeam = () => {
     </div>
   );
 };
-
