@@ -11,7 +11,7 @@ interface MenuPageProps {
 const menuItems = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about_us" },
-  { name: "Our Services", path: "/services" },
+  { name: "Our Services", path: "/our_services" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Contact Us", path: "/contact_us" },
 ];

@@ -66,7 +66,8 @@ const OurServicesAnimatedSec = () => {
               key={index}
               className="service-row border-t border-gray-500 py-6 relative group"
             >
-              <div className="flex justify-between items-center mx-auto w-[84vw] relative z-10">
+              {/* Desktop View */}
+              <div className="hidden md:flex justify-between items-center mx-auto w-[84vw] relative z-10">
                 <div className="flex items-center max-w-[80%] gap-4">
                   <h3 className="text-2xl font-bold font-secondaryFont w-[22vw] break-words my-auto">
                     {service.title}
@@ -88,10 +89,42 @@ const OurServicesAnimatedSec = () => {
                 </div>
               </div>
 
+              {/* Mobile View */}
+              <div className="flex md:hidden flex-col mx-auto w-[92%] relative z-10">
+                <div className="flex gap-3 items-start">
+                  <div className="flex-1">
+                    <h3 className="text-base font-bold font-secondaryFont mb-1.5">
+                      {service.title}
+                    </h3>
+                    <p className="text-[11px] leading-[16px] font-secondaryFont text-gray-300">
+                      {service.description}
+                    </p>
+                  </div>
+                  <button className="flex-shrink-0 flex items-center justify-center w-[28px] h-[28px] border border-gray-400 rounded-full">
+                    <Image
+                      src="/assets/arrow-right.png"
+                      alt="arrow"
+                      width={54}
+                      height={54}
+                      className="w-[16px] h-[16px]"
+                    />
+                  </button>
+                </div>
+                <div className="w-full h-[120px] mt-3 rounded-lg overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={309}
+                    height={217}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
               <div
-                className="absolute right-[20%] -top-[20%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50"
+                className="absolute right-[20%] -top-[20%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 hidden md:block"
                 style={{
-                  transform: `rotate(${rotationDeg})`, // Apply the dynamic rotation
+                  transform: `rotate(${rotationDeg})`,
                 }}
               >
                 <Image
@@ -99,7 +132,7 @@ const OurServicesAnimatedSec = () => {
                   alt={service.title}
                   width={309}
                   height={217}
-                  className="w-[309px] h-[217px] object-cover object-center  rounded-lg shadow-2xl"
+                  className="w-[309px] h-[217px] object-cover object-center rounded-lg shadow-2xl"
                 />
               </div>
             </div>
