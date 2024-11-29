@@ -19,8 +19,10 @@ export default function Home() {
       <AboutSecondSection />
       <WhatWeDo />
       <OurServices />
-      <WhyUsSection />
-      <GallerySection />
+      <div className="hidden md:block">
+        <WhyUsSection />
+        <GallerySection />
+      </div>
       <OurTeam />
       <Testimonials />
       <FooterSection />

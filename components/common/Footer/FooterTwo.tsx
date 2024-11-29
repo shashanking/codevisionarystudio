@@ -23,11 +23,12 @@ const FooterTwo = ({ useBlackBackground = false }) => {
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       />
 
-      <div>
+      <div className="px-1">
         <ul className="flex justify-center gap-10 font-secondaryFont text-white text-base flex-wrap">
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/">Home</Link></li>
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/about_us">About Us</Link></li>
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/our_services">Our Services</Link></li>
+          <li className="hover:text-[#89E2FF] transition-colors"><Link href="/portfolio">Portfolio</Link></li>
           <li className="hover:text-[#89E2FF] transition-colors"><Link href="/contact_us">Contact Us</Link></li>
           <li className="hover:text-[#89E2FF] transition-colors"><a href="https://forms.gle/vaN1SWi8zK7HXCRi9">Join Us</a></li>
         </ul>

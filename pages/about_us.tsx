@@ -7,7 +7,7 @@ import FooterTwo from "@/components/common/Footer/FooterTwo";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
       <AboutUsLanding />
       {/* About Us Animated Card Section */}
       <AboutUsAnimation />
