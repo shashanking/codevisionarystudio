@@ -29,7 +29,7 @@ const AboutUsBanner = () => {
           {/* Text content */}
           <div className="order-last md:order-first w-full md:w-[50%] flex flex-col justify-start md:justify-center gap-6 md:gap-8 p-4 md:pl-20 -mt-12 md:mt-0">
             <h1 className="text-[36px] leading-[44px] md:text-5xl font-bold text-white max-w-[252px] md:max-w-none">
-              Let's Start a Conversation
+              Let&apos;s Start a Conversation
             </h1>
             <p className="text-[14px] leading-[21px] md:text-xl text-white max-w-[326px] md:max-w-none font-secondaryFont">
               Whether you're starting a new project or looking to enhance your
