@@ -7,7 +7,7 @@ import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 import { createLead } from "@/lib/firestore";
 import { useRouter } from 'next/router';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 interface FormValues {
   fName: string;
@@ -16,7 +16,7 @@ interface FormValues {
   phoneNumber: string;
   message: string;
   subject: string;
-  recaptcha: string | null;
+  // recaptcha: string | null;
 }
 
 const formFields: Array<{
@@ -35,12 +35,12 @@ const validationSchema = Yup.object({
   phoneNumber: Yup.number().required("Phone number required"),
   message: Yup.string(),
   subject: Yup.string(),
-  recaptcha: Yup.string().required("Please verify that you are not a robot"),
+  // recaptcha: Yup.string().required("Please verify that you are not a robot"),
 });
 
 const ContactUsFormSec = () => {
   const router = useRouter();
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  // const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const { handleSubmit, values, handleChange, handleBlur, resetForm, setFieldValue, errors, touched } =
     useFormik<FormValues>({
@@ -51,15 +51,15 @@ const ContactUsFormSec = () => {
         phoneNumber: "",
         message: "",
         subject: "",
-        recaptcha: null,
+        // recaptcha: null,
       },
       validationSchema,
       onSubmit: async (values) => {
         try {
-          if (!values.recaptcha) {
-            toast.error("Please complete the reCAPTCHA verification");
-            return;
-          }
+          // if (!values.recaptcha) {
+          //   toast.error("Please complete the reCAPTCHA verification");
+          //   return;
+          // }
 
           const template = {
             to_name: "codevisionarystudio",
@@ -92,7 +92,7 @@ const ContactUsFormSec = () => {
           if (sendEmail.status === 200) {
             toast.success("Form submitted successfully! Our team will get back to you soon");
             resetForm();
-            recaptchaRef.current?.reset();
+            // recaptchaRef.current?.reset();
             router.push('/thank_you');
           }
         } catch (error) {
@@ -185,7 +185,7 @@ const ContactUsFormSec = () => {
               onBlur={handleBlur}
               value={values.message}
             />
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
@@ -195,7 +195,7 @@ const ContactUsFormSec = () => {
               {errors.recaptcha && touched.recaptcha && (
                 <div className="text-red-500 text-sm mt-1">{errors.recaptcha}</div>
               )}
-            </div>
+            </div> */}
             <button
               type="submit"
               style={{ fontFamily: mainFont.style.fontFamily }}
