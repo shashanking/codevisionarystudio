@@ -20,10 +20,10 @@ export default function Home() {
       <WhatWeDo />
       <OurServices />
       <WhyUsSection />
-      <div className="hidden ">
+      {/* <div className="hidden "> */}
 
         <GallerySection />
-      </div>
+      {/* </div> */}
       <OurTeam />
       <Testimonials />
       <FooterSection />
