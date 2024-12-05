@@ -8,13 +8,21 @@ export const GallerySection = () => {
   const mainWrapperRef = useRef<HTMLDivElement | null>(null);
   const [currentScreenSizeImage1, setCurrentScreenSizeImage1] = useState(0);
   const [currentScreenSizeImage2, setCurrentScreenSizeImage2] = useState(0);
+  const [currentScreenSizeImage1Height, setCurrentScreenSizeImage1Height] =
+    useState(0);
+  const [currentScreenSizeImage2Height, setCurrentScreenSizeImage2Height] =
+    useState(0);
 
   useEffect(() => {
     setCurrentScreenSizeImage1(window.innerWidth * 0.66);
     setCurrentScreenSizeImage2(window.innerWidth * 0.33);
+    setCurrentScreenSizeImage1Height(window.innerHeight * .66);
+    setCurrentScreenSizeImage2Height(window.innerHeight * 0.33);
     const handleScreenResize = () => {
       setCurrentScreenSizeImage1(window.innerWidth * 0.66);
       setCurrentScreenSizeImage2(window.innerWidth * 0.33);
+      setCurrentScreenSizeImage1Height(window.innerHeight * .66);
+      setCurrentScreenSizeImage2Height(window.innerHeight * 0.33);
     };
     window.addEventListener("resize", handleScreenResize);
     return () => window.removeEventListener("resize", handleScreenResize);
@@ -22,6 +30,49 @@ export const GallerySection = () => {
   const { scrollYProgress } = useScroll({
     target: mainWrapperRef,
   });
+
+  const [currentWindowWidth, setCurrentWindowWidth] = useState(0);
+  const [currentWindowHeight, setCurrentWindowHeight] = useState(0);
+  const [isDesktop, setIsDesktop] = useState({
+    orientation: false,
+  });
+
+  useEffect(() => {
+    const handleScreenOrientation = () => {
+      setIsDesktop({
+        orientation: window.screen?.orientation.type.includes("portrait"),
+      });
+    };
+
+    const handleScreenChange = () => {
+      setCurrentWindowWidth(window.innerWidth);
+      setCurrentWindowHeight(window.innerHeight);
+
+      // setIsDesktop({
+      //   orientation: window.screen?.orientation.type.includes("portrait"),
+      // });
+
+      // window.addEventListener("orientationchange", () => {
+      //   setIsDesktop({
+      //     orientation: window.screen?.orientation.type.includes("portrait"),
+      //   });
+      // });
+      handleScreenOrientation();
+    };
+    handleScreenChange();
+
+    window.addEventListener("resize", handleScreenChange);
+    window.addEventListener("orientationchange", handleScreenOrientation);
+
+    return () => {
+      window.removeEventListener("resize", handleScreenChange);
+      window.removeEventListener("orientationchange", handleScreenOrientation);
+    };
+  }, []);
+
+  const maxYOffset = currentWindowHeight * (!isDesktop.orientation ? 1.5 : 0);
+  const maxXOffset = currentWindowWidth * (!isDesktop.orientation ? 0 : 1);
+  // const maxXoffset = currentWindowWidth * (!isDesktop.orientation ? -0.46 : -0);
 
   // animation for X axis...
   const translateXImage1 = useTransform(
@@ -34,13 +85,24 @@ export const GallerySection = () => {
     [0.41, 0.55],
     [0, currentScreenSizeImage2]
   );
+  const translateYImage1 = useTransform(
+    scrollYProgress,
+    [0.41, 0.55],
+    [0, currentScreenSizeImage1Height]
+  );
+  const translateYImage2 = useTransform(
+    scrollYProgress,
+    [0.41, 0.55],
+    [0, currentScreenSizeImage2Height]
+  );
 
   // animation for Y axis....
 
+  // for desktop and tablet landscape...
   const translateYImage1Phase1 = useTransform(
     scrollYProgress,
     [0, 0.2],
-    ["800%", "0%"]
+    [`${maxYOffset}px`, "0px"]
   );
   const translateYImage1Phase2 = useTransform(
     scrollYProgress,
@@ -52,13 +114,34 @@ export const GallerySection = () => {
     if (value >= 0 && value <= 0.2) return translateYImage1Phase1.get();
     if (value >= 0.2 && value <= 0.55) return "0%";
     if (value >= 0.55 && value <= 0.65) return translateYImage1Phase2.get();
-    return "-800%";
+    return `-${maxYOffset}px`;
   });
 
+  // for mobile and tablet portrait...
+
+  const translateXImage1Phase1 = useTransform(
+    scrollYProgress,
+    [0, 0.2],
+    [`-${maxXOffset}px`, "0px"]
+  );
+  const translateXImage1Phase2 = useTransform(
+    scrollYProgress,
+    [0.56, 0.65],
+    ["0px", `${maxXOffset}px`]
+  );
+
+  const combineTranslateImage1X = useTransform(scrollYProgress, (value) => {
+    if (value >= 0 && value <= 0.2) return translateXImage1Phase1.get();
+    if (value >= 0.2 && value <= 0.55) return "0px";
+    if (value >= 0.55 && value <= 0.65) return translateXImage1Phase2.get();
+    return `-${maxXOffset}px`;
+  });
+
+  // for desktop and tablet landscape..
   const translateYImage2Phase1 = useTransform(
     scrollYProgress,
     [0.21, 0.3],
-    ["800%", "0%"]
+    [`${maxYOffset}px`, "0px"]
   );
   const translateYImage2Phase2 = useTransform(
     scrollYProgress,
@@ -66,17 +149,36 @@ export const GallerySection = () => {
     ["0%", "-800%"]
   );
   const combineTranslateImage2 = useTransform(scrollYProgress, (value) => {
-    if (value >= 0 && value <= 0.2) return "800%";
+    if (value >= 0 && value <= 0.2) return `${maxYOffset}px`;
     if (value >= 0.2 && value <= 0.3) return translateYImage2Phase1.get();
     if (value >= 0.3 && value <= 0.65) return "0%";
     if (value >= 0.65 && value <= 0.75) return translateYImage2Phase2.get();
-    return "-800%";
+    return `-${maxYOffset}px`;
   });
 
+  const translateXImage2Phase1 = useTransform(
+    scrollYProgress,
+    [0.21, 0.3],
+    [`-${maxXOffset}px`, "0px"]
+  );
+  const translateXImage2Phase2 = useTransform(
+    scrollYProgress,
+    [0.65, 0.75],
+    ["0px", `${maxXOffset}px`]
+  );
+  const combineTranslateImage2X = useTransform(scrollYProgress, (value) => {
+    if (value >= 0 && value <= 0.2) return `-${maxXOffset}px`;
+    if (value >= 0.2 && value <= 0.3) return translateXImage2Phase1.get();
+    if (value >= 0.3 && value <= 0.65) return "0%";
+    if (value >= 0.65 && value <= 0.75) return translateXImage2Phase2.get();
+    return `-${maxXOffset}px`;
+  });
+
+  // for desktop and tablet landscape...
   const translateYImage3Phase1 = useTransform(
     scrollYProgress,
     [0.31, 0.4],
-    ["800%", "0%"]
+    [`${maxYOffset}px`, "0px"]
   );
   const translateYImage3Phase2 = useTransform(
     scrollYProgress,
@@ -84,12 +186,31 @@ export const GallerySection = () => {
     ["0%", "-800%"]
   );
   const combineTranslateImage3 = useTransform(scrollYProgress, (value) => {
-    if (value >= 0 && value <= 0.31) return "800%";
+    if (value >= 0 && value <= 0.31) return `${maxYOffset}px`;
 
     if (value >= 0.31 && value <= 0.4) return translateYImage3Phase1.get();
     if (value >= 0.4 && value <= 0.75) return "0%";
     if (value >= 0.75 && value <= 0.85) return translateYImage3Phase2.get();
-    return "-800%";
+    return `-${maxYOffset}px`;
+  });
+
+  const translateXImage3Phase1 = useTransform(
+    scrollYProgress,
+    [0.31, 0.4],
+    [`-${maxXOffset}px`, "0px"]
+  );
+  const translateXImage3Phase2 = useTransform(
+    scrollYProgress,
+    [0.75, 0.85],
+    ["0px", `${maxXOffset}px`]
+  );
+  const combineTranslateImage3X = useTransform(scrollYProgress, (value) => {
+    if (value >= 0 && value <= 0.31) return `-${maxXOffset}px`;
+
+    if (value >= 0.31 && value <= 0.4) return translateXImage3Phase1.get();
+    if (value >= 0.4 && value <= 0.75) return "0px";
+    if (value >= 0.75 && value <= 0.85) return translateXImage3Phase2.get();
+    return `-${maxXOffset}px`;
   });
 
   // for text ....
@@ -190,14 +311,13 @@ export const GallerySection = () => {
     stiffness: 20,
     damping: 20,
   });
- 
 
   return (
     <>
       <div>
         <div
           ref={mainWrapperRef}
-          className="max-w-[1920px] mx-auto h-[500vh]  relative"
+          className="max-w-[1920px] mx-auto h-[800vh]  relative"
         >
           <div className="h-screen w-full sticky top-0 overflow-hidden">
             <div className="absolute top-0 -left-[15%] w-[50%] h-[50%]  flex justify-center items-center">
@@ -375,12 +495,29 @@ export const GallerySection = () => {
                     y: translateYImage1Smooth,
                     x: translateXImage1Smooth,
                   }}
-                  className="relative flex-1 h-full z-30"
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full z-30 2xl:flex xl:flex lg:flex md:landscape:flex md:portrait:hidden hidden
+                  "
                 >
                   <Image
                     fill
                     src="/assets/portfolioImg1.png"
                     alt="portfolio-image"
+                    className="object-cover"
+                  />
+                </motion.div>
+
+                <motion.div
+                  style={{
+                    y: translateYImage1,
+                    x: combineTranslateImage1X,
+                  }}
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full z-30 2xl:hidden xl:hidden lg:hidden md:landscape:hidden flex"
+                >
+                  <Image
+                    fill
+                    src="/assets/portfolioImg1.png"
+                    alt="portfolio-image"
+                    className="object-cover"
                   />
                 </motion.div>
 
@@ -390,12 +527,27 @@ export const GallerySection = () => {
                     y: translateYImage2Smooth,
                     x: translateXImage2Smooth,
                   }}
-                  className="relative flex-1 h-full z-20"
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full z-20 2xl:flex xl:flex lg:flex md:landscape:flex md:portrait:hidden hidden"
                 >
                   <Image
                     fill
                     src="/assets/portfolioImg2.png"
                     alt="portfolio-image"
+                    className="object-cover"
+                  />
+                </motion.div>
+                <motion.div
+                  style={{
+                    y: translateYImage2,
+                    x: combineTranslateImage2X,
+                  }}
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full z-20 2xl:hidden xl:hidden lg:hidden md:landscape:hidden flex"
+                >
+                  <Image
+                    fill
+                    src="/assets/portfolioImg2.png"
+                    alt="portfolio-image"
+                    className="object-cover"
                   />
                 </motion.div>
 
@@ -404,12 +556,28 @@ export const GallerySection = () => {
                   style={{
                     y: translateYImage3Smooth,
                   }}
-                  className="relative flex-1 h-full"
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:flex xl:flex lg:flex md:landscape:flex md:portrait:hidden hidden"
                 >
                   <Image
                     fill
                     src="/assets/portfolioImg3.png"
                     alt="portfolio-image"
+                    className="object-cover"
+                  />
+                </motion.div>
+
+                <motion.div
+                  style={{
+                    
+                    x: combineTranslateImage3X,
+                  }}
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:hidden xl:hidden lg:hidden md:landscape:hidden flex"
+                >
+                  <Image
+                    fill
+                    src="/assets/portfolioImg3.png"
+                    alt="portfolio-image"
+                    className="object-cover"
                   />
                 </motion.div>
               </div>
