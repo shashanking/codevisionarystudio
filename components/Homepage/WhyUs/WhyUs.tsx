@@ -20,13 +20,12 @@ export const WhyUsSection = () => {
     target: mainContainerWrapperRef,
   });
 
-
   //  all main animations
 
   // PHASE 1: Entry Animation (scroll: 0.1 -> 0.35)
   // Elements slide in from outside viewport with fade in
 
-  // PHASE 2: Center Stage (scroll: 0.35 -> 0.8) 
+  // PHASE 2: Center Stage (scroll: 0.35 -> 0.8)
   // Elements align to center position and maintain full opacity
 
   // PHASE 3: Exit Animation (scroll: 0.8 -> 1.0)
@@ -58,7 +57,6 @@ export const WhyUsSection = () => {
     [0.35, 0.8],
     ["150%", "0%"]
   );
-
 
   const Image1ScrollYPhase1 = useTransform(
     scrollYProgress,
@@ -118,13 +116,11 @@ export const WhyUsSection = () => {
     ["-150%", "0%"]
   );
 
-
   const Image2ScrollYPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     ["-150%", "0%"]
   );
-
 
   const Image2OpacityPhase1 = useTransform(
     scrollYProgress,
@@ -174,7 +170,6 @@ export const WhyUsSection = () => {
     [0.35, 0.8],
     ["150%", "0%"]
   );
-
 
   const Image3ScrollYPhase1 = useTransform(
     scrollYProgress,
@@ -232,13 +227,11 @@ export const WhyUsSection = () => {
     ["-150%", "0%"]
   );
 
-
   const Image4ScrollYPhase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
     ["-150%", "0%"]
   );
-
 
   const Image4OpacityPhase1 = useTransform(
     scrollYProgress,
@@ -346,7 +339,7 @@ export const WhyUsSection = () => {
   const TranslateYAxisPoint2Phase1 = useTransform(
     scrollYProgress,
     [0.1, 0.35],
-    ["0%", "-110%"]
+    ["0%", "-100%"]
   );
   const TranslateYAxisPoint2Phase2 = useTransform(
     scrollYProgress,
@@ -370,9 +363,8 @@ export const WhyUsSection = () => {
   const TranslateYAxisPoint3 = useTransform(
     scrollYProgress,
     [0.35, 0.8], // Changed from [0.8, 1] to align with Point 2's timing
-    ["0%", "-240%"]
+    ["0%", "-180%"]
   );
-
 
   const OpacityPoint1 = useTransform(scrollYProgress, [0.1, 0.35], [1, 0]);
   const OpacityPoint2Phase1 = useTransform(
@@ -555,18 +547,18 @@ export const WhyUsSection = () => {
                   <p className="text-white font-secondaryFont font-[400] mt-3 text-sm md:text-[1vw] text-center md:text-left">
                     Code Visionary Studio stands out for our innovative
                     solutions, personalized service, and proven track record.
-                    Our holistic approach to web design, application development,
-                    branding, and marketing ensures your business thrives in the
-                    digital age.
+                    Our holistic approach to web design, application
+                    development, branding, and marketing ensures your business
+                    thrives in the digital age.
                   </p>
                 </div>
-                <div className="h-32 overflow-hidden w-full">
+                <div className="w-full h-20 overflow-hidden 2xl:h-auto xl:h-auto lg:h-auto md:landscape:auto md:portrait:h-32">
                   <motion.div
                     style={{
                       y: TranslateYAxisPoint1Smooth,
                       opacity: OpacityPoint1Smooth,
                     }}
-                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[90%] md:w-[80%] my-[3%] mx-auto md:mx-0"
+                    className="bg-white flex-shrink-0 rounded-full px-3 2xl:py-2.5 xl:py-2.5 lg:py-2.5 md:landscape:py-2.5 py-1.5 flex justify-center items-center gap-4 2xl:w-[80%] xl:w-[80%] lg:w-[80%] w-full md:w-[80%] my-[1%] mx-auto md:mx-0"
                   >
                     <div className="bg-black h-10 w-10 md:h-14 md:w-14 rounded-full flex justify-center items-center flex-shrink-0">
                       <h4
@@ -579,11 +571,13 @@ export const WhyUsSection = () => {
                       </h4>
                     </div>
                     <div>
-                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-base md:text-[1.2vw]">
+                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] 2xl:text-base xl:text-base lg:text-base text-[3.6vw] md:text-[1.2vw]">
                         Innovative Solutions
                       </h4>
-                      <p className="text-[#333333] text-xs md:text-[.85vw] font-secondaryFont font-[600]">
-                        Our team creates cutting-edge, custom mobile and web applications that transform ideas into impactful digital experiences.
+                      <p className="text-[#333333] 2xl:text-xs xl:text-xs lg:text-xs text-[2.5vw] md:text-[.85vw] font-secondaryFont font-[600]">
+                        Our team creates cutting-edge, custom mobile and web
+                        applications that transform ideas into impactful digital
+                        experiences.
                       </p>
                     </div>
                   </motion.div>
@@ -593,7 +587,7 @@ export const WhyUsSection = () => {
                       y: TranslateYAxisPoint2Smooth,
                       opacity: OpacityPoint2Smooth,
                     }}
-                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[90%] md:w-[80%] my-[3%] mx-auto md:mx-0"
+                    className="bg-white flex-shrink-0 rounded-full px-3 2xl:py-2.5 xl:py-2.5 lg:py-2.5 md:landscape:py-2.5 py-1.5 flex justify-center items-center gap-4 2xl:w-[80%] xl:w-[80%] lg:w-[80%] w-full md:w-[80%] my-[1%] mx-auto md:mx-0"
                   >
                     <div className="bg-black h-10 w-10 md:h-14 md:w-14 rounded-full flex justify-center items-center flex-shrink-0">
                       <h4
@@ -606,11 +600,12 @@ export const WhyUsSection = () => {
                       </h4>
                     </div>
                     <div>
-                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-base md:text-[1.2vw]">
+                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] 2xl:text-base xl:text-base lg:text-base text-[3.6vw] md:text-[1.2vw]">
                         Client-Centric Approach
                       </h4>
-                      <p className="text-[#333333] text-xs md:text-[.85vw] font-secondaryFont font-[600]">
-                        We prioritize understanding your unique needs and goals to deliver tailored solutions that exceed expectations.
+                      <p className="text-[#333333] 2xl:text-xs xl:text-xs lg:text-xs text-[2.5vw] md:text-[.85vw] font-secondaryFont font-[600]">
+                        We prioritize understanding your unique needs and goals
+                        to deliver tailored solutions that exceed expectations.
                       </p>
                     </div>
                   </motion.div>
@@ -620,7 +615,7 @@ export const WhyUsSection = () => {
                       y: TranslateYAxisPoint3Smooth,
                       opacity: OpacityPoint3Smooth,
                     }}
-                    className="bg-white flex-shrink-0 rounded-full px-3 py-2.5 flex justify-center items-center gap-4 w-[90%] md:w-[80%] my-[3%] mx-auto md:mx-0"
+                    className="bg-white flex-shrink-0 rounded-full px-3 2xl:py-2.5 xl:py-2.5 lg:py-2.5 md:landscape:py-2.5 py-1.5 flex justify-center items-center gap-4 2xl:w-[80%] xl:w-[80%] lg:w-[80%] w-full md:w-[80%] my-[1%] mx-auto md:mx-0"
                   >
                     <div className="bg-black h-10 w-10 md:h-14 md:w-14 rounded-full flex justify-center items-center flex-shrink-0">
                       <h4
@@ -633,11 +628,12 @@ export const WhyUsSection = () => {
                       </h4>
                     </div>
                     <div>
-                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] text-base md:text-[1.2vw]">
+                      <h4 className="text-[#000D0F] font-secondaryFont font-[600] 2xl:text-base xl:text-base lg:text-base text-[3.6vw] md:text-[1.2vw]">
                         End-to-End Excellence
                       </h4>
-                      <p className="text-[#333333] text-xs md:text-[.85vw] font-secondaryFont font-[600]">
-                        From concept to deployment, we ensure quality and innovation at every step of your project journey.
+                      <p className="text-[#333333] 2xl:text-xs xl:text-xs lg:text-xs text-[2.5vw] md:text-[.85vw] font-secondaryFont font-[600]">
+                        From concept to deployment, we ensure quality and
+                        innovation at every step of your project journey.
                       </p>
                     </div>
                   </motion.div>

@@ -213,6 +213,26 @@ export const GallerySection = () => {
     return `-${maxXOffset}px`;
   });
 
+
+  const opacityImage4 = useTransform(
+    scrollYProgress,
+    [0.75, .86],
+    [0,1]
+  );
+  // const translateXImage3Phase2 = useTransform(
+  //   scrollYProgress,
+  //   [0.75, 0.85],
+  //   ["0px", `${maxXOffset}px`]
+  // );
+  // const combineTranslateImage4X = useTransform(scrollYProgress, (value) => {
+  //   if (value >= 0 && value <= 0.31) return `-${maxXOffset}px`;
+
+  //   if (value >= 0.31 && value <= 0.4) return translateXImage3Phase1.get();
+  //   if (value >= 0.4 && value <= 0.75) return "0px";
+  //   if (value >= 0.75 && value <= 0.85) return translateXImage3Phase2.get();
+  //   return `-${maxXOffset}px`;
+  // });
+
   // for text ....
 
   const translateYText1 = useTransform(
@@ -261,20 +281,29 @@ export const GallerySection = () => {
   const translateYImage1Smooth = useSpring(combineTranslateImage1, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateXImage1Smooth = useSpring(translateXImage1, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYImage2Smooth = useSpring(combineTranslateImage2, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateXImage2Smooth = useSpring(translateXImage2, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYImage3Smooth = useSpring(combineTranslateImage3, {
+    stiffness: 20,
+    damping: 20,
+    restDelta:20
+  });
+  const opacityImage3Smooth = useSpring(opacityImage4, {
     stiffness: 20,
     damping: 20,
   });
@@ -282,34 +311,42 @@ export const GallerySection = () => {
   const translateYText1Smooth = useSpring(translateYText1, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYText2Smooth = useSpring(translateYText2, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYText3Smooth = useSpring(translateYText3, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYText4Smooth = useSpring(translateYText4, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYPara1Smooth = useSpring(translateYPara1, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYPara2Smooth = useSpring(translateYPara2, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYPara3Smooth = useSpring(translateYPara3, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
   const translateYPara4Smooth = useSpring(translateYPara4, {
     stiffness: 20,
     damping: 20,
+    restDelta:20
   });
 
   return (
@@ -556,7 +593,7 @@ export const GallerySection = () => {
                   style={{
                     y: translateYImage3Smooth,
                   }}
-                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:flex xl:flex lg:flex md:landscape:flex md:portrait:hidden hidden"
+                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:flex z-10 xl:flex lg:flex md:landscape:flex md:portrait:hidden hidden"
                 >
                   <Image
                     fill
@@ -571,11 +608,42 @@ export const GallerySection = () => {
                     
                     x: combineTranslateImage3X,
                   }}
-                  className="relative flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:hidden xl:hidden lg:hidden md:landscape:hidden flex"
+                  className="relative z-10 flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:hidden xl:hidden lg:hidden md:landscape:hidden flex"
                 >
                   <Image
                     fill
                     src="/assets/portfolioImg3.png"
+                    alt="portfolio-image"
+                    className="object-cover"
+                  />
+                </motion.div>
+
+                {/* image four */}
+                <motion.div
+                  style={{
+                    // y: translateYImage3Smooth,
+                    opacity:opacityImage3Smooth
+                  }}
+                  className="absolute flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-[33%] right-0 top-0 2xl:flex xl:flex lg:flex md:landscape:flex md:portrait:hidden hidden z-0"
+                >
+                  <Image
+                    fill
+                    src="/assets/portfolioImg4.png"
+                    alt="portfolio-image"
+                    className="object-cover"
+                  />
+                </motion.div>
+
+                <motion.div
+                  style={{
+                    opacity:opacityImage3Smooth
+                    
+                  }}
+                  className="absolute bottom-0 z-0 flex-1 2xl:h-full xl:h-full lg:h-full md:landscape:h-full h-[33.33333%] w-full 2xl:hidden xl:hidden lg:hidden md:landscape:hidden flex"
+                >
+                  <Image
+                    fill
+                    src="/assets/portfolioImg4.png"
                     alt="portfolio-image"
                     className="object-cover"
                   />

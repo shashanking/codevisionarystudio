@@ -7,7 +7,8 @@ import FooterTwo from "@/components/common/Footer/FooterTwo";
 
 const AboutUs = () => {
   return (
-    <div className="w-full overflow-x-hidden">
+    <>
+    {/* <div className="w-full overflow-x-hidden"> */}
       <AboutUsLanding />
       {/* About Us Animated Card Section */}
       <AboutUsAnimation />
@@ -17,7 +18,8 @@ const AboutUs = () => {
       <AboutUsBanner />
       {/* About Us Footer Section */}
       <FooterTwo  useBlackBackground={false} />
-    </div>
+    {/* </div> */}
+    </>
 
   )
 }
