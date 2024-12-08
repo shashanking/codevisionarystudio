@@ -3,10 +3,18 @@ import { mainFont } from "@/components/UI/Mainfontt";
 import Image from "next/image";
 
 const ContactUsLandingMobile = () => {
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById('contact-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="relative h-[100vh] w-full bg-[#000D0F] overflow-hidden">
       {/* Grid background with larger cells for mobile */}
-      <div className="absolute inset-0 z-30 grid grid-cols-[repeat(auto-fill,minmax(75px,1fr))] grid-rows-[repeat(auto-fill,minmax(75px,1fr))] mix-blend-soft-light pointer-events-auto">
+      <div className="absolute inset-0 z-10 grid grid-cols-[repeat(auto-fill,minmax(75px,1fr))] grid-rows-[repeat(auto-fill,minmax(75px,1fr))] mix-blend-soft-light pointer-events-none">
         {[...Array(100)].map((_, index) => (
           <div
             key={index}
@@ -16,10 +24,10 @@ const ContactUsLandingMobile = () => {
       </div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-x-0 bottom-0 h-[30vh] z-30 bg-gradient-to-t from-[#000D0F] to-transparent pointer-events-none"></div>
+      <div className="absolute inset-x-0 bottom-0 h-[30vh] z-20 bg-gradient-to-t from-[#000D0F] to-transparent pointer-events-none"></div>
 
       {/* Main content */}
-      <div className="absolute z-20 text-center flex flex-col items-center px-4 h-full">
+      <div className="absolute z-30 text-center flex flex-col items-center px-4 h-full">
         <div className="justify-center my-auto">
           <div
             style={{ fontFamily: mainFont.style.fontFamily }}
@@ -33,9 +41,9 @@ const ContactUsLandingMobile = () => {
           </div>
 
           {/* Contact buttons - Below subtitle */}
-          <div className="mt-12 flex flex-col space-y-4 items-center w-full">
+          <div className="mt-12 flex flex-col space-y-4 items-center w-full relative">
             <a href="tel:+918240833838"
-              className="w-[186px] h-[72px] rounded-full flex items-center justify-start pl-2 bg-white text-black">
+              className="relative z-40 w-[186px] h-[72px] rounded-full flex items-center justify-start pl-2 bg-white text-black cursor-pointer">
               <div className="flex items-center justify-center">
                 <span className="flex items-center h-full">
                   <Image
@@ -56,13 +64,14 @@ const ContactUsLandingMobile = () => {
             </a>
 
             <a href="#contact-form"
-              className="w-[280px] h-[72px] rounded-full flex items-center justify-start pl-2 bg-white text-black">
+              onClick={handleContactClick}
+              className="relative z-40 w-[280px] h-[72px] rounded-full flex items-center justify-start pl-2 bg-transparent text-white cursor-pointer  border border-white">
               <div className="flex items-center justify-center">
                 <span className="flex items-center h-full">
                   <Image
                     src="/assets/chat.png"
                     alt="Chat Icon"
-                    className="invert bg-white h-[46px] w-[46px] rounded-full p-2"
+                    className="invert h-[46px] w-[46px] rounded-full p-2"
                     width={25}
                     height={25}
                   />

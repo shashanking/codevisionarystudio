@@ -463,7 +463,7 @@ export const GallerySection = () => {
                         style={{
                           y: translateYPara1Smooth,
                         }}
-                        className="font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
+                        className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Pellentesque ipsum risus, fermentum tincidunt eleifend
@@ -476,7 +476,7 @@ export const GallerySection = () => {
                         style={{
                           y: translateYPara2Smooth,
                         }}
-                        className="font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw]  font-[400]"
+                        className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw]  font-[400]"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Pellentesque ipsum risus, fermentum tincidunt eleifend
@@ -489,7 +489,7 @@ export const GallerySection = () => {
                         style={{
                           y: translateYPara3Smooth,
                         }}
-                        className="font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw]  font-[400]"
+                        className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw]  font-[400]"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Pellentesque ipsum risus, fermentum tincidunt eleifend
@@ -502,7 +502,7 @@ export const GallerySection = () => {
                         style={{
                           y: translateYPara4Smooth,
                         }}
-                        className="font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
+                        className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Pellentesque ipsum risus, fermentum tincidunt eleifend
