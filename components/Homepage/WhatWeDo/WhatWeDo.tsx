@@ -23,7 +23,7 @@ export const WhatWeDo = () => {
   );
   const translateXImage3 = useTransform(
     scrollYProgress,
-    [0.65, 0.95],
+    [0.65, 0.85],
     ["-650%", "0%"]
   );
 
@@ -44,7 +44,7 @@ export const WhatWeDo = () => {
   // animation for opacity increace....
   const opacityImage1 = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
   const opacityImage2 = useTransform(scrollYProgress, [0.35, 0.6], [0, 1]);
-  const opacityImage3 = useTransform(scrollYProgress, [0.65, 0.95], [0, 1]);
+  const opacityImage3 = useTransform(scrollYProgress, [0.65, 0.85], [0, 1]);
 
   // smooth transition opacity...
 

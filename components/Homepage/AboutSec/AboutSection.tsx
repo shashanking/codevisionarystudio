@@ -104,7 +104,7 @@ export const AboutSection = () => {
         ref={about__MainWrapper}
         className="max-w-[1920px] mx-auto min-h-[230vh] relative"
       >
-        <div className="sticky top-0 w-full h-[120vh] flex justify-center items-center overflow-hidden">
+        <div className="sticky top-0 w-full h-[120dvh] flex justify-center items-center overflow-hidden">
           <div className="absolute w-full h-full flex justify-center items-center">
             <HomeAboutSecSvg />
           </div>
