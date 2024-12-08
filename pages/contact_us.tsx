@@ -8,6 +8,16 @@ const ContactUsPage = () => {
     <>
       <Head>
         <title>Contact Us - Code Visionary Studio</title>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16644368488"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16644368488');
+          `
+        }} />
         <style>{`
           body {
             margin: 0;
