@@ -17,6 +17,22 @@ const ContactUsPage = () => {
             overflow-x: hidden;
           }
         `}</style>
+        <script>
+          {`
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16644368488/kzckCOaN1PQZEOjQ04A-',
+                'event_callback': callback
+            });
+            return false;
+          }
+        `}
+        </script>
       </Head>
       <Pixel name="FACEBOOK_PIXEL_1" trackLead={true} />
       <div className="w-full bg-[#000D0F]">

@@ -171,7 +171,7 @@ const ContactUsFormSec = () => {
                 <option value="UI/UX Design">Web Application Development</option>
                 <option value="UI/UX Design">UI/UX Design</option>
                 <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
-                <option value="UI/UX Design">Social Media Marketiing</option>
+                <option value="UI/UX Design">Social Media Marketing</option>
                 <option value="UI/UX Design">Branding</option>
               </select>
             </div>

@@ -39,7 +39,7 @@ const OurServicesLanding = () => {
                 <li>Mobile Application Design & Development</li>
                 <li>Branding</li>
                 <li>Digital Marketing / Performance Marketing</li>
-                <li>UI UX</li>
+                <li>UI/UX</li>
                 <li>Web Application</li>
                 <li>Search Engine Optimisation (SEO)</li>
                 <li>Social Media Marketing</li>
