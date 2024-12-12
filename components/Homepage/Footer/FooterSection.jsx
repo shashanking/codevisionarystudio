@@ -131,7 +131,7 @@ export const FooterSection = () => {
                 <option value="UI/UX Design">Web Application Development</option>
                 <option value="UI/UX Design">UI/UX Design</option>
                 <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
-                <option value="UI/UX Design">Social Media Marketiing</option>
+                <option value="UI/UX Design">Social Media Marketing</option>
 
                 <option value="UI/UX Design">Branding</option>
               </select>
@@ -219,8 +219,8 @@ export const FooterSection = () => {
         <div className="w-full h-[1px] bg-white/90" />
         <div className="h-[60px] md:h-[100px] flex items-center">
           <div
-            style={{ 
-              fontFamily: mainFont.style.fontFamily, 
+            style={{
+              fontFamily: mainFont.style.fontFamily,
               color: "transparent",
               WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)"
             }}

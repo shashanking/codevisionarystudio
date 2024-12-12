@@ -8,6 +8,11 @@ const ThankYouPage = () => {
     <>
       <Head>
         <title>Thank You - Code Visionary Studio</title>
+        <script>
+          {`
+        gtag('event', 'conversion', {'send_to': 'AW-16644368488/1_CuCNKz1_QZEOjQ04A-'});
+        `}
+        </script>
       </Head>
       <Pixel name="FACEBOOK_PIXEL_1" trackLead={false} />
       <div className=" w-full bg-[#000D0F] flex flex-col">

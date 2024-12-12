@@ -365,12 +365,12 @@ export const GallerySection = () => {
             </div>
 
             <div className="absolute top-0 w-full h-full z-10 flex justify-center items-center">
-              <div className="w-[90%] relative  mx-auto h-full flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:landscape:flex-row md:portrait:flex-col 2xl:justify-start xl:justify-start lg:justify-start md:landscape:justify-start md:portrait:justify-start justify-start items-center">
-                <div className="2xl:w-[55%] xl:w-[55%] lg:w-[55%] md:portrait:w-full md:landscape:w-[55%] w-full">
+              <div className="w-[90%] relative mx-auto h-full flex flex-col 2xl:flex-row xl:flex-row lg:flex-row md:landscape:flex-row md:portrait:flex-col 2xl:justify-start xl:justify-start lg:justify-start md:landscape:justify-start md:portrait:justify-start justify-start items-center">
+                <div className="2xl:w-[55%] xl:w-[55%] lg:w-[55%] md:portrait:w-full md:landscape:w-[55%] w-full 2xl:pt-32 xl:pt-32 lg:pt-32 md:landscape:pt-32 md:portrait:pt-24 pt-12">
                   <div className="flex justify-start items-center gap-4 my-3">
                     <HomepageTagIconSvg />
                     <h4
-                      className="2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.1vw] text-[3.1vw] font-bold uppercase"
+                      className="2xl:text-[1.1vw] xl:text-[1.1vw] lg:text-[1.1vw] md:landscape:text-[1.1vw] md:portrait:text-[2.1vw] text-[3.1vw] font-bold uppercase text-white"
                       style={{
                         fontFamily: mainFont.style.fontFamily,
                       }}
