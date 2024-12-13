@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -40,6 +40,7 @@ const validationSchema = Yup.object({
 
 const ContactUsFormSec = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(false); // State to manage loading
   // const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const { handleSubmit, values, handleChange, handleBlur, resetForm, setFieldValue, errors, touched } =
@@ -55,6 +56,7 @@ const ContactUsFormSec = () => {
       },
       validationSchema,
       onSubmit: async (values) => {
+        setLoading(true); // Set loading state to true
         try {
           // if (!values.recaptcha) {
           //   toast.error("Please complete the reCAPTCHA verification");
@@ -93,11 +95,16 @@ const ContactUsFormSec = () => {
             toast.success("Form submitted successfully! Our team will get back to you soon");
             resetForm();
             // recaptchaRef.current?.reset();
-            router.push('/thank_you');
+            router.push({
+              pathname: '/thank_you',
+              query: { fromContactUs: true },
+            });
           }
         } catch (error) {
           console.error(error);
           toast.error("Something went wrong! Please try again later");
+        } finally {
+          setLoading(false); // Reset loading state
         }
       },
     });
@@ -198,11 +205,12 @@ const ContactUsFormSec = () => {
             </div> */}
             <button
               type="submit"
+              disabled={loading}
               style={{ fontFamily: mainFont.style.fontFamily }}
               className="w-[187px] h-[50px] text-black font-bold bg-white rounded-full transition duration-300 ease-in-out 
               hover:bg-gradient-to-r hover:from-[#2bb2e0]  hover:to-[#23849d] hover:text-white"
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
         </div>
