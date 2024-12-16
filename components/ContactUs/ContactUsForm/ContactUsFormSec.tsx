@@ -166,21 +166,22 @@ const ContactUsFormSec = () => {
               />
             </div>
             <div className="flex w-full  mb-5 flex-1 rounded-full border border-[#FFFFFF33]">
-              <select
-                onChange={handleChange}
-                onBlur={handleBlur}
-                name="subject"
-                className="w-[96%] border-white h-[50px] my-auto pl-6  font-secondaryFont leading-6 text-md  text-white bg-transparent focus:outline-none placeholder:text-white placeholder:text-sm"
-              >
-                <option value="">Service</option>
-                <option value="web development">Website Design and Development</option>
-                <option value="app development">Mobile Application Development</option>
-                <option value="UI/UX Design">Web Application Development</option>
-                <option value="UI/UX Design">UI/UX Design</option>
-                <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
-                <option value="UI/UX Design">Social Media Marketing</option>
-                <option value="UI/UX Design">Branding</option>
-              </select>
+            <select
+  onChange={handleChange}
+  onBlur={handleBlur}
+  name="subject"
+  className="w-full h-[50px] pl-6 mr-6 font-secondaryFont leading-6 text-md rounded-lg text-white bg-transparent focus:outline-none placeholder:text-white placeholder:text-sm focus:text-black focus:bg-transparent"
+>
+  <option value="">Services</option>
+  <option value="web development">Website Design and Development</option>
+  <option value="app development">Mobile Application Development</option>
+  <option value="UI/UX Design">Web Application Development</option>
+  <option value="UI/UX Design">UI/UX Design</option>
+  <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
+  <option value="UI/UX Design">Social Media Marketing</option>
+  <option value="UI/UX Design">Branding</option>
+</select>
+
             </div>
             <input
               type="text"

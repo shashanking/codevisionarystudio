@@ -12,7 +12,7 @@ const PortfolioLanding = () => {
       <div className="absolute w-full max-w-[1122px] h-[190px] left-1/2 -translate-x-1/2 top-[250px] px-4">
         <h1 style={{ fontFamily: mainFont.style.fontFamily }} className="text-[clamp(48px,5vw,96px)] leading-[1] text-center font-bold text-white">
           Innovative Solutions <br /> That Drive Action
-        </h1>
+        </h1> 
       </div>
 
       <div className="absolute w-full max-w-[1254px] left-1/2 -translate-x-1/2 top-[488px] px-6">
