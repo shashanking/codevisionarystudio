@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
         ></iframe>
         <div className="absolute bottom-0 left-0 w-full bg-green-5 homePage__heroSectionOverlay h-[20%]" />
       </div>
-      <div className="max-w-[1920px] min-h-[100vh] mx-auto relative flex justify-center 2xl:items-center xl:items-center lg:items-center md:landscape:items-center md:portrait:items-center items-end py-5">
+      <div className="max-w-[1920px] min-h-[100vh] mx-auto relative flex justify-center 2xl:items-center xl:items-center lg:items-center md:landscape:items-center md:portrait:items-center items-end py-16">
         <div className="flex flex-col justify-center items-center 2xl:w-[85%] xl:w-[85%] lg:w-[85%] md:portrait:w-[95%] md:landscape:w-[85%] w-[95%] gap-1 mx-auto relative">
           <h1
             style={{

@@ -23,7 +23,7 @@ const projects: ProjectDetails[] = [
   },
   {
     title: "Contract crafters",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum risus, fermentum tincidunt eleifend quis, efficitur convallis lectus. Donec mattis orci est, vel tincidunt odio dignissim in.",
+    description: "",
     work: "UI/UX Design, Application and dashboard development.",
     duration: "45 Days",
     techStack: "Flutter, firebase, git, flutter flow",
@@ -31,7 +31,7 @@ const projects: ProjectDetails[] = [
   },
   {
     title: "Car repair",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum risus, fermentum tincidunt eleifend quis, efficitur convallis lectus. Donec mattis orci est, vel tincidunt odio dignissim in.",
+    description: "",
     work: "UI/UX Design, Application and dashboard development.",
     duration: "45 Days",
     techStack: "Flutter, firebase, git, flutter flow",

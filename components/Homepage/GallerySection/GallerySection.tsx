@@ -14,7 +14,7 @@ export const GallerySection = () => {
     useState(0);
 
   useEffect(() => {
-    setCurrentScreenSizeImage1(window.innerWidth * 0.66);
+    setCurrentScreenSizeImage1(window.innerWidth * 0.66); 
     setCurrentScreenSizeImage2(window.innerWidth * 0.33);
     setCurrentScreenSizeImage1Height(window.innerHeight * .66);
     setCurrentScreenSizeImage2Height(window.innerHeight * 0.33);
@@ -422,10 +422,10 @@ export const GallerySection = () => {
                         className=""
                       >
                         <motion.h3
-                          className="text-white 2xl:text-[2.2vw] xl:text-[2.2vw] lg:text-[2.2vw] md:landscape:text-[2.2vw] md:portrait:text-[4.2vw] text-[5.5vw] font-[700]"
-                          style={{
-                            fontFamily: mainFont.style.fontFamily,
-                          }}
+                         className="text-white 2xl:text-[2.2vw] xl:text-[2.2vw] lg:text-[2.2vw] md:landscape:text-[2.2vw] md:portrait:text-[4.2vw] text-[5.5vw] font-[700]"
+                         style={{
+                           fontFamily: mainFont.style.fontFamily,
+                         }}
                         >
                           Car corner
                         </motion.h3>
@@ -438,10 +438,10 @@ export const GallerySection = () => {
                         className=""
                       >
                         <motion.h3
-                          className="text-white 2xl:text-[2.2vw] xl:text-[2.2vw] lg:text-[2.2vw] md:landscape:text-[2.2vw] md:portrait:text-[4.2vw] text-[5.5vw] font-[700]"
-                          style={{
-                            fontFamily: mainFont.style.fontFamily,
-                          }}
+                         className="text-white 2xl:text-[2.2vw] xl:text-[2.2vw] lg:text-[2.2vw] md:landscape:text-[2.2vw] md:portrait:text-[4.2vw] text-[5.5vw] font-[700]"
+                         style={{
+                           fontFamily: mainFont.style.fontFamily,
+                         }}
                         >
                           Contract crafters
                         </motion.h3>
@@ -458,7 +458,7 @@ export const GallerySection = () => {
                         </motion.h3>
                       </motion.div>
                     </div>
-                    <div className="h-24 overflow-hidden flex flex-col justify-start items-start gap-2">
+                    <div className="h-28 overflow-hidden flex flex-col justify-start items-start gap-2">
                       <motion.p
                         style={{
                           y: translateYPara1Smooth,
@@ -476,7 +476,7 @@ export const GallerySection = () => {
                         style={{
                           y: translateYPara2Smooth,
                         }}
-                        className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw]  font-[400]"
+                        className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
                       >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Pellentesque ipsum risus, fermentum tincidunt eleifend
@@ -513,14 +513,14 @@ export const GallerySection = () => {
                       </motion.p>
                     </div>
 
-                    <button
+                    {/* <button
                       className="2xl:text-[1.2vw] xl:text-[1.2vw] lg:text-[1.2vw] md:portrait:text-[2.5vw] md:landscape:text-[1.2vw] text-[3.5vw] relative  rounded-full mt-[5%] px-5 py-2 font-[500] bg-[#C44F56] text-white hover:text-[#C44F56] hover:bg-white transition-all duration-300 ease-linear"
                       style={{
                         fontFamily: mainFont.style.fontFamily,
                       }}
                     >
                       Learn More
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

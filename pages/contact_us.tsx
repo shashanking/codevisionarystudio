@@ -37,7 +37,7 @@ const ContactUsPage = () => {
         </script>
       </Head>
       <Pixel name="FACEBOOK_PIXEL_1" trackLead={true} />
-      <div className="w-full bg-[#000D0F]">
+      <div className="w-full bg-[#000D0F] flex flex-col gap-y-32 ">
         <ContactUsResponsive type="landing" />
         <ContactUsResponsive type="form" />
         <FooterTwo useBlackBackground={true} />
