@@ -107,7 +107,7 @@ export const GallerySection = () => {
   const translateYImage1Phase2 = useTransform(
     scrollYProgress,
     [0.56, 0.65],
-    ["0%", "-800%"]
+    ["0%", "-300%"]
   );
 
   const combineTranslateImage1 = useTransform(scrollYProgress, (value) => {
@@ -146,7 +146,7 @@ export const GallerySection = () => {
   const translateYImage2Phase2 = useTransform(
     scrollYProgress,
     [0.65, 0.75],
-    ["0%", "-800%"]
+    ["0%", "-300%"]
   );
   const combineTranslateImage2 = useTransform(scrollYProgress, (value) => {
     if (value >= 0 && value <= 0.2) return `${maxYOffset}px`;
@@ -183,7 +183,7 @@ export const GallerySection = () => {
   const translateYImage3Phase2 = useTransform(
     scrollYProgress,
     [0.75, 0.85],
-    ["0%", "-800%"]
+    ["0%", "-300%"]
   );
   const combineTranslateImage3 = useTransform(scrollYProgress, (value) => {
     if (value >= 0 && value <= 0.31) return `${maxYOffset}px`;
@@ -254,27 +254,27 @@ export const GallerySection = () => {
   const translateYPara2 = useTransform(
     scrollYProgress,
     [0.56, 0.75],
-    ["0%", "-185%"]
+    ["0%", "-235%"]
   );
   const translateYText3 = useTransform(
     scrollYProgress,
     [0.56, 0.85],
-    ["0%", "-170%"]
+    ["0%", "-195%"]
   );
   const translateYPara3 = useTransform(
     scrollYProgress,
     [0.56, 0.85],
-    ["0%", "-285%"]
+    ["0%", "-360%"]
   );
   const translateYText4 = useTransform(
     scrollYProgress,
     [0.56, 0.95],
-    ["0%", "-190%"]
+    ["10%", "-190%"]
   );
   const translateYPara4 = useTransform(
     scrollYProgress,
-    [0.56, 0.85],
-    ["0%", "-270%"]
+    [0.56, 0.95],
+    ["30%", "-360%"]
   );
 
   //   smoothing the animation all...
@@ -458,19 +458,15 @@ export const GallerySection = () => {
                         </motion.h3>
                       </motion.div>
                     </div>
-                    <div className="h-28 overflow-hidden flex flex-col justify-start items-start gap-2">
+                    <div className="lg:h-[120px]  h-24 overflow-hidden flex flex-col justify-start items-start gap-2">
                       <motion.p
                         style={{
                           y: translateYPara1Smooth,
                         }}
                         className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque ipsum risus, fermentum tincidunt eleifend
-                        quis, efficitur convallis lectus. Donec mattis orci est,
-                        vel tincidunt odio dignissim in. Proin non sollicitudin
-                        risus. Praesent eget risus id magna molestie volutpat at
-                        vel neque.
+                       Upwealth Magazine is a meticulously designed project with a tough, intuitive UI. Our team invested significant time refining the experience, ensuring seamless navigation and a visually appealing layout, all while delivering high-quality, engaging financial content for users.
+                       
                       </motion.p>
                       <motion.p
                         style={{
@@ -478,12 +474,7 @@ export const GallerySection = () => {
                         }}
                         className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque ipsum risus, fermentum tincidunt eleifend
-                        quis, efficitur convallis lectus. Donec mattis orci est,
-                        vel tincidunt odio dignissim in. Proin non sollicitudin
-                        risus. Praesent eget risus id magna molestie volutpat at
-                        vel neque.
+                        Car Corner is an innovative web development project that seamlessly integrates user-friendly front-end design with robust back-end functionality, offering a comprehensive platform for car enthusiasts to explore, buy, sell, and connect within a dynamic automotive community.
                       </motion.p>
                       <motion.p
                         style={{
@@ -491,12 +482,7 @@ export const GallerySection = () => {
                         }}
                         className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw]  font-[400]"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque ipsum risus, fermentum tincidunt eleifend
-                        quis, efficitur convallis lectus. Donec mattis orci est,
-                        vel tincidunt odio dignissim in. Proin non sollicitudin
-                        risus. Praesent eget risus id magna molestie volutpat at
-                        vel neque.
+                       Contract Crafters is a web development project designed to simplify complex legal processes, providing users with an intuitive platform to create, manage, and customize contracts. It empowers individuals and businesses by making legal documentation more accessible and efficient.
                       </motion.p>
                       <motion.p
                         style={{
@@ -504,12 +490,7 @@ export const GallerySection = () => {
                         }}
                         className="text-white font-secondaryFont 2xl:text-[1vw] xl:text-[1vw] lg:text-[1vw] md:landscape:text-[1vw] md:portrait:text-[2vw] text-[3vw] font-[400]"
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Pellentesque ipsum risus, fermentum tincidunt eleifend
-                        quis, efficitur convallis lectus. Donec mattis orci est,
-                        vel tincidunt odio dignissim in. Proin non sollicitudin
-                        risus. Praesent eget risus id magna molestie volutpat at
-                        vel neque.
+                       Money Blaster is a dynamic web project that blends creativity with practicality, turning financial management into an engaging experience. By empowering users to take control of their finances in an interactive, fun way, it sparks smarter financial decisions for all.
                       </motion.p>
                     </div>
 
