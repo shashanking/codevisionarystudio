@@ -118,11 +118,11 @@ export const OurTeam = () => {
                   >
                     <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
                       <Image
-                        height={130}
+                        height={230}
                         width={322}
                         src={cur.image}
                         alt={cur.name || "Team member"}
-                        className="z-0 object-center object-cover h-[400px] w-[320] rounded-lg"
+                        className="z-0 object-center object-cover h-[500px] w-[320] rounded-lg bg-top"
                       />
                       <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
                     </div>
