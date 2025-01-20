@@ -122,11 +122,11 @@ export const OurTeam = () => {
                         width={322}
                         src={cur.image}
                         alt={cur.name || "Team member"}
-                        className="z-0 object-center object-cover h-[500px] w-[320] rounded-lg bg-top"
+                        className="z-0 object-center object-cover h-[450px] w-[320] rounded-lg bg-top"
                       />
                       <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
                     </div>
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-[70px]">
                       <h4 className="font-secondaryFont font-[600] text-lg md:text-[1.3vw] text-white">
                         {cur.name}
                       </h4>
