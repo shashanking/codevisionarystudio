@@ -7,11 +7,6 @@ import { useInView } from "@/hooks/useInView";
 
 const teamList = [
   {
-    image: "/assets/vik_pic.jpg",
-    name: "Vikash Jha",
-    // position: "Lead Technical Consultant",
-  },
-  {
     image: "/assets/rini_pic.jpg",
     name: "Rini Chakraborty",
     // position: "Marketing Director",
