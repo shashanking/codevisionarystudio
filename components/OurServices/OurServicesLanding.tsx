@@ -43,6 +43,8 @@ const OurServicesLanding = () => {
                 <li>Web Application</li>
                 <li>Search Engine Optimisation (SEO)</li>
                 <li>Social Media Marketing</li>
+                <li>Advertising </li>
+                <li>Production</li>
               </ul>
             </div>
 

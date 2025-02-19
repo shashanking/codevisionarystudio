@@ -43,6 +43,16 @@ const services = [
     description: "Building and managing social media strategies that engage audiences and foster brand loyalty.",
     image: "/assets/service-sol-3.png"
   },
+  {
+    title: "Advertising",
+    description: " Design. Print. Impress!  Crafting Stunning Brochures, Cards & Advertising Materials!",
+    image: "/assets/Advertising.png"
+  },
+  {
+    title: "Production",
+    description: "Concept. Camera. Click! Khichak – Capturing Every Frame, Every Moment with Expert Photography & Videography Services!",
+    image: "/assets/Production.png"
+  },
 ];
 
 const OurServicesAnimatedSec = () => {
@@ -110,6 +120,7 @@ const OurServicesAnimatedSec = () => {
                     />
                   </button>
                 </div>
+                
                 <div className="w-full h-[120px] mt-3 rounded-lg overflow-hidden">
                   <Image
                     src={service.image}

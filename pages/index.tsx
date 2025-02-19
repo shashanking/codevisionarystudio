@@ -1,5 +1,7 @@
 import { AboutSecondSection } from "@/components/Homepage/AboutSec/AboutSecondSection";
 import { AboutSection } from "@/components/Homepage/AboutSec/AboutSection";
+import TrustedBySection from "@/components/Homepage/Clients/TrustedBySection";
+import Work_With_Clients from "@/components/Homepage/Clients/Work_With_Clients";
 import { FooterSection } from "@/components/Homepage/Footer/FooterSection";
 import { GallerySection } from "@/components/Homepage/GallerySection/GallerySection";
 
@@ -15,6 +17,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <TrustedBySection />
+      <Work_With_Clients />
       <AboutSection />
       <AboutSecondSection />
       <WhatWeDo />
@@ -22,7 +26,7 @@ export default function Home() {
       <WhyUsSection />
       {/* <div className="hidden "> */}
 
-        <GallerySection />
+        {/* <GallerySection />  */}
       {/* </div> */}
       <OurTeam />
       <Testimonials />
