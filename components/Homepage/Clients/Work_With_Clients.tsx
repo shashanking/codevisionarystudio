@@ -36,6 +36,9 @@ const logos = [
   {
     image: "/assets/Car_Repair.png",
   },
+  {
+    image: "/assets/Photo_Fest.png",
+  },
 ];
 
 const Work_With_Clients = () => {
