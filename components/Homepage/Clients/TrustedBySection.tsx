@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const TrustedBySection = () => {
   return (
-    <div  className="flex flex-col lg:flex-row  justify-center items-center mx-auto">
-      <div className="flex flex-col lg:flex-row  justify-center items-center mx-auto">
+    <div  >
+      <div className="flex flex-col lg:flex-row  items-center ">
         <div
           style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
           className=" w-full font-bold 2xl:text-[2.4vw] xl:text-[2.4vw] lg:text-[2.4vw] md:portrait:text-[3.5vw] md:landscape:text-[2.4vw] text-[5.5vw] flex justify-center items-center"
@@ -13,8 +13,8 @@ const TrustedBySection = () => {
           {" "}
           Trusted By{" "}
         </div>
-        <div className="w-full flex justify-center  mt-10" >
-        <div className=" flex flex-col md:flex-row items-center justify-around  w-full gap-4  ">
+        <div className="w-full flex start-0 portrait:justify-center  mt-10" >
+        <div className=" flex flex-col md:flex-row items-center justify-around   gap-4  ">
           <div>
             <Image
               src="/assets/Kaltech.png"
