@@ -16,7 +16,7 @@ const logos = [
     image: "/assets/Sukhoneer.png",
   },
   {
-    image: "/assets/Dentist_Clinic.png",
+    image: "/assets/Dental_Clinic.png",
   },
   {
     image: "/assets/Toto_Wala.png",
@@ -31,10 +31,10 @@ const logos = [
     image: "/assets/Money_Blaster.png",
   },
   {
-    image: "/assets/Dorji.png",
+    image: "/assets/Upwealth.png",
   },
   {
-    image: "/assets/Dorji.png",
+    image: "/assets/Car_Repair.png",
   },
 ];
 
@@ -49,20 +49,19 @@ const Work_With_Clients = () => {
           Clients We Have Worked With
         </div>
       </div>
-      <div className="w-full flex justify-center mt-10">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-[90%] ">
+      <div className=" flex justify-center items-center mt-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-8 px-4  ">
           {logos.map((logo, index) => {
             return (
               <div
                 key={index}
-                //   className="service-row border-t border-gray-500 py-6 relative group"
               >
                 <Image
                   src={logo.image}
                   alt={`Client logo ${index + 1}`}
                   width={200}
                   height={150}
-                  className="w-[250px] h-[250px] object-contain"
+                  className="w-[200px] h-[200px] object-contain rounded-xl"
                 />
               </div>
             );
