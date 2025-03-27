@@ -12,18 +12,23 @@ const teamList = [
     // position: "Marketing Director",
   },
 
+  {
+    image: "/assets/vik_pic.jpg",
+    name: "Vikash Jha",
+    // position: "Strategic Consultant",
+  },
 
   {
     image: "/assets/sayan_pic.jpg",
     name: "Sayan Choudhury",
     // position: "Strategic Consultant",
   },
-  // {
-  //   image: "/assets/sahil_pic.jpg",
-  //   name: "Sahil Biswas",
-  //  // position: "Lead UX/UI Designer",
+  {
+    image: "/assets/sahil_pic.jpg",
+    name: "Sahil Biswas",
+   // position: "Lead UX/UI Designer",
 
-  // },
+  },
   {
     image: "/assets/shashank_pic.jpg",
     name: "Shashank Singh",
