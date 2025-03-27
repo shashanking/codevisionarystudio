@@ -17,16 +17,14 @@ const terms_and_conditions = () => {
             {/* Heading text */}
             <div
               style={{ fontFamily: mainFont.style.fontFamily }}
-              className="font-semibold md:text-[72px]  text-[40px] md:leading-[72px] leading-[40px] uppercase text-white"
+              className="font-semibold md:text-[72px]  text-[40px] md:leading-[72px] leading-[40px] uppercase mb-16 text-white"
             >
               Terms and Conditions
             </div>
-            <p className="md:py-4 pt-[26px] pb-[50px] md:text-3xl text-[14px] text-white md:leading-normal leading-[21px]">
-              Choose the perfect plan for your journey
-            </p>
+           
           </div>
           <div className="flex justify-center">
-            <div className="max-w-[1400px]  ">
+            <div className="max-w-[1400px] mb-6 ">
               <div>
                 <h2>General Terms</h2>
                 <p>

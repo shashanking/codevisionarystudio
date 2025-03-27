@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import { mainFont } from "@/components/UI/Mainfontt";
 import { FooterSection } from '@/components/Homepage/Footer/FooterSection';
+import { global } from "styled-jsx/css";
 const privacy_policy = () => {
   return (
      <div>
