@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { mainFont } from "@/components/UI/Mainfontt";
 import { FooterSection } from "@/components/Homepage/Footer/FooterSection";
-import { global } from "styled-jsx/css";
 
 const terms_and_conditions = () => {
   return (
@@ -21,10 +19,9 @@ const terms_and_conditions = () => {
             >
               Terms and Conditions
             </div>
-           
           </div>
-          <div className="flex justify-center">
-            <div className="max-w-[1400px] mb-6 ">
+          <div className="flex justify-center mx-6 ">
+            <div className="max-w-[1400px] m-6 ">
               <div>
                 <h2>General Terms</h2>
                 <p>
