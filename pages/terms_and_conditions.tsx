@@ -179,6 +179,7 @@ const terms_and_conditions = () => {
                   remember is that by purchasing our services, you agree to the
                   terms along with our Privacy Policy.
                 </p>
+                <p>Please note that we provide no refunds for our services.</p>
                 <p>
                   If, for any reason, You are not completely satisfied with the
                   service that we provide, don’t hesitate to contact us and we
