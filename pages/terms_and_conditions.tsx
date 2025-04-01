@@ -1,6 +1,7 @@
 import React from "react";
 import { mainFont } from "@/components/UI/Mainfontt";
 import { FooterSection } from "@/components/Homepage/Footer/FooterSection";
+import { global } from "styled-jsx/css";
 
 const terms_and_conditions = () => {
   return (
@@ -21,7 +22,7 @@ const terms_and_conditions = () => {
             </div>
           </div>
           <div className="flex justify-center mx-6 ">
-            <div className="max-w-[1400px] m-6 ">
+            <div className="max-w-[1400px] m-6 text-white ">
               <div>
                 <h2>General Terms</h2>
                 <p>
