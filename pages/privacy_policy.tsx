@@ -23,7 +23,7 @@ const privacy_policy = () => {
           </div>
 
           <div className="flex justify-center mx-6 ">
-            <div className="max-w-[1400px] sm:mx-6 my-6 ">
+            <div className="max-w-[1400px] sm:mx-6 my-6  text-white">
               <div>
                 <p>
                   Code Visionary Studio (“we”, “our”, or “us”) is committed to
