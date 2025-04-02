@@ -31,7 +31,6 @@ const menuItems = [
   { name: "Terms and Conditions", link: "/terms_and_conditions" },
   { name: "Privacy Policy", link: "/privacy_policy" },
   { name: "Join Our Team", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
-
 ];
 
 const formFields = [
@@ -128,11 +127,19 @@ export const FooterSection = () => {
                 className="w-full h-[36px] leading-6 font-secondaryFont text-sm text-black bg-transparent border-b border-black focus:outline-none cursor-pointer pr-8"
               >
                 <option value="">Subjects</option>
-                <option value="web development">Website Design and Development</option>
-                <option value="app development">Mobile Application Development</option>
-                <option value="UI/UX Design">Web Application Development</option>
+                <option value="web development">
+                  Website Design and Development
+                </option>
+                <option value="app development">
+                  Mobile Application Development
+                </option>
+                <option value="UI/UX Design">
+                  Web Application Development
+                </option>
                 <option value="UI/UX Design">UI/UX Design</option>
-                <option value="UI/UX Design">Search Engine Optimization (SEO)</option>
+                <option value="UI/UX Design">
+                  Search Engine Optimization (SEO)
+                </option>
                 <option value="UI/UX Design">Social Media Marketing</option>
 
                 <option value="UI/UX Design">Branding</option>
@@ -161,11 +168,17 @@ export const FooterSection = () => {
                 width={200}
                 height={70}
                 className="object-contain"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               />
               <p className="text-sm md:text-base font-secondaryFont leading-relaxed text-white/90">
                 Your trusted partner in digital transformation. We create
                 innovative solutions that drive business growth.
+              </p>
+              <p className="text-sm md:text-base font-secondaryFont leading-relaxed text-white/90">
+                Saparaipur Block Saranya Nibas, <br />
+                Road/Street/Lane - Bidyasagar Park Road, <br />
+                State - West Bengal District - South 24 Parganas, <br />
+                City - Maheshtala, Pin - 700142
               </p>
             </div>
 
@@ -173,7 +186,10 @@ export const FooterSection = () => {
             <div className="w-full md:w-[45%] flex justify-between md:justify-end gap-8 md:gap-0">
               <div className="flex flex-col gap-3 w-[45%] md:w-[126px] md:mr-10">
                 <h1
-                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
+                  style={{
+                    fontFamily: mainFont.style.fontFamily,
+                    color: "#ffffff",
+                  }}
                   className="text-lg md:text-xl leading-6 font-semibold text-white"
                 >
                   Menu
@@ -184,9 +200,7 @@ export const FooterSection = () => {
                       key={index}
                       className="hover:text-white/70 cursor-pointer"
                     >
-                      <Link href={item.link}>
-                        {item.name}
-                      </Link>
+                      <Link href={item.link}>{item.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -194,7 +208,10 @@ export const FooterSection = () => {
 
               <div className="flex flex-col gap-3 w-[45%] md:w-[309px]">
                 <h2
-                  style={{ fontFamily: mainFont.style.fontFamily, color: "#ffffff" }}
+                  style={{
+                    fontFamily: mainFont.style.fontFamily,
+                    color: "#ffffff",
+                  }}
                   className="text-lg md:text-xl leading-6 font-semibold text-white"
                 >
                   Contact Info
@@ -206,9 +223,7 @@ export const FooterSection = () => {
                     <br />
                     West Bengal, 700142
                   </p>
-                  <p className="break-words">
-                    codevisionarystudio@gmail.com
-                  </p>
+                  <p className="break-words">codevisionarystudio@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -224,7 +239,7 @@ export const FooterSection = () => {
             style={{
               fontFamily: mainFont.style.fontFamily,
               color: "transparent",
-              WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)"
+              WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)",
             }}
             className="animate-marquee whitespace-nowrap text-[40px] md:text-[80px] leading-[40px] md:leading-[80px] uppercase"
           >
