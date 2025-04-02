@@ -67,7 +67,7 @@ const PriceCards: React.FC = () => {
           <p className="text-center text-white mt-2">{card.description}</p>
           <div className="flex justify-center items-baseline mt-4">
             <span className="text-4xl font-semibold text-white">
-              ${card.price}
+            ₹{card.price}
             </span>
             <span className="text-sm text-white ml-1">/month</span>
           </div>
