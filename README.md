@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CodeVisionary Studio Website
+
+This is the official repository for the CodeVisionary Studio website, a modern web application built with [Next.js](https://nextjs.org/).
+
+## Features
+
+### Recent Updates
+
+#### Testimonials Section
+- Enhanced testimonials section with a modern carousel using Swiper.js
+- Added automatic scrolling functionality for testimonials
+- Implemented circular profile images for each testimonial
+- Styled navigation buttons with sea blue color (#1e90ff)
+- Improved responsive design for better mobile viewing
+
+#### Clients Section
+- Created a new animated client showcase with smooth horizontal scrolling
+- Implemented an infinite scroll effect using CSS animations
+- Displayed client logos in a single line with consistent spacing
+- Added subtle fade effects on the edges for a polished look
+- Optimized for performance with hardware-accelerated animations
 
 ## Getting Started
 
@@ -16,13 +36,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Key Components
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `components/Homepage/Testimonials/Testimonials.jsx` - Testimonials carousel with Swiper integration
+- `components/Homepage/Clients/MovingClients.tsx` - Animated client logo showcase with CSS animations
+- `components/Homepage/Clients/Work_With_Clients.tsx` - Client section wrapper component
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
+
+- **Next.js** - React framework for production
+- **TypeScript** - For type safety and better developer experience
+- **Tailwind CSS** - For utility-first styling
+- **Swiper.js** - For testimonial carousel functionality
+- **CSS Animations** - For smooth client logo scrolling
 
 ## Learn More
 
@@ -30,8 +58,6 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
