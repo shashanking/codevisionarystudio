@@ -26,10 +26,10 @@ export default function Home() {
       <WhyUsSection />
       {/* <div className="hidden "> */}
 
-        {/* <GallerySection />  */}
+      {/* <GallerySection />  */}
       {/* </div> */}
       <OurTeam />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FooterSection />
     </>
   );

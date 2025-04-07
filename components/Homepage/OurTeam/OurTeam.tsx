@@ -13,7 +13,7 @@ const teamList = [
   },
 
   {
-    image: "/assets/vik_pic.jpg",
+    image: "/assets/vikash-pic.jpg",
     name: "Vikash Jha",
     // position: "Strategic Consultant",
   },
@@ -26,11 +26,11 @@ const teamList = [
   {
     image: "/assets/sahil_pic.jpg",
     name: "Sahil Biswas",
-   // position: "Lead UX/UI Designer",
+    // position: "Lead UX/UI Designer",
 
   },
   {
-    image: "/assets/shashank_pic.jpg",
+    image: "/assets/shashank-pic.jpg",
     name: "Shashank Singh",
     // position: "Lead Developer",
   },
