@@ -13,7 +13,7 @@ const teamList = [
   },
 
   {
-    image: "/assets/vikash-pic.jpg",
+    image: "/assets/vik-pic.jpg",
     name: "Vikash Jha",
     // position: "Strategic Consultant",
   },
