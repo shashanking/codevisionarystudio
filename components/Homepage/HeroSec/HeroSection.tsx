@@ -5,14 +5,34 @@ import React from "react";
 export const HeroSection: React.FC = () => {
   return (
     <div className="relative">
-      <div className="absolute w-full h-full">
-        <iframe
-          src="https://my.spline.design/webbg-2027e265eca50f4533c337593fa82e2a"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-          title="Background Animation"
-        ></iframe>
+      <div className="absolute w-[calc(100%)] h-[calc(100%+40px)]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover"
+          style={{ filter: 'brightness(0.7)' }}
+          onError={(e) => {
+            console.error('Video loading error:', e);
+            e.currentTarget.style.display = 'none';
+          }}
+          onLoadedData={(e) => {
+            console.log('Video loaded successfully');
+            e.currentTarget.style.display = 'block';
+          }}
+        >
+          <source
+            src="/assets/hero-cvs-bg.mp4"
+            type="video/mp4"
+            onError={(e) => {
+              const source = e.target as HTMLSourceElement;
+              source.onerror = null;
+              source.remove();
+            }}
+          />
+        </video>
         <div className="absolute bottom-0 left-0 w-full bg-green-5 homePage__heroSectionOverlay h-[20%]" />
       </div>
       <div className="max-w-[1920px] min-h-[100vh] mx-auto relative flex justify-center 2xl:items-center xl:items-center lg:items-center md:landscape:items-center md:portrait:items-center items-end py-16">
