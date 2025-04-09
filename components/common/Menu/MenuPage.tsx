@@ -20,7 +20,7 @@ const menuItems = [
   { name: "About Us", path: "/about_us" },
   { name: "Our Services", path: "/our_services" },
   { name: "Portfolio", path: "/portfolio" },
-  { name: "Pricing", path: "/price" },
+  // { name: "Pricing", path: "/price" },
   { name: "Contact Us", path: "/contact_us" },
 ];
 

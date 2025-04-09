@@ -28,8 +28,6 @@ const menuItems = [
   { name: "Our Services", link: "/our_services" },
   { name: "Portfolio", link: "/portfolio" },
   { name: "Contact Us", link: "/contact_us" },
-  { name: "Terms and Conditions", link: "/terms_and_conditions" },
-  { name: "Privacy Policy", link: "/privacy_policy" },
   { name: "Join Our Team", link: "https://forms.gle/vaN1SWi8zK7HXCRi9" },
 ];
 
@@ -224,6 +222,16 @@ export const FooterSection = () => {
                     West Bengal, 700142
                   </p>
                   <p className="break-words">codevisionarystudio@gmail.com</p>
+                  <p
+                    className="hover:text-white/70 cursor-pointer"
+                  >
+                    <Link href="/terms_and_conditions">Terms and Conditions</Link>
+                  </p>
+                  <p
+                    className="hover:text-white/70 cursor-pointer"
+                  >
+                    <Link href="/privacy_policy">Privacy Policy</Link>
+                  </p>
                 </div>
               </div>
             </div>
