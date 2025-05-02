@@ -62,8 +62,24 @@ export const OurTeam = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Map of names to audio file paths
+  const audioUrlMap: Record<string, string> = {
+    "Shashank Singh": "/assets/shashank_audio.mp3",
+    "Rini Chakraborty": "/assets/rini_audio.mp3",
+    "Sahil Biswas": "/assets/sahil_audio.mp3",
+    "Vikash Jha": "/assets/vikash_audio.mp3",
+    "Pradip Choudhury": "/assets/pradip_audio.mp3",
+    "Sayan Choudhury": "/assets/sayan_audio.mp3",
+  };
+
   // Ref to keep track of currently playing audio
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+  // Array of refs for all audio elements
+  const audioRefs = useRef<(HTMLAudioElement | null)[]>([]);
+  // Ensure refs array is always up-to-date
+  if (audioRefs.current.length !== teamList.length) {
+    audioRefs.current = Array(teamList.length).fill(null);
+  }
 
   return (
     <div ref={containerRef} style={{ height: '250vh' }}>
@@ -111,43 +127,33 @@ export const OurTeam = () => {
                 }}
               >
                 {teamList.map((cur, id) => {
-                  // Define audio URL for members who have one
-                  const audioUrlMap: Record<string, string> = {
-                    "Shashank Singh": "/assets/shashank_audio.mp3",
-                    "Rini Chakraborty": "/assets/rini_audio.mp3",
-                    "Sahil Biswas": "/assets/sahil_audio.mp3",
-                    "Vikash Jha": "/assets/vikash_audio.mp3",
-                    "Pradip Choudhury": "/assets/pradip_audio.mp3",
-                    "Sayan Choudhury": "/assets/sayan_audio.mp3",
-                  };
-
                   const hasAudio = !!audioUrlMap[cur.name];
-                  const audioRef = useRef<HTMLAudioElement | null>(null);
+                  // Use the same ref array for all audios
+                  if (!audioRefs.current[id]) audioRefs.current[id] = null;
 
                   // Handler for click event to play audio
                   const handleAudioClick = () => {
-                    if (hasAudio && audioRef.current) {
+                    const audioRef = audioRefs.current[id];
+                    if (hasAudio && audioRef) {
                       // Pause any previously playing audio
-                      if (currentAudioRef.current && currentAudioRef.current !== audioRef.current) {
+                      if (currentAudioRef.current && currentAudioRef.current !== audioRef) {
                         currentAudioRef.current.pause();
                         currentAudioRef.current.currentTime = 0;
                       }
                       // If already playing, pause and reset
-                      if (!audioRef.current.paused) {
-                        audioRef.current.pause();
-                        audioRef.current.currentTime = 0;
+                      if (!audioRef.paused) {
+                        audioRef.pause();
+                        audioRef.currentTime = 0;
                         currentAudioRef.current = null;
                       } else {
-                        audioRef.current.currentTime = 0;
-                        audioRef.current.play();
-                        currentAudioRef.current = audioRef.current;
+                        audioRef.currentTime = 0;
+                        audioRef.play();
+                        currentAudioRef.current = audioRef;
                       }
                     }
                   };
-                  // For backward compatibility with onClick prop
                   const handleMouseEnter = handleAudioClick;
                   const handleMouseLeave = () => { };
-
 
                   return (
                     <motion.div
@@ -178,7 +184,7 @@ export const OurTeam = () => {
                               </svg>
                               <span className="text-xs font-semibold">Click to play audio</span>
                             </div>
-                            <audio ref={audioRef} src={audioUrlMap[cur.name]} preload="auto" />
+                            <audio ref={el => { audioRefs.current[id] = el; }} src={audioUrlMap[cur.name]} preload="auto" />
                           </>
                         )}
                       </div>
