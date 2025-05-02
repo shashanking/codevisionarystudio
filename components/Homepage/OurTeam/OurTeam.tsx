@@ -62,6 +62,9 @@ export const OurTeam = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Ref to keep track of currently playing audio
+  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+
   return (
     <div ref={containerRef} style={{ height: '250vh' }}>
       <div className="sticky top-0 overflow-hidden">
@@ -107,35 +110,89 @@ export const OurTeam = () => {
                   willChange: 'transform',
                 }}
               >
-                {teamList.map((cur, id) => (
-                  <motion.div
-                    key={id}
-                    id={`ID-${id + 1}`}
-                    initial={{ filter: "grayscale(1)" }}
-                    whileHover={{ filter: "grayscale(0)" }}
-                    className="flex-shrink-0"
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
-                      <Image
-                        height={230}
-                        width={322}
-                        src={cur.image}
-                        alt={cur.name || "Team member"}
-                        className="z-0 object-center object-cover h-[450px] w-[320] rounded-lg bg-top"
-                      />
-                      <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
-                    </div>
-                    <div className="text-center mt-[70px]">
-                      <h4 className="font-secondaryFont font-[600] text-lg md:text-[1.3vw] text-white">
-                        {cur.name}
-                      </h4>
-                      <p className="font-secondaryFont font-[400] text-base md:text-[1vw] text-white/80 mt-1">
-                        {/* {cur.position} */}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
+                {teamList.map((cur, id) => {
+                  // Define audio URL for members who have one
+                  const audioUrlMap: Record<string, string> = {
+                    "Shashank Singh": "/assets/shashank_audio.mp3",
+                    "Rini Chakraborty": "/assets/rini_audio.mp3",
+                    "Sahil Biswas": "/assets/sahil_audio.mp3",
+                    "Vikash Jha": "/assets/vikash_audio.mp3",
+                    "Pradip Choudhury": "/assets/pradip_audio.mp3",
+                    "Sayan Choudhury": "/assets/sayan_audio.mp3",
+                  };
+
+                  const hasAudio = !!audioUrlMap[cur.name];
+                  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+                  // Handler for click event to play audio
+                  const handleAudioClick = () => {
+                    if (hasAudio && audioRef.current) {
+                      // Pause any previously playing audio
+                      if (currentAudioRef.current && currentAudioRef.current !== audioRef.current) {
+                        currentAudioRef.current.pause();
+                        currentAudioRef.current.currentTime = 0;
+                      }
+                      // If already playing, pause and reset
+                      if (!audioRef.current.paused) {
+                        audioRef.current.pause();
+                        audioRef.current.currentTime = 0;
+                        currentAudioRef.current = null;
+                      } else {
+                        audioRef.current.currentTime = 0;
+                        audioRef.current.play();
+                        currentAudioRef.current = audioRef.current;
+                      }
+                    }
+                  };
+                  // For backward compatibility with onClick prop
+                  const handleMouseEnter = handleAudioClick;
+                  const handleMouseLeave = () => { };
+
+
+                  return (
+                    <motion.div
+                      key={id}
+                      id={`ID-${id + 1}`}
+                      initial={{ filter: "grayscale(1)" }}
+                      whileHover={{ filter: "grayscale(0)" }}
+                      className="flex-shrink-0"
+                      transition={{ duration: 0.3 }}
+                      onClick={handleMouseEnter} // handleMouseEnter now acts as playAudioOnClick
+                      style={{ cursor: hasAudio ? 'pointer' : 'default' }}
+                    >
+                      <div className="relative lg:landscape:w-[300px] lg:landscape:h-[390px]">
+                        <Image
+                          height={230}
+                          width={322}
+                          src={cur.image}
+                          alt={cur.name || "Team member"}
+                          className="z-0 object-center object-cover h-[450px] w-[320] rounded-lg bg-top"
+                        />
+                        <div className="absolute w-full h-full bg-transparent z-10 top-0 left-0" />
+                        {/* UI indicator for audio-enabled members */}
+                        {hasAudio && (
+                          <>
+                            <div className="absolute top-2 left-2 flex items-center bg-black/60 text-white px-2 py-1 rounded shadow z-20 pointer-events-none animate-pulse">
+                              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 19V6l-2 2H5a2 2 0 00-2 2v4a2 2 0 002 2h2l2 2zm7-2a4 4 0 000-8" />
+                              </svg>
+                              <span className="text-xs font-semibold">Click to play audio</span>
+                            </div>
+                            <audio ref={audioRef} src={audioUrlMap[cur.name]} preload="auto" />
+                          </>
+                        )}
+                      </div>
+                      <div className="text-center mt-[70px]">
+                        <h4 className="font-secondaryFont font-[600] text-lg md:text-[1.3vw] text-white">
+                          {cur.name}
+                        </h4>
+                        <p className="font-secondaryFont font-[400] text-base md:text-[1vw] text-white/80 mt-1">
+                          {/* {cur.position} */}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </motion.div>            </div>
           </div>
         </div>
