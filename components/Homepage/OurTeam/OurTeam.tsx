@@ -7,10 +7,11 @@ import { useInView } from "@/hooks/useInView";
 
 const teamList = [
   {
-    image: "/assets/rini_pic.jpg",
-    name: "Rini Chakraborty",
+    image: "/assets/pradip_pic.jpg",
+    name: "Pradip Choudhury",
     // position: "Marketing Director",
   },
+
 
   {
     image: "/assets/vik-pic.jpeg",
@@ -34,11 +35,13 @@ const teamList = [
     name: "Shashank Singh",
     // position: "Lead Developer",
   },
+
   {
-    image: "/assets/pradip_pic.jpg",
-    name: "Pradip Choudhury",
+    image: "/assets/rini_pic.jpg",
+    name: "Rini Chakraborty",
     // position: "Marketing Director",
   },
+
 
 ];
 export const OurTeam = () => {
