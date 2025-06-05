@@ -179,7 +179,7 @@ const ContactUsFormSecMobile = () => {
               Create, scale, or refine your digital presence — let&apos;s build something extraordinary together!
             </p>
             <p style={{ fontFamily: mainFont.style.fontFamily, lineHeight: "15px" }} className="flex gap-4 my-4 py-auto text-white text-base sm:text-[14px] ">
-              <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={24} /> +91-8240833838
+              <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={24} /> +918637515632
             </p>
           </div>
 

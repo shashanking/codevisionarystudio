@@ -28,7 +28,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="flex justify-center items-center w-[100%] mt-[38%] absolute z-50">
-        <a href="tel:+918240833838" className="relative w-[72px] h-[72px] rounded-full flex items-center justify-start hover:w-[186px] transition-all duration-300 pl-2 hover:bg-white hover:text-black group ml-4">
+        <a href="tel:+918637515632" className="relative w-[72px] h-[72px] rounded-full flex items-center justify-start hover:w-[186px] transition-all duration-300 pl-2 hover:bg-white hover:text-black group ml-4">
           <div className="flex items-center justify-center">
             <span className="flex items-center h-full group-hover:text-black transition-all duration-300">
               <Image

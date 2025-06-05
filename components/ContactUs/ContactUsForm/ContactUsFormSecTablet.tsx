@@ -186,7 +186,7 @@ const ContactUsFormSecTablet = () => {
                 Create, scale, or refine your digital presence — let&apos;s build something extraordinary together!
               </p>
               <p style={{ fontFamily: mainFont.style.fontFamily }} className="flex gap-4 my-4 text-white text-lg">
-                <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={20} /> +91-8240833838
+                <Image src="/assets/ph_phone_fill.png" alt="" height={20} width={20} /> +918637515632
               </p>
             </div>
 

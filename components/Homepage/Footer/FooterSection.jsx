@@ -215,7 +215,7 @@ export const FooterSection = () => {
                   Contact Info
                 </h2>
                 <div className="space-y-2 text-sm md:text-base text-white/90 font-secondaryFont ">
-                  <p>+91-8240833838</p>
+                  <p onClick={() => window.open("tel:+918637515632")} className="hover:text-white/70 cursor-pointer">+918637515632</p>
                   <p>
                     Kolkata,
                     <br />

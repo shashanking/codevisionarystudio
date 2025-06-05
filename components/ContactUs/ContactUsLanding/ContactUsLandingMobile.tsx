@@ -42,7 +42,7 @@ const ContactUsLandingMobile = () => {
 
           {/* Contact buttons - Below subtitle */}
           <div className="mt-12 flex flex-col space-y-4 items-center w-full relative">
-            <a href="tel:+918240833838"
+            <a href="tel:+918637515632"
               className="relative z-40 w-[186px] h-[72px] rounded-full flex items-center justify-start pl-2 bg-white text-black cursor-pointer">
               <div className="flex items-center justify-center">
                 <span className="flex items-center h-full">

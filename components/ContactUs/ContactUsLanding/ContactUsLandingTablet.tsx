@@ -34,7 +34,7 @@ const ContactUsLandingTablet = () => {
 
           {/* Contact buttons - Horizontal layout for tablet */}
           <div className="mt-20 flex flex-row justify-between items-center w-full">
-            <a href="tel:+918240833838"
+            <a href="tel:+918637515632"
               className="h-[72px] rounded-full flex items-center justify-start pl-2 pr-10 bg-white text-black mx-auto">
               <div className="flex items-center justify-center">
                 <span className="flex items-center h-full">
