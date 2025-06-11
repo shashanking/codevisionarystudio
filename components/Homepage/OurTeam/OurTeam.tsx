@@ -6,11 +6,7 @@ import { HomeAboutSecSvg, HomepageTagIconSvg } from "@/styles/Svgs/AllSvgs";
 import { useInView } from "@/hooks/useInView";
 
 const teamList = [
-  {
-    image: "/assets/pradip_pic.jpg",
-    name: "Pradip Choudhury",
-    // position: "Marketing Director",
-  },
+ 
 
 
   {
@@ -39,6 +35,12 @@ const teamList = [
   {
     image: "/assets/rini_pic.jpg",
     name: "Rini Chakraborty",
+    // position: "Marketing Director",
+  },
+
+   {
+    image: "/assets/pradip_pic.jpg",
+    name: "Pradip Choudhury",
     // position: "Marketing Director",
   },
 
