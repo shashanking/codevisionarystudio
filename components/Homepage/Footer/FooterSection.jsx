@@ -219,7 +219,7 @@ export const FooterSection = () => {
                   <p>
                     Kolkata,
                     <br />
-                    West Bengal, 700142
+                    West Bengal
                   </p>
                   <p className="break-words">codevisionarystudio@gmail.com</p>
                   <p
