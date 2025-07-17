@@ -81,14 +81,14 @@ const terms_and_conditions = () => {
                     information about you such as your language preference or
                     login information.
                   </li>
-                  <li>
+                  {/* <li>
                     <span>Company:</span> When this policy mentions “Company”,
                     “we”, “us,” or “our,” it refers to Code Visionary Studio,
                     13-239/2/NEW Bidyasagar Park Road at Saparaipur Bidyasagar
                     Park SARANYA NIBAS District :- South 24 Parganas Pincode :-
                     700142, Indiathat is responsible for your information under
                     this Privacy Policy.
-                  </li>
+                  </li> */}
                   <li>
                     <span>Country:</span> Where Code Visionary Studio or the
                     owners/founders of Code Visionary Studio are based, in this

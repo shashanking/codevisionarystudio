@@ -172,12 +172,12 @@ export const FooterSection = () => {
                 Your trusted partner in digital transformation. We create
                 innovative solutions that drive business growth.
               </p>
-              <p className="text-sm md:text-base font-secondaryFont leading-relaxed text-white/90">
+              {/* <p className="text-sm md:text-base font-secondaryFont leading-relaxed text-white/90">
                 Saparaipur Block Saranya Nibas, <br />
                 Road/Street/Lane - Bidyasagar Park Road, <br />
                 State - West Bengal District - South 24 Parganas, <br />
                 City - Maheshtala, Pin - 700142
-              </p>
+              </p> */}
             </div>
 
             {/* Fixed width percentage might need adjustment for mobile */}
